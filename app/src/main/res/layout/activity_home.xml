@@ -36,6 +36,7 @@
             android:text="엑스엑스"
             android:textColor="#ffffff"
             android:textSize="30sp"
+            android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/logo"
