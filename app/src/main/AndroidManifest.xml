@@ -41,11 +41,9 @@
             android:value="@integer/google_play_services_version"/>
 
 
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity"></activity>
 
-
-        <!--테스트용-->
-        <activity android:name=".FragmentMapActivity">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -53,6 +51,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".FragmentMapActivity"></activity>
 
     </application>
 
