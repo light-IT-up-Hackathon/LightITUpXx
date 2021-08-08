@@ -3,18 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
     <!--Top bar-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#ED655D"
         android:paddingHorizontal="11dp"
         android:paddingTop="17dp"
         android:paddingBottom="7dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="#ED655D">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/hospitalName"
@@ -51,4 +52,79 @@
             app:layout_constraintTop_toBottomOf="@+id/hospitalName" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/hospital_logo"
+        android:layout_width="145dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle"
+        android:drawableBottom="@drawable/hospital_size"
+        android:gravity="top|center_vertical"
+        android:text="\n병원 >"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/leisure_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <Button
+        android:id="@+id/leisure_logo"
+        android:layout_width="145dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/rectangle"
+        android:drawableBottom="@drawable/leisure_size"
+        android:gravity="top|center_vertical"
+        android:text="여가\n시설 >"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hospital_logo"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <Button
+        android:id="@+id/facility_logo"
+        android:layout_width="326dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle"
+        android:drawableRight="@drawable/facility_size"
+        android:gravity="center_vertical"
+        android:text="공용 시설 >"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hospital_logo" />
+
+    <Button
+        android:id="@+id/house_logo"
+        android:layout_width="326dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle"
+        android:drawableRight="@drawable/house_size"
+        android:gravity="center_vertical"
+        android:text="주거 시설 >"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/facility_logo" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="325dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="28dp"
+        android:background="#FF9D9D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
