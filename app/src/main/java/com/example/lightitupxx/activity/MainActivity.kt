@@ -1,7 +1,8 @@
-package com.example.lightitupxx
+package com.example.lightitupxx.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.lightitupxx.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

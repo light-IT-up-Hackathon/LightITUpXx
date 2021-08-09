@@ -37,16 +37,16 @@
             android:name="com.google.android.gms.vision"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".MainActivity" />
-        <activity android:name=".HomeActivity">
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FragmentMapActivity" />
-        <activity android:name=".CategoryActivity"/>
-        <activity android:name=".MypageActivity"/>
+        <activity android:name=".activity.FragmentMapActivity" />
+        <activity android:name=".activity.CategoryActivity"/>
+        <activity android:name=".activity.MypageActivity"/>
     </application>
 
 </manifest>

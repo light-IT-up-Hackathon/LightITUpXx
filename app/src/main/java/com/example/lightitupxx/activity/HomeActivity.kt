@@ -1,6 +1,5 @@
-package com.example.lightitupxx
+package com.example.lightitupxx.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -8,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.lightitupxx.R
 import org.jetbrains.anko.startActivity
 
 
@@ -21,12 +21,15 @@ class HomeActivity: AppCompatActivity() {
     private lateinit var searchBox:EditText
     private lateinit var searchButton: Button
 
+    //더미데이터
+    val placeArray: Array<String> = arrayOf("이소아병원", "한유림병원", "안예린병원", "김성연병원")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
         //view 연결
-        layoutHospital = findViewById<ConstraintLayout>(R.id.layout_Hostpital)
+        layoutHospital = findViewById<ConstraintLayout>(R.id.layout_Hospital)
         layoutleisure = findViewById<ConstraintLayout>(R.id.layout_Leisure)
         layoutpublic = findViewById<ConstraintLayout>(R.id.layout_public)
         layoutHome = findViewById<ConstraintLayout>(R.id.layout_home)
@@ -78,10 +81,16 @@ class HomeActivity: AppCompatActivity() {
     private fun searchButtonEvent(){
         searchButton.setOnClickListener {
             val searchTerm=searchBox.text.toString()
+            if(searchTerm in placeArray){
+                //예린이 detailActivity 연결시 변경
+//                val intent=Intent(this, CategoryActivity::class.java)
+//                intent.putExtra("searchTerm", searchTerm)
+//                startActivity(intent)
+                Toast.makeText(this, ""+searchTerm,Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, "주변의 근거리 장소를 찾아 보아요!",Toast.LENGTH_SHORT).show()
+            }
 
-            val intent=Intent(this, CategoryActivity::class.java)
-            intent.putExtra("searchTerm", searchTerm)
-            startActivity(intent)
         }
     }
 

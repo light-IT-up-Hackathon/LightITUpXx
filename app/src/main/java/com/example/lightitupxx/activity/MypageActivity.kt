@@ -1,14 +1,14 @@
-package com.example.lightitupxx
+package com.example.lightitupxx.activity
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import org.jetbrains.anko.find
-import org.jetbrains.anko.startActivity
+import com.example.lightitupxx.R
 
 class MypageActivity:AppCompatActivity(){
 
+    lateinit var backButton:View
     lateinit var layoutName:View
     lateinit var layoutScrap:View
     lateinit var layoutMyinfo:View
@@ -28,6 +28,11 @@ class MypageActivity:AppCompatActivity(){
         layoutMyinfo=findViewById(R.id.layout_myinfo)
         layoutPolicy=findViewById(R.id.layout_policy)
         layoutVersion=findViewById(R.id.layout_version)
+        backButton = findViewById(R.id.img_myPageBack)
+
+//        backButton.setOnClickListener {
+//            onBackPressed()
+//        }
 
         scrapLayoutEvent()
         myinfoLayoutEvent()

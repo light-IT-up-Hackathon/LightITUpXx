@@ -1,14 +1,11 @@
-package com.example.lightitupxx
+package com.example.lightitupxx.activity
 
-import android.Manifest
 import android.content.ContentValues.TAG
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.lifecycle.Transformations.map
+import com.example.lightitupxx.R
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapsInitializer
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -18,11 +15,15 @@ import com.google.android.gms.maps.model.MarkerOptions
 
 
 class FragmentMapActivity: AppCompatActivity(), OnMapReadyCallback {
+    lateinit var backButton:View
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_map)
 
-
+        backButton = findViewById(R.id.img_mapBack)
+//        backButton.setOnClickListener {
+//            onBackPressed()
+//        }
 
         //지도 프래그먼트 설정
         // Get the SupportMapFragment and request notification when the map is ready to be used.
