@@ -76,6 +76,15 @@ class CategoryActivity : AppCompatActivity() {
                     recyclerGridView_main2.adapter=hospitalAdapter_chi
                     recyclerGridView_main2.layoutManager= GridLayoutManager(applicationContext,2)
                 }
+
+                //검색
+                val searchTerm=intent.getStringExtra("searchTerm")
+                if(field[position].location==searchTerm){
+                    //우선은 걍 [김성연의원] 치면 산부인과 페이지 나오게 함
+                    recyclerGridView_main2.adapter=hospitalAdapter
+                    recyclerGridView_main2.layoutManager= GridLayoutManager(applicationContext,2)
+                }
+
             }
         })
 

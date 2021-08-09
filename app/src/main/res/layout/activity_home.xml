@@ -13,8 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@color/mainColor"
         android:paddingHorizontal="11dp"
-        android:paddingTop="17dp"
-        android:paddingBottom="7dp"
+        android:paddingTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -86,7 +85,7 @@
             android:layout_width="44dp"
             android:layout_height="match_parent"
             android:background="@drawable/search_icon"
-            android:backgroundTint="#353535" />
+            android:backgroundTint="#FFFFFF" />
 
     </LinearLayout>
 
@@ -106,8 +105,8 @@
     <!--hospital-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_Hostpital"
-        android:layout_width="177dp"
-        android:layout_height="200dp"
+        android:layout_width="143dp"
+        android:layout_height="163dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="8dp"
@@ -120,12 +119,13 @@
             android:id="@+id/tv_hospital"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="16dp"
             android:clickable="false"
             android:text="병원"
             android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/layout_Hostpital"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="@+id/layout_Hostpital"
             app:layout_constraintTop_toTopOf="@+id/layout_Hostpital" />
 
@@ -133,9 +133,12 @@
             android:id="@+id/img_hospital"
             android:layout_width="84dp"
             android:layout_height="91dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="31dp"
             android:clickable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/layout_Hostpital"
             app:layout_constraintTop_toBottomOf="@+id/tv_hospital"
             app:srcCompat="@drawable/hospital_logo" />
@@ -144,8 +147,8 @@
     <!--Leisure-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_Leisure"
-        android:layout_width="177dp"
-        android:layout_height="200dp"
+        android:layout_width="143dp"
+        android:layout_height="163dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="32dp"
@@ -158,7 +161,7 @@
             android:id="@+id/tv_leisure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:clickable="false"
             android:text="여가시설"
             android:textColor="@color/black"
@@ -169,12 +172,14 @@
 
         <ImageView
             android:id="@+id/img_leisure"
-            android:layout_width="91dp"
-            android:layout_height="89dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="82dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="31dp"
             android:clickable="false"
-            app:layout_constraintLeft_toLeftOf="@+id/layout_Leisure"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_leisure"
             app:srcCompat="@drawable/leisure_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -182,8 +187,8 @@
     <!--public facilities-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_public"
-        android:layout_width="177dp"
-        android:layout_height="200dp"
+        android:layout_width="143dp"
+        android:layout_height="163dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
@@ -196,7 +201,7 @@
             android:id="@+id/tv_public"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="16dp"
             android:clickable="false"
             android:text="공용시설"
             android:textColor="@color/black"
@@ -209,10 +214,13 @@
             android:id="@+id/img_public"
             android:layout_width="113dp"
             android:layout_height="62dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="14dp"
             android:clickable="false"
-            app:layout_constraintStart_toStartOf="@+id/layout_public"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_public"
             app:srcCompat="@drawable/facility_logo" />
 
@@ -221,8 +229,8 @@
     <!--home-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_home"
-        android:layout_width="173dp"
-        android:layout_height="200dp"
+        android:layout_width="143dp"
+        android:layout_height="163dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
@@ -235,7 +243,7 @@
             android:id="@+id/tv_house"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="16dp"
             android:clickable="false"
             android:text="주거시설"
             android:textColor="@color/black"
@@ -248,12 +256,56 @@
             android:id="@+id/img_home"
             android:layout_width="68dp"
             android:layout_height="68dp"
-            android:layout_marginStart="52dp"
+            android:layout_marginStart="37dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="38dp"
             android:clickable="false"
-            app:layout_constraintStart_toStartOf="@+id/layout_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_house"
             app:srcCompat="@drawable/house_logo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_mypage"
+        android:layout_width="345dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_public">
+
+        <TextView
+            android:id="@+id/tv_mypage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="false"
+            android:text="마이페이지 및 설정"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="36dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/person_icon" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
