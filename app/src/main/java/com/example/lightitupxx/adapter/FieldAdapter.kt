@@ -1,21 +1,23 @@
-package com.example.lightitupxx
+package com.example.lightitupxx.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lightitupxx.api.LocationItem
+import com.example.lightitupxx.R
 import java.util.*
 
 class FieldAdapter(val locationList : ArrayList<LocationItem>): RecyclerView.Adapter<FieldAdapter.CustomViewHolder>() {
     //뷰홀더가 처음 생성될때
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FieldAdapter.CustomViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_main2, parent, false)
         return CustomViewHolder(view)
     }
 
     //재활용해주는 곳 및 값을 넣어주는 곳
-    override fun onBindViewHolder(holder: FieldAdapter.CustomViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         holder.bindItems(locationList[position])
         holder.itemView.setOnClickListener {
             itemClickListener.onClick(it, position)

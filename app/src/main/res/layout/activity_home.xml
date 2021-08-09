@@ -104,7 +104,7 @@
 
     <!--hospital-->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_Hostpital"
+        android:id="@+id/layout_Hospital"
         android:layout_width="143dp"
         android:layout_height="163dp"
         android:layout_marginStart="32dp"
@@ -124,10 +124,10 @@
             android:text="병원"
             android:textColor="@color/black"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/layout_Hostpital"
+            app:layout_constraintEnd_toEndOf="@+id/layout_Hospital"
             app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="@+id/layout_Hostpital"
-            app:layout_constraintTop_toTopOf="@+id/layout_Hostpital" />
+            app:layout_constraintStart_toStartOf="@+id/layout_Hospital"
+            app:layout_constraintTop_toTopOf="@+id/layout_Hospital" />
 
         <ImageView
             android:id="@+id/img_hospital"
@@ -139,7 +139,7 @@
             android:clickable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/layout_Hostpital"
+            app:layout_constraintStart_toStartOf="@+id/layout_Hospital"
             app:layout_constraintTop_toBottomOf="@+id/tv_hospital"
             app:srcCompat="@drawable/hospital_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -154,7 +154,7 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/layout_Hostpital"
+        app:layout_constraintStart_toEndOf="@+id/layout_Hospital"
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
         <TextView
@@ -195,7 +195,7 @@
         android:background="@drawable/rectangle"
         app:layout_constraintEnd_toStartOf="@+id/layout_home"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_Hostpital">
+        app:layout_constraintTop_toBottomOf="@+id/layout_Hospital">
 
         <TextView
             android:id="@+id/tv_public"
