@@ -1,5 +1,6 @@
 package com.example.lightitupxx
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -16,6 +17,7 @@ class HomeActivity: AppCompatActivity() {
     private lateinit var layoutleisure:View
     private lateinit var layoutpublic:View
     private lateinit var layoutHome:View
+    private lateinit var layoutMypage:View
     private lateinit var searchBox:EditText
     private lateinit var searchButton: Button
 
@@ -23,13 +25,12 @@ class HomeActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        //코드 작성
-
         //view 연결
         layoutHospital = findViewById<ConstraintLayout>(R.id.layout_Hostpital)
         layoutleisure = findViewById<ConstraintLayout>(R.id.layout_Leisure)
         layoutpublic = findViewById<ConstraintLayout>(R.id.layout_public)
         layoutHome = findViewById<ConstraintLayout>(R.id.layout_home)
+        layoutMypage=findViewById(R.id.layout_mypage)
         searchBox = findViewById(R.id.searchBox)
         searchButton = findViewById(R.id.search_button)
 
@@ -38,9 +39,8 @@ class HomeActivity: AppCompatActivity() {
         leisureLayoutEvent()
         publicFacilityLayoutEvent()
         homeLayoutEvent()
+        mypageLayoutEvent()
         searchButtonEvent()
-
-
     }
 
     //functions--> clickable layout including child
@@ -68,18 +68,20 @@ class HomeActivity: AppCompatActivity() {
             myToast.show()
         }
     }
+    private fun mypageLayoutEvent(){
+        layoutMypage.setOnClickListener{
+            startActivity<MypageActivity>()
+        }
+    }
 
     //검색
     private fun searchButtonEvent(){
         searchButton.setOnClickListener {
             val searchTerm=searchBox.text.toString()
-            if (searchTerm=="mlbHospital"){
-                val myToast = Toast.makeText(this, "한유림 사랑해: "+searchTerm, Toast.LENGTH_SHORT)
-                myToast.show()
-            }else{
-                val myToast = Toast.makeText(this, "이소아 완성해줘", Toast.LENGTH_SHORT)
-                myToast.show()
-            }
+
+            val intent=Intent(this, CategoryActivity::class.java)
+            intent.putExtra("searchTerm", searchTerm)
+            startActivity(intent)
         }
     }
 

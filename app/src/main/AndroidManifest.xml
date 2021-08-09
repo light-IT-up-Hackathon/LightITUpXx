@@ -45,8 +45,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FragmentMapActivity" />
-        <activity android:name=".CategoryActivity">
-        </activity>
+        <activity android:name=".CategoryActivity"/>
+        <activity android:name=".MypageActivity"/>
     </application>
 
 </manifest>
