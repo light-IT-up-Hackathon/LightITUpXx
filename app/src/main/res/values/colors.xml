@@ -11,4 +11,6 @@
     <color name="appBackgroundColor">#FFEBEB</color>
     <color name="facilitiesBackgroundColor">#FFDADADA</color>\
     <color name="seachLayoutColor">#D8D8D8</color>
+    <color name="categoryBackgroundColor">#F1F3F5</color>
+    <color name="category">#DEE2E6</color>
 </resources>
