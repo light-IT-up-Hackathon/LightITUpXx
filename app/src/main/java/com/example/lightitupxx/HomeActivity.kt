@@ -2,7 +2,8 @@ package com.example.lightitupxx
 
 import android.os.Bundle
 import android.view.View
-import android.widget.SearchView
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -14,7 +15,8 @@ class HomeActivity: AppCompatActivity() {
     private lateinit var layoutleisure:View
     private lateinit var layoutpublic:View
     private lateinit var layoutHome:View
-    //private lateinit var searchView:View
+    private lateinit var searchBox:EditText
+    private lateinit var searchButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,12 +29,15 @@ class HomeActivity: AppCompatActivity() {
         layoutleisure = findViewById<ConstraintLayout>(R.id.layout_Leisure)
         layoutpublic = findViewById<ConstraintLayout>(R.id.layout_public)
         layoutHome = findViewById<ConstraintLayout>(R.id.layout_home)
-        //searchView = findViewById<SearchView>(R.id.searchView)
+        searchBox = findViewById(R.id.searchBox)
+        searchButton = findViewById(R.id.search_button)
 
+        //함수 및 기능 구현
         hospitalLayoutEvent()
         leisureLayoutEvent()
         publicFacilityLayoutEvent()
         homeLayoutEvent()
+        searchButtonEvent()
 
 
     }
@@ -61,6 +66,14 @@ class HomeActivity: AppCompatActivity() {
     private fun homeLayoutEvent(){
         layoutHome.setOnClickListener {
             val myToast = Toast.makeText(this, "layoutHome", Toast.LENGTH_SHORT)
+            myToast.show()
+        }
+    }
+
+    //functions
+    private fun searchButtonEvent(){
+        searchButton.setOnClickListener {
+            val myToast = Toast.makeText(this,"searchButton clicked!!", Toast.LENGTH_SHORT)
             myToast.show()
         }
     }
