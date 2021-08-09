@@ -99,6 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
+            android:clickable="false"
             android:text="병원"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -112,6 +113,7 @@
             android:layout_height="91dp"
             android:layout_marginStart="44dp"
             android:layout_marginTop="16dp"
+            android:clickable="false"
             app:layout_constraintStart_toStartOf="@+id/layout_Hostpital"
             app:layout_constraintTop_toBottomOf="@+id/tv_hospital"
             app:srcCompat="@drawable/hospital_logo" />
@@ -135,6 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:clickable="false"
             android:text="여가시설"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -148,6 +151,7 @@
             android:layout_height="89dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
+            android:clickable="false"
             app:layout_constraintLeft_toLeftOf="@+id/layout_Leisure"
             app:layout_constraintTop_toBottomOf="@+id/tv_leisure"
             app:srcCompat="@drawable/leisure_logo" />
@@ -171,6 +175,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:clickable="false"
             android:text="공용시설"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -184,6 +189,7 @@
             android:layout_height="62dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
+            android:clickable="false"
             app:layout_constraintStart_toStartOf="@+id/layout_public"
             app:layout_constraintTop_toBottomOf="@+id/tv_public"
             app:srcCompat="@drawable/facility_logo" />
@@ -208,6 +214,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
+            android:clickable="false"
             android:text="주거시설"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -221,6 +228,7 @@
             android:layout_height="68dp"
             android:layout_marginStart="52dp"
             android:layout_marginTop="20dp"
+            android:clickable="false"
             app:layout_constraintStart_toStartOf="@+id/layout_home"
             app:layout_constraintTop_toBottomOf="@+id/tv_house"
             app:srcCompat="@drawable/house_logo" />
