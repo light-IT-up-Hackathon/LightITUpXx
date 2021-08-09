@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import org.jetbrains.anko.startActivity
 
 
 class HomeActivity: AppCompatActivity() {
@@ -42,12 +43,10 @@ class HomeActivity: AppCompatActivity() {
 
     }
 
-
     //functions--> clickable layout including child
     private fun hospitalLayoutEvent(){
         layoutHospital.setOnClickListener {
-            val myToast = Toast.makeText(this, "layouthospital", Toast.LENGTH_SHORT)
-            myToast.show()
+            startActivity<CategoryActivity>()
         }
     }
     private fun leisureLayoutEvent(){
