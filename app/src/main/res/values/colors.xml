@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="mainColor">#ED655D</color>
     <color name="appBackgroundColor">#FFEBEB</color>
-    <color name="facilitiesBackgroundColor">#FFDADADA</color>
+    <color name="facilitiesBackgroundColor">#FFDADADA</color>\
+    <color name="seachLayoutColor">#D8D8D8</color>
 </resources>
