@@ -12,7 +12,7 @@
     android:layout_height="280dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="?attr/selectableItemBackground"
+        android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
         android:layout_width="180dp"

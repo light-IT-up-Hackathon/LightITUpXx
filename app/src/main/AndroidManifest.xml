@@ -4,7 +4,8 @@
     <!-- 필요한 권한 생성 -->
     <permission
         android:name="com.example.my38_locationmap.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature" /> <!-- 권한 부여 설정 -->
+        android:protectionLevel="signature" />
+    <!-- 권한 부여 설정 -->
     <uses-permission android:name="com.example.my38_locationmap.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="READ_GSERVICES" />
@@ -21,15 +22,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".CategoryActivity">
+        android:theme="@style/Theme.LightITUpXx">
 
-        </activity>
         <!-- 라이브러리 사용 설정 -->
         <uses-library android:name="com.google.android.maps" />
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false" /> <!-- 이거 등록하기 -->
+            android:required="false" />
+        <!-- 이거 등록하기 -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDKZKu_ItkotzeK_4jabxq-RcfK-yn61x0" />
@@ -45,6 +45,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FragmentMapActivity" />
+        <activity android:name=".CategoryActivity">
+        </activity>
     </application>
 
 </manifest>
