@@ -60,28 +60,33 @@
         android:id="@+id/searchLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="5dp"
+        android:layout_marginHorizontal="15dp"
         android:layout_marginTop="16dp"
-        android:background="@color/seachLayoutColor"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/mainColor"
         android:orientation="horizontal"
+        android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_bar">
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"
+        >
 
         <EditText
+            android:layout_gravity="center_vertical"
             android:id="@+id/searchBox"
-            android:layout_width="320dp"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/seachLayoutColor"
             android:hint="검색어를 입력하세요."
-            android:minHeight="48dp"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/search_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="검색" />
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/search_icon"
+            android:backgroundTint="#353535" />
 
     </LinearLayout>
 
