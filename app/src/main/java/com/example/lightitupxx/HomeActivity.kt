@@ -75,7 +75,7 @@ class HomeActivity: AppCompatActivity() {
         searchButton.setOnClickListener {
             val searchTerm=searchBox.text.toString()
             if (searchTerm=="mlbHospital"){
-                val myToast = Toast.makeText(this, "한유림  사랑해: "+searchTerm, Toast.LENGTH_SHORT)
+                val myToast = Toast.makeText(this, "한유림 사랑해: "+searchTerm, Toast.LENGTH_SHORT)
                 myToast.show()
             }else{
                 val myToast = Toast.makeText(this, "이소아 완성해줘", Toast.LENGTH_SHORT)
