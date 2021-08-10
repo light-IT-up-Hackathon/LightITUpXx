@@ -30,8 +30,8 @@
 
                     <Button
                         android:id="@+id/back_button"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/ic_baseline_arrow_back_ios_24"
@@ -49,7 +49,7 @@
                         <Button
                             android:id="@+id/call_activity"
                             android:layout_width="wrap_content"
-                            android:layout_height="51dp"
+                            android:layout_height="58dp"
                             android:layout_marginLeft="65dp"
                             android:layout_marginTop="140dp"
                             android:background="@drawable/button_background"
@@ -59,7 +59,7 @@
                         <Button
                             android:id="@+id/map_activity"
                             android:layout_width="wrap_content"
-                            android:layout_height="51dp"
+                            android:layout_height="58dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="140dp"
                             android:layout_toRightOf="@id/call_activity"
@@ -70,14 +70,13 @@
                         <Button
                             android:id="@+id/scrap_activity"
                             android:layout_width="wrap_content"
-                            android:layout_height="51dp"
+                            android:layout_height="60dp"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="170dp"
+                            android:layout_marginTop="156dp"
                             android:layout_toRightOf="@id/map_activity"
                             android:background="@drawable/button_background"
                             android:drawableTop="@drawable/heart"
                             android:padding="0sp"
-                            android:scaleType="centerInside"
                             android:text="스크랩"
                             android:textColor="@color/black" />
 
