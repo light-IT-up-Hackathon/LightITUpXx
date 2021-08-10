@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3EA6A6A6"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/one"
+                android:backgroundTint="#3EA6A6A6"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#3EA6A6A6"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/back_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/ic_baseline_arrow_back_ios_24"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <LinearLayout
+                        android:id="@+id/grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="235dp"
+                        android:layout_marginTop="250dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/background_grey">
+
+
+                        <Button
+                            android:id="@+id/call_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="51dp"
+                            android:layout_marginLeft="65dp"
+                            android:layout_marginTop="140dp"
+                            android:background="@drawable/button_background"
+                            android:text="전화하기"
+                            android:textColor="@color/black" />
+
+                        <Button
+                            android:id="@+id/map_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="51dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="140dp"
+                            android:layout_toRightOf="@id/call_activity"
+                            android:background="@drawable/button_background_color"
+                            android:text="지도보기"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/scrap_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="51dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="170dp"
+                            android:layout_toRightOf="@id/map_activity"
+                            android:background="@drawable/button_background"
+                            android:drawableTop="@drawable/heart"
+                            android:padding="0sp"
+                            android:scaleType="centerInside"
+                            android:text="스크랩"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/saunadetail" />
+
+                    <LinearLayout
+                        android:id="@+id/hospital_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/background_hospital"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:text="[ 청솔여성전용사우나 ]"
+                            android:textColor="@color/black"
+                            android:textSize="25dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="목욕탕,사우나"
+                            android:textColor="#86000000"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="40dp"
+                            android:text="서울 노원구 상계로9길 23"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="20dp"
+                            android:text="매일 00:00 - 24:00"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/two"
+                android:layout_below="@+id/one"
+                android:orientation="vertical">
+
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_below="@id/call"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/address"
+                    android:layout_below="@id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/address1"
+                        android:textSize="17dp"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:text="  서울 노원구 상계동 397-4" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_below="@id/parking"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/time"
+                    android:layout_below="@id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/time"
+                        android:textSize="17dp"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:text="  매일 00:00 - 24:00" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line10"
+                    android:layout_below="@id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/cost"
+                    android:layout_below="@id/line10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/cost"
+                        android:textSize="17dp"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:text="  입욕료 6000원" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line5"
+                    android:layout_below="@id/parking"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/tag"
+                    android:layout_below="@id/line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/tag1"/>
+
+                    <LinearLayout
+                        android:id="@+id/test_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="#여성전용 #사우나 #장작불가마 #맛사지" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="#부항" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line6"
+                    android:layout_below="@id/tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/treatment"
+                    android:layout_below="@id/line6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/treatment"/>
+
+                    <LinearLayout
+                        android:id="@+id/text_treatment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="여성전용 사우나로서 이번에 장작불가마를 신설하여" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="여성들의 기호에 맞도록 노폐물 배출에 특별히 신경" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="을 써 아주 좋은 호감을 얻고 있습니다." />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

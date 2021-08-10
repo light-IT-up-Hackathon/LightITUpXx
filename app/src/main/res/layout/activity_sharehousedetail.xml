@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3EA6A6A6"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/one"
+                android:backgroundTint="#3EA6A6A6"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#3EA6A6A6"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/back_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/ic_baseline_arrow_back_ios_24"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <LinearLayout
+                        android:id="@+id/grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="235dp"
+                        android:layout_marginTop="250dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/background_grey">
+
+
+                        <Button
+                            android:id="@+id/call_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="51dp"
+                            android:layout_marginLeft="65dp"
+                            android:layout_marginTop="140dp"
+                            android:background="@drawable/button_background"
+                            android:text="전화하기"
+                            android:textColor="@color/black" />
+
+                        <Button
+                            android:id="@+id/map_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="51dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="140dp"
+                            android:layout_toRightOf="@id/call_activity"
+                            android:background="@drawable/button_background_color"
+                            android:text="지도보기"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/scrap_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="51dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="170dp"
+                            android:layout_toRightOf="@id/map_activity"
+                            android:background="@drawable/button_background"
+                            android:drawableTop="@drawable/heart"
+                            android:padding="0sp"
+                            android:scaleType="centerInside"
+                            android:text="스크랩"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sharehousedetail" />
+
+                    <LinearLayout
+                        android:id="@+id/hospital_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/background_hospital"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:text="[ 쉐어하우스 하늘 ]"
+                            android:textColor="@color/black"
+                            android:textSize="25dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="쉐어하우스,하숙"
+                            android:textColor="#86000000"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="40dp"
+                            android:paddingBottom="40dp"
+                            android:text="서울 노원구 석계로15길 25"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/two"
+                android:layout_below="@+id/one"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/two"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/call"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:text="0507-1362-5608" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_below="@id/call"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/address"
+                    android:layout_below="@id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/address1"
+                        android:textSize="17dp"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:text="  서울 노원구 월계동 926" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_below="@id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/loaction"
+                    android:layout_below="@id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:src="@drawable/location"/>
+
+                    <LinearLayout
+                        android:id="@+id/text_loaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="광운대역(1호선) 2번출구 도보1분," />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="광운대학교 도보7분" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_below="@id/loaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/cost"
+                    android:layout_below="@id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/cost"/>
+
+                    <LinearLayout
+                        android:id="@+id/text_cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="1인실 A 420,000원" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="2인실 B 350,000원" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="2인실 C 300,000원
+" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line10"
+                    android:layout_below="@id/loaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/parking"
+                    android:layout_below="@id/line10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/parking"
+                        android:textSize="17dp"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:text=" 주차, 무선 인터넷" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_below="@id/parking"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <View
+                    android:id="@+id/line5"
+                    android:layout_below="@id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/tag"
+                    android:layout_below="@id/line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/tag1"/>
+
+                    <LinearLayout
+                        android:id="@+id/test_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="#광운대쉐어하우스 #광운대역쉐어하우스" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="#여성전용쉐어하우스 #인덕대쉐어하우스" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line6"
+                    android:layout_below="@id/tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/treatment"
+                    android:layout_below="@id/line6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/treatment"/>
+
+                    <LinearLayout
+                        android:id="@+id/text_treatment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="쾌적하고 깨끗한 쉐어하우스, 안전을 최우선으로 생각합니다." />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="40평대의 하우스에 각 방마다 개인 발코니가 있고" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="정기적으로 청소아주머니가 방문오십니다.
+" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
