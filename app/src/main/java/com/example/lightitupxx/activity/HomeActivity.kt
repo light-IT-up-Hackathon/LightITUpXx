@@ -54,21 +54,24 @@ class HomeActivity: AppCompatActivity() {
     }
     private fun leisureLayoutEvent(){
         layoutleisure.setOnClickListener {
-            val myToast = Toast.makeText(this, "layoutleisure", Toast.LENGTH_SHORT)
-            myToast.show()
+            layoutleisure.setOnClickListener {
+                startActivity<CategoryActivity>()
+            }
         }
 
     }
     private fun publicFacilityLayoutEvent(){
         layoutpublic.setOnClickListener {
-            val myToast = Toast.makeText(this, "layoutpublic", Toast.LENGTH_SHORT)
-            myToast.show()
+            layoutpublic.setOnClickListener {
+                startActivity<CategoryActivity>()
+            }
         }
     }
     private fun homeLayoutEvent(){
         layoutHome.setOnClickListener {
-            val myToast = Toast.makeText(this, "layoutHome", Toast.LENGTH_SHORT)
-            myToast.show()
+            layoutHome.setOnClickListener {
+                startActivity<CategoryActivity>()
+            }
         }
     }
     private fun mypageLayoutEvent(){
