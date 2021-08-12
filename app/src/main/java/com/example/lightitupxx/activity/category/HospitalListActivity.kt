@@ -141,7 +141,7 @@ class HospitalListActivity : AppCompatActivity() {
         hospitals_jung.add(Facility_info (R.drawable.img_oshospital_bang,"[방병원]","정형외과","평일 08시~17시","서울시 노원구",37.61849265152965, 127.07507101367848))
         hospitals_jung.add(Facility_info (R.drawable.img_oshospital_strong,"[굳쎈정형외과의원]","정형외과","평일 09시~18시","서울시 노원구",37.67802514845685, 127.0549906001897))
         hospitals_jung.add(Facility_info (R.drawable.img_hospital_sangmo,"[성모오케이정형외과의원]","정형외과","평일 09시~18시","서울시 노원구",37.65599236951852, 127.06733332535853))
-        hospitals_jung.add(Facility_info (R.drawable.img_oshospital_nobos,"[서울노보스병원]","정형외과","평일 09시~18시","서울시 노원구"37.65483586359399, 127.06199025414544))
+        hospitals_jung.add(Facility_info (R.drawable.img_oshospital_nobos,"[서울노보스병원]","정형외과","평일 09시~18시","서울시 노원구",37.65483586359399, 127.06199025414544))
 
     }
 }
