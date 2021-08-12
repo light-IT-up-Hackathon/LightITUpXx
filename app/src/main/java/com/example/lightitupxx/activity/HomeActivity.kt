@@ -35,7 +35,6 @@ class HomeActivity: AppCompatActivity() {
         //view 연결
         layoutHospital = findViewById<ConstraintLayout>(R.id.layout_Hospital)
         layoutleisure = findViewById<ConstraintLayout>(R.id.layout_Leisure)
-        layoutpublic = findViewById<ConstraintLayout>(R.id.layout_public)
         layoutHome = findViewById<ConstraintLayout>(R.id.layout_home)
         layoutMypage=findViewById(R.id.layout_mypage)
         searchBox = findViewById(R.id.searchBox)

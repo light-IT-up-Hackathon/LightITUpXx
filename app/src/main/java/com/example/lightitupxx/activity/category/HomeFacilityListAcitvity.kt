@@ -34,10 +34,10 @@ class HomeFacilityListAcitvity : AppCompatActivity() {
 
         backButton = findViewById(R.id.img_homePageBack)
         fieldAdapter = FieldAdapter(field)
-        fieldlist_leisure.adapter = fieldAdapter
-        fieldlist_leisure.setHasFixedSize(true) //어뎁터에 성능을 위한것
+        fieldlist_home.adapter = fieldAdapter
+        fieldlist_home.setHasFixedSize(true) //어뎁터에 성능을 위한것
         //레이아웃 매니저를 이용해 어뎁터의 방향을 결정
-        fieldlist_leisure.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        fieldlist_home.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         facilityAdapter_wal = HomeAdapter (leisure_wal)
         facilityAdapter_jun= HomeAdapter (leisure_jun)
@@ -62,16 +62,16 @@ class HomeFacilityListAcitvity : AppCompatActivity() {
 
     private fun fieldCheck(v: View, position: Int){
         if(field[position].location=="월세"){
-            recyclerGridView_leisure.adapter=facilityAdapter_wal
-            recyclerGridView_leisure.layoutManager= GridLayoutManager(applicationContext,2)
+            recyclerGridView_home.adapter=facilityAdapter_wal
+            recyclerGridView_home.layoutManager= GridLayoutManager(applicationContext,2)
         }
         else if(field[position].location=="전세"){
-            recyclerGridView_leisure.adapter=facilityAdapter_jun
-            recyclerGridView_leisure.layoutManager= GridLayoutManager(applicationContext,2)
+            recyclerGridView_home.adapter=facilityAdapter_jun
+            recyclerGridView_home.layoutManager= GridLayoutManager(applicationContext,2)
         }
         else if(field[position].location=="매매") {
-            recyclerGridView_leisure.adapter=facilityAdapter_meme
-            recyclerGridView_leisure.layoutManager= GridLayoutManager(applicationContext,2)
+            recyclerGridView_home.adapter=facilityAdapter_meme
+            recyclerGridView_home.layoutManager= GridLayoutManager(applicationContext,2)
         }
     }
 
