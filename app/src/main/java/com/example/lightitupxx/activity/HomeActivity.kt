@@ -1,5 +1,6 @@
 package com.example.lightitupxx.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -76,15 +77,10 @@ class HomeActivity: AppCompatActivity() {
         searchButton.setOnClickListener {
             val searchTerm=searchBox.text.toString()
             if(searchTerm in placeArray){
-                //예린이 detailActivity 연결시 변경
-//                val intent=Intent(this, CategoryActivity::class.java)
-//                intent.putExtra("searchTerm", searchTerm)
-//                startActivity(intent)
                 Toast.makeText(this, ""+searchTerm,Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(this, "주변의 근거리 장소를 찾아 보아요!",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "검색결과 없음",Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 
