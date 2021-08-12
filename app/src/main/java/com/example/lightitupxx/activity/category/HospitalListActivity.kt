@@ -109,7 +109,7 @@ class HospitalListActivity : AppCompatActivity() {
     }
 
     private fun setHospitalsList(){
-        hospital_san.add(Facility_info (R.drawable.hospital,"[남미현산부인과의원]","산부인과","평일 09시~19시","서울시 노원구"))
+        hospital_san.add(Facility_info (R.drawable.hospital,"[남미현산부인과의원]","산부인과","평일 09시~19시","서울시 노원구", "ddnld"))
         hospital_san.add(Facility_info (R.drawable.img_obhospital_park,"[박경숙산부인과]","산부인과","평일 09시~18시","서울시 노원구"))
         hospital_san.add(Facility_info (R.drawable.img_obhospital_ab,"[에비뉴여성의원]","산부인과","평일 10시~19시","서울시 노원구"))
         hospital_san.add(Facility_info (R.drawable.img_ophospital_piona,"[피오나여성의원]","산부인과","평일 09시~21시","서울시 노원구"))
