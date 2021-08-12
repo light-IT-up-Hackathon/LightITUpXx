@@ -82,25 +82,26 @@ class HomeFacilityListAcitvity : AppCompatActivity() {
     }
 
     private fun setHospitalsList(){
-        leisure_wal.add(Facility_info (R.drawable.h_image0,"[김성연월세]","월세","평일 09시~20시","인천시 계양구"))
-        leisure_wal.add(Facility_info (R.drawable.h_image0,"[한유림월세]","월세","평일 08시~20시","인천시 계양구"))
-        leisure_wal.add(Facility_info (R.drawable.h_image0,"[자지원월세]","월세","평일 09시~20시","경기도 고양시"))
-        leisure_wal.add(Facility_info (R.drawable.h_image0,"[잠지원월세]","월세","평일 10시~20시","서울시 구로구"))
-        leisure_wal.add(Facility_info (R.drawable.h_image0,"[이소아월세]","월세","평일 08시~20시","서울시 노원구"))
-        leisure_wal.add(Facility_info (R.drawable.h_image0,"[김성연월세]","월세","평일 09시~20시","인천시 계양구"))
 
-        leisure_jun.add(Facility_info (R.drawable.h_image1,"[우리전세]","전세","평일 09시~20시","인천시 계양구"))
-        leisure_jun.add(Facility_info (R.drawable.h_image1,"[서울전세]","전세","평일 08시~20시","인천시 계양구"))
-        leisure_jun.add(Facility_info (R.drawable.h_image1,"[이소아전세]","전세","평일 09시~20시","경기도 고양시"))
-        leisure_jun.add(Facility_info (R.drawable.h_image1,"[최고전세]","전세","평일 10시~20시","서울시 구로구"))
-        leisure_jun.add(Facility_info (R.drawable.h_image1,"[세종전세]","전세","평일 08시~20시","서울시 노원구"))
-        leisure_jun.add(Facility_info (R.drawable.h_image1,"[태릉전세]","전세","평일 09시~20시","인천시 계양구"))
+        leisure_wal.add(Facility_info (R.drawable.img_home_sanggyejugong7,"[상계주공7단지]","월세","701동 1211호","서울시 노원구"))
+        leisure_wal.add(Facility_info (R.drawable.img_home_sodambill,"[소담빌]","월세","B동 302호","서울시 노원구"))
+        leisure_wal.add(Facility_info (R.drawable.img_home_chungsole,"[상계청솔아파트]","월세","125동 121호","서울시 노원구"))
+        leisure_wal.add(Facility_info (R.drawable.img_home_daeho,"[대호]","월세","805동 709호","서울시 노원구"))
+        leisure_wal.add(Facility_info (R.drawable.img_home_yumguang,"[염광]","월세","103동 705호","서울시 노원구"))
+        leisure_wal.add(Facility_info (R.drawable.img_home_junggyegugong4,"[중계주공4단지]","월세","405동 306호","서울시 노원구"))
 
-        leisure_meme.add(Facility_info (R.drawable.img_home_joogong,"[상계주공7단지]","매매","107동 1103호","인천시 계양구"))
-        leisure_meme.add(Facility_info (R.drawable.img_home_ganyoung,"[건영2차]","매매","102동 705호","인천시 계양구"))
-        leisure_meme.add(Facility_info (R.drawable.img_home_sung,"[성원]","매매","403동 104호","경기도 고양시"))
-        leisure_meme.add(Facility_info (R.drawable.img_home_green,"[중계그린]","매매","113동 104호","서울시 구로구"))
+        leisure_jun.add(Facility_info (R.drawable.img_home_shindonga,"[신동아]","전세","106동 904호","서울시 노원구"))
+        leisure_jun.add(Facility_info (R.drawable.img_home_sanggyejugong9,"[상계주공9단지]","전세","912동 505호","서울시 노원구"))
+        leisure_jun.add(Facility_info (R.drawable.img_home_sanggyejugong7,"[상계주공7단지]","전세","707동 202호","서울시 노원구"))
+        leisure_jun.add(Facility_info (R.drawable.img_home_hanshin,"[한신]","전세","107동 905호","서울시 노원구"))
+        leisure_jun.add(Facility_info (R.drawable.img_home_byuksan,"[벽산]","전세","201동 514호","서울시 노원구"))
+        leisure_jun.add(Facility_info (R.drawable.img_home_anusbill,"[중계경남아너스빌]","전세","704동 404호","서울시 노원구"))
+
+        leisure_meme.add(Facility_info (R.drawable.img_home_joogong,"[상계주공7단지]","매매","107동 1103호","서울시 노원구"))
+        leisure_meme.add(Facility_info (R.drawable.img_home_ganyoung,"[건영2차]","매매","102동 705호","서울시 노원구"))
+        leisure_meme.add(Facility_info (R.drawable.img_home_sung,"[성원]","매매","403동 104호","서울시 노원구"))
+        leisure_meme.add(Facility_info (R.drawable.img_home_green,"[중계그린]","매매","113동 104호","서울시 노원구"))
         leisure_meme.add(Facility_info (R.drawable.img_home_hansin,"[한신3차]","매매","301동 209호","서울시 노원구"))
-        leisure_meme.add(Facility_info (R.drawable.img_home_sunglim,"[성림]","매매","901동 506호","인천시 계양구"))
+        leisure_meme.add(Facility_info (R.drawable.img_home_sunglim,"[성림]","매매","901동 506호","서울시 노원구"))
     }
 }
