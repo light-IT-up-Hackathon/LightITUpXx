@@ -12,7 +12,7 @@ class SharehouseDetailActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sharehousedetail)
 
-        callsharehouseBtn.setOnClickListener {
+        callsharehouse.setOnClickListener {
             var intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel: 0507-1362-5608")
             startActivity(intent)

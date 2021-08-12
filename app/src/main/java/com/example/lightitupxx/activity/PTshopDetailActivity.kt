@@ -12,7 +12,7 @@ class PTshopDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ptshopdetail)
 
-        callptshopBtn.setOnClickListener {
+        callptshop.setOnClickListener {
             var intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel: 02-976-4500")
             startActivity(intent)

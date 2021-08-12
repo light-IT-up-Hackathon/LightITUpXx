@@ -144,7 +144,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/call"
+                    android:id="@+id/callsauna"
                     android:layout_below="@id/two"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
 
                 <View
                     android:id="@+id/line1"
-                    android:layout_below="@id/call"
+                    android:layout_below="@id/callsauna"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#1E000000"/>
