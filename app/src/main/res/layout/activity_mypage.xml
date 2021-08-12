@@ -116,6 +116,9 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/rectangle"
         android:padding="5dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintEnd_toStartOf="@+id/layout_myinfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_name">
@@ -159,6 +162,9 @@
         android:layout_marginEnd="30dp"
         android:background="@drawable/rectangle"
         android:padding="5dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/layout_scrap"
         app:layout_constraintTop_toBottomOf="@+id/layout_name">
@@ -193,11 +199,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_notice"
+        android:id="@+id/layout_reserve"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/top_bottom_stroke"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintTop_toBottomOf="@+id/layout_scrap">
 
         <TextView
@@ -208,7 +217,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:gravity="center_horizontal"
-            android:text="공지사항"
+            android:text="MY 예약"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -229,11 +238,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_cs"
+        android:id="@+id/layout_coupon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_stroke"
-        app:layout_constraintTop_toBottomOf="@+id/layout_notice"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/layout_reserve"
         tools:layout_editor_absoluteX="16dp">
 
         <ImageView
@@ -255,7 +267,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="고객센터"
+            android:text="MY 쿠폰함"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -265,11 +277,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_policy"
+        android:id="@+id/layout_cs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_stroke"
-        app:layout_constraintTop_toBottomOf="@+id/layout_cs">
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/layout_coupon">
 
         <ImageView
             android:id="@+id/imageView7"
@@ -290,7 +305,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="약관 및 정책"
+            android:text="고객 센터"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -303,7 +318,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_stroke"
-        app:layout_constraintTop_toBottomOf="@+id/layout_policy"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/layout_cs"
         tools:layout_editor_absoluteX="0dp">
 
         <ImageView
@@ -325,7 +343,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="현재 버전 정보"
+            android:text="버전 정보"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"

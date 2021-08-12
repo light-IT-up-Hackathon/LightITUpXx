@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.lightitupxx.R
+import org.jetbrains.anko.startActivity
 
 class MypageActivity:AppCompatActivity(){
 
@@ -12,8 +14,8 @@ class MypageActivity:AppCompatActivity(){
     lateinit var layoutName:View
     lateinit var layoutScrap:View
     lateinit var layoutMyinfo:View
-    lateinit var layoutNotice:View
-    lateinit var layoutPolicy: View
+    lateinit var layoutReserve:View
+    lateinit var layoutCoupon: View
     lateinit var layoutVersion:View
     lateinit var layoutCS:View
 
@@ -21,30 +23,31 @@ class MypageActivity:AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mypage)
 
-        layoutName=findViewById(R.id.layout_name)
-        layoutScrap=findViewById(R.id.layout_scrap)
-        layoutNotice=findViewById(R.id.layout_notice)
-        layoutCS=findViewById(R.id.layout_cs)
-        layoutMyinfo=findViewById(R.id.layout_myinfo)
-        layoutPolicy=findViewById(R.id.layout_policy)
-        layoutVersion=findViewById(R.id.layout_version)
+        layoutName=findViewById<ConstraintLayout>(R.id.layout_name)
+        layoutScrap=findViewById<ConstraintLayout>(R.id.layout_scrap)
+        layoutReserve=findViewById<ConstraintLayout>(R.id.layout_reserve)
+        layoutCoupon=findViewById<ConstraintLayout>(R.id.layout_coupon)
+        layoutMyinfo=findViewById<ConstraintLayout>(R.id.layout_myinfo)
+        layoutCS=findViewById<ConstraintLayout>(R.id.layout_cs)
+        layoutVersion=findViewById<ConstraintLayout>(R.id.layout_version)
+
         backButton = findViewById(R.id.img_myPageBack)
 
-//        backButton.setOnClickListener {
-//            onBackPressed()
-//        }
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
 
         scrapLayoutEvent()
         myinfoLayoutEvent()
-        noticeLayoutEvent()
+        reserveLayoutEvent()
         csLayoutEvent()
-        policyLayoutEvent()
+        couponLayoutEvent()
         versionLayoutEvent()
     }
 
     private fun scrapLayoutEvent(){
         layoutScrap.setOnClickListener {
-            (Toast.makeText(this, "scrap!!", Toast.LENGTH_SHORT)).show()
+            startActivity<ScrapActivity>()
         }
     }
     private fun myinfoLayoutEvent(){
@@ -52,24 +55,24 @@ class MypageActivity:AppCompatActivity(){
             (Toast.makeText(this, "myInfo!!", Toast.LENGTH_SHORT)).show()
         }
     }
-    private fun noticeLayoutEvent(){
-        layoutNotice.setOnClickListener {
-            (Toast.makeText(this, "notice!!", Toast.LENGTH_SHORT)).show()
+    private fun reserveLayoutEvent(){
+        layoutReserve.setOnClickListener {
+            startActivity<MypageReserveActivity>()
+        }
+    }
+    private fun couponLayoutEvent(){
+        layoutCoupon.setOnClickListener {
+            startActivity<CouponActivity>()
         }
     }
     private fun csLayoutEvent(){
         layoutCS.setOnClickListener {
-            (Toast.makeText(this, "CS!!", Toast.LENGTH_SHORT)).show()
-        }
-    }
-    private fun policyLayoutEvent(){
-        layoutPolicy.setOnClickListener {
-            (Toast.makeText(this, "policy!!", Toast.LENGTH_SHORT)).show()
+            startActivity<MypageCsActivity>()
         }
     }
     private fun versionLayoutEvent(){
         layoutVersion.setOnClickListener {
-            (Toast.makeText(this, "version!!", Toast.LENGTH_SHORT)).show()
+            startActivity<MypageVersionActivity>()
         }
     }
 }
