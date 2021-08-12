@@ -12,7 +12,7 @@ class SaunaDetailActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saunadetail)
 
-        callsaunaBtn.setOnClickListener {
+        callsauna.setOnClickListener {
             var intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel: 02-465-4500")
             startActivity(intent)
