@@ -35,7 +35,6 @@ class HomeActivity: AppCompatActivity() {
         //view 연결
         layoutHospital = findViewById<ConstraintLayout>(R.id.layout_Hospital)
         layoutleisure = findViewById<ConstraintLayout>(R.id.layout_Leisure)
-        layoutpublic = findViewById<ConstraintLayout>(R.id.layout_public)
         layoutHome = findViewById<ConstraintLayout>(R.id.layout_home)
         layoutMypage=findViewById(R.id.layout_mypage)
         searchBox = findViewById(R.id.searchBox)
@@ -57,17 +56,13 @@ class HomeActivity: AppCompatActivity() {
     }
     private fun leisureLayoutEvent(){
         layoutleisure.setOnClickListener {
-            layoutleisure.setOnClickListener {
                 startActivity<LeisureFacilityListActivity>()
-            }
         }
 
     }
     private fun homeLayoutEvent(){
         layoutHome.setOnClickListener {
-            layoutHome.setOnClickListener {
                 startActivity<HomeFacilityListAcitvity>()
-            }
         }
     }
     private fun mypageLayoutEvent(){

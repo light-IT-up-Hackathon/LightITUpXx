@@ -113,6 +113,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rectangle"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+
         app:layout_constraintBottom_toTopOf="@+id/layout_mypage"
         app:layout_constraintEnd_toStartOf="@+id/layout_home"
         app:layout_constraintStart_toStartOf="parent">
@@ -159,6 +163,9 @@
         android:background="@drawable/rectangle"
         app:layout_constraintEnd_toEndOf="@+id/layout_Hospital"
         app:layout_constraintStart_toStartOf="parent"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
         <TextView
@@ -196,6 +203,9 @@
         android:layout_marginEnd="52dp"
         android:background="@drawable/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintStart_toStartOf="@+id/layout_home"
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
@@ -222,6 +232,9 @@
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rectangle"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toTopOf="@+id/layout_mypage"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -262,7 +275,10 @@
         android:background="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
 
         <TextView
             android:id="@+id/tv_mypage"

@@ -22,8 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LightITUpXx">
-        <activity android:name=".activity.category.HomeFacilityListAcitvity"></activity>
-        <activity android:name=".activity.category.LeisureFacilityListActivity" /> <!-- 라이브러리 사용 설정 -->
+
+        <!-- 라이브러리 사용 설정 -->
         <uses-library android:name="com.google.android.maps" />
         <uses-library
             android:name="org.apache.http.legacy"
@@ -35,6 +35,14 @@
             android:name="com.google.android.gms.vision"
             android:value="@integer/google_play_services_version" />
 
+        <activity android:name=".activity.member.MypageVersionActivity"/>
+        <activity android:name=".activity.member.MypageReserveActivity" />
+        <activity android:name=".activity.member.MypageCsActivity" />
+        <activity android:name=".activity.member.CouponActivity"/>
+        <activity android:name=".activity.member.ScrapActivity"/>
+        <activity android:name=".activity.category.HomeFacilityListAcitvity" />
+        <activity android:name=".activity.detail.PTshopDetailActivity" />
+        <activity android:name=".activity.category.LeisureFacilityListActivity" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.detail.FragmentMapActivity" />
         <activity android:name=".activity.category.HospitalListActivity" />
