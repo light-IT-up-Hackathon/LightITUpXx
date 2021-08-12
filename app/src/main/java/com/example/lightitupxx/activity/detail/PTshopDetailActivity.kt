@@ -1,23 +1,21 @@
-package com.example.lightitupxx.activity
+package com.example.lightitupxx.activity.detail
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lightitupxx.R
-import kotlinx.android.synthetic.main.activity_hospitaldetail.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
+import kotlinx.android.synthetic.main.activity_ptshopdetail.*
 
-class HospitalDetailActivity : AppCompatActivity() {
+class PTshopDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hospitaldetail)
+        setContentView(R.layout.activity_ptshopdetail)
 
-        callhospital.setOnClickListener {
+        callptshop.setOnClickListener {
             var intent = Intent(Intent.ACTION_DIAL)
-            intent.data= Uri.parse("tel: 02-938-5557")
+            intent.data = Uri.parse("tel: 02-976-4500")
             startActivity(intent)
         }
-
     }
 }

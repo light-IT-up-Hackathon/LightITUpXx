@@ -4,8 +4,7 @@
     <!-- 필요한 권한 생성 -->
     <permission
         android:name="com.example.my38_locationmap.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature" />
-    <!-- 권한 부여 설정 -->
+        android:protectionLevel="signature" /> <!-- 권한 부여 설정 -->
     <uses-permission android:name="com.example.my38_locationmap.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="READ_GSERVICES" />
@@ -28,8 +27,7 @@
         <uses-library android:name="com.google.android.maps" />
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false" />
-        <!-- 이거 등록하기 -->
+            android:required="false" /> <!-- 이거 등록하기 -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDKZKu_ItkotzeK_4jabxq-RcfK-yn61x0" />
@@ -37,27 +35,31 @@
             android:name="com.google.android.gms.vision"
             android:value="@integer/google_play_services_version" />
 
+        <activity android:name=".activity.member.MypageVersionActivity"/>
+        <activity android:name=".activity.member.MypageReserveActivity" />
+        <activity android:name=".activity.member.MypageCsActivity" />
+        <activity android:name=".activity.member.CouponActivity"/>
+        <activity android:name=".activity.member.ScrapActivity"/>
+        <activity android:name=".activity.category.HomeFacilityListAcitvity" />
+        <activity android:name=".activity.detail.PTshopDetailActivity" />
+        <activity android:name=".activity.category.LeisureFacilityListActivity" />
         <activity android:name=".activity.MainActivity" />
-
-        <activity android:name=".activity.FragmentMapActivity" />
-        <activity android:name=".activity.CategoryActivity"/>
-        <activity android:name=".activity.MypageActivity"/>
-        <activity android:name=".activity.HospitalDetailActivity"/>
-
+        <activity android:name=".activity.detail.FragmentMapActivity" />
+        <activity android:name=".activity.category.HospitalListActivity" />
+        <activity android:name=".activity.member.MypageActivity" />
+        <activity android:name=".activity.detail.HospitalDetailActivity" />
         <activity android:name=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+
         <activity android:name=".activity.CheckmyinfoActivity">
 
         </activity>
-
-
-
-
 
     </application>
 

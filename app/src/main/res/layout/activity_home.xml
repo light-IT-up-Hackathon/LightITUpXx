@@ -103,17 +103,23 @@
         app:layout_constraintTop_toBottomOf="@+id/searchLayout" />
 
     <!--hospital-->
+
+    <!--Leisure-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_Hospital"
         android:layout_width="143dp"
         android:layout_height="163dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="14dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/rectangle"
-        app:layout_constraintEnd_toStartOf="@+id/layout_Leisure"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+
+        app:layout_constraintBottom_toTopOf="@+id/layout_mypage"
+        app:layout_constraintEnd_toStartOf="@+id/layout_home"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/tv_hospital"
@@ -144,17 +150,22 @@
             app:srcCompat="@drawable/hospital_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--Leisure-->
+    <!--public facilities-->
+
+    <!--home-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_Leisure"
         android:layout_width="143dp"
         android:layout_height="163dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/rectangle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/layout_Hospital"
+        app:layout_constraintEnd_toEndOf="@+id/layout_Hospital"
+        app:layout_constraintStart_toStartOf="parent"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
         <TextView
@@ -184,60 +195,48 @@
             app:srcCompat="@drawable/leisure_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--public facilities-->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_public"
+        android:id="@+id/layout_help"
         android:layout_width="143dp"
         android:layout_height="163dp"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="52dp"
         android:background="@drawable/rectangle"
-        app:layout_constraintEnd_toStartOf="@+id/layout_home"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_Hospital">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="@+id/layout_home"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
 
         <TextView
-            android:id="@+id/tv_public"
+            android:id="@+id/tv_help"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:clickable="false"
-            android:text="공용시설"
+            android:text="우야노"
             android:textColor="@color/black"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/layout_public"
-            app:layout_constraintStart_toStartOf="@+id/layout_public"
-            app:layout_constraintTop_toTopOf="@+id/layout_public" />
-
-        <ImageView
-            android:id="@+id/img_public"
-            android:layout_width="113dp"
-            android:layout_height="62dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="14dp"
-            android:clickable="false"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_public"
-            app:srcCompat="@drawable/facility_logo" />
+            app:layout_constraintTop_toTopOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--home-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_home"
         android:layout_width="143dp"
         android:layout_height="163dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/rectangle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/layout_public"
-        app:layout_constraintTop_toBottomOf="@+id/layout_Leisure">
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/layout_mypage"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:id="@+id/tv_house"
@@ -271,12 +270,15 @@
         android:layout_width="313dp"
         android:layout_height="43dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="45dp"
         android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_public">
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
 
         <TextView
             android:id="@+id/tv_mypage"
