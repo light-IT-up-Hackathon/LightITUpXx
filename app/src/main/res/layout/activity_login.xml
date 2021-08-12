@@ -44,7 +44,7 @@
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/etv_login_id"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
@@ -57,8 +57,8 @@
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintEnd_toStartOf="@+id/etv_login_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/etv_login_id" />
 
     <TextView
         android:id="@+id/textView5"
@@ -74,10 +74,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tv_joining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etv_login_id"
         android:layout_width="210dp"
         android:layout_height="37dp"
         android:layout_marginTop="32dp"
@@ -99,12 +99,12 @@
         android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="10sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/etv_login_pwd"
         android:layout_width="210dp"
         android:layout_height="37dp"
         android:layout_marginTop="16dp"
@@ -112,11 +112,12 @@
         android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/etv_login_id" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_login"
         android:layout_width="211dp"
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
@@ -128,5 +129,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/etv_login_pwd" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
