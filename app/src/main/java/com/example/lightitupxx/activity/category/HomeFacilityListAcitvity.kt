@@ -96,11 +96,11 @@ class HomeFacilityListAcitvity : AppCompatActivity() {
         leisure_jun.add(Facility_info (R.drawable.h_image1,"[세종전세]","전세","평일 08시~20시","서울시 노원구"))
         leisure_jun.add(Facility_info (R.drawable.h_image1,"[태릉전세]","전세","평일 09시~20시","인천시 계양구"))
 
-        leisure_meme.add(Facility_info (R.drawable.h_image2,"[감자피매매]","매매","평일 09시~20시","인천시 계양구"))
-        leisure_meme.add(Facility_info (R.drawable.h_image2,"[김성연매매]","매매","평일 08시~20시","인천시 계양구"))
-        leisure_meme.add(Facility_info (R.drawable.h_image2,"[이소아피매매]","매매","평일 09시~20시","경기도 고양시"))
-        leisure_meme.add(Facility_info (R.drawable.h_image2,"[안예린매매]","매매","평일 10시~20시","서울시 구로구"))
-        leisure_meme.add(Facility_info (R.drawable.h_image2,"[한유림매매]","매매","평일 08시~20시","서울시 노원구"))
-        leisure_meme.add(Facility_info (R.drawable.h_image2,"[해커톤매매]","매매","평일 09시~20시","인천시 계양구"))
+        leisure_meme.add(Facility_info (R.drawable.img_home_joogong,"[상계주공7단지]","매매","107동 1103호","인천시 계양구"))
+        leisure_meme.add(Facility_info (R.drawable.img_home_ganyoung,"[건영2차]","매매","102동 705호","인천시 계양구"))
+        leisure_meme.add(Facility_info (R.drawable.img_home_sung,"[성원]","매매","403동 104호","경기도 고양시"))
+        leisure_meme.add(Facility_info (R.drawable.img_home_green,"[중계그린]","매매","113동 104호","서울시 구로구"))
+        leisure_meme.add(Facility_info (R.drawable.img_home_hansin,"[한신3차]","매매","301동 209호","서울시 노원구"))
+        leisure_meme.add(Facility_info (R.drawable.img_home_sunglim,"[성림]","매매","901동 506호","인천시 계양구"))
     }
 }

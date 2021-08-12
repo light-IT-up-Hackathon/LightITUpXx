@@ -96,10 +96,7 @@ class HospitalListActivity : AppCompatActivity() {
             recyclerGridView_hospital.adapter=facilityAdapter_jung
             recyclerGridView_hospital.layoutManager= GridLayoutManager(applicationContext,2)
         }
-        else if(field[position].location=="치과"){
-            recyclerGridView_hospital.adapter=facilityAdapter_chi
-            recyclerGridView_hospital.layoutManager= GridLayoutManager(applicationContext,2)
-        }
+
     }
 
     private fun setField(fieldAdapter: FieldAdapter) {
@@ -108,49 +105,44 @@ class HospitalListActivity : AppCompatActivity() {
         field.add(LocationItem("피부과"))
         field.add(LocationItem("이비인후과"))
         field.add(LocationItem("정형외과"))
-        field.add(LocationItem("치과"))
+
     }
 
     private fun setHospitalsList(){
-        hospital_san.add(Facility_info (R.drawable.h_image0,"[엠엔비여성의원]","산부인과","평일 09시~20시","인천시 계양구"))
-        hospital_san.add(Facility_info (R.drawable.h_image0,"[김성연의원]","산부인과","평일 08시~20시","인천시 계양구"))
-        hospital_san.add(Facility_info (R.drawable.h_image0,"[이소아의원]","산부인과","평일 09시~20시","경기도 고양시"))
-        hospital_san.add(Facility_info (R.drawable.h_image0,"[안예린의원]","산부인과","평일 10시~20시","서울시 구로구"))
-        hospital_san.add(Facility_info (R.drawable.h_image0,"[한유림의원]","산부인과","평일 08시~20시","서울시 노원구"))
-        hospital_san.add(Facility_info (R.drawable.h_image0,"[복음병원]","산부인과","평일 09시~20시","인천시 계양구"))
+        hospital_san.add(Facility_info (R.drawable.hospital,"[남미현산부인과의원]","산부인과","평일 09시~19시","서울시 노원구"))
+        hospital_san.add(Facility_info (R.drawable.img_obhospital_park,"[박경숙산부인과]","산부인과","평일 09시~18시","서울시 노원구"))
+        hospital_san.add(Facility_info (R.drawable.img_obhospital_ab,"[에비뉴여성의원]","산부인과","평일 10시~19시","서울시 노원구"))
+        hospital_san.add(Facility_info (R.drawable.img_ophospital_piona,"[피오나여성의원]","산부인과","평일 09시~21시","서울시 노원구"))
+        hospital_san.add(Facility_info (R.drawable.img_obhospital_lee,"[이가영산부인과의원]","산부인과","평일 09~19시","서울시 노원구"))
+        hospital_san.add(Facility_info (R.drawable.img_obhospital_gyu,"[박규희산부인과의원]","산부인과","평일 09시~17시","서울시 노원구"))
 
-        hospitals_ne.add(Facility_info (R.drawable.h_image1,"[우리내과]","내과","평일 09시~20시","인천시 계양구"))
-        hospitals_ne.add(Facility_info (R.drawable.h_image1,"[서울내과]","내과","평일 08시~20시","인천시 계양구"))
-        hospitals_ne.add(Facility_info (R.drawable.h_image1,"[이소아내과]","내과","평일 09시~20시","경기도 고양시"))
-        hospitals_ne.add(Facility_info (R.drawable.h_image1,"[최고내과]","내과","평일 10시~20시","서울시 구로구"))
-        hospitals_ne.add(Facility_info (R.drawable.h_image1,"[세종내과]","내과","평일 08시~20시","서울시 노원구"))
-        hospitals_ne.add(Facility_info (R.drawable.h_image1,"[태릉내과]","내과","평일 09시~20시","인천시 계양구"))
+        hospitals_ne.add(Facility_info (R.drawable.img_imhospital_365,"[365열린의원]","내과","평일 09시~22시","서울시 노원구"))
+        hospitals_ne.add(Facility_info (R.drawable.img_imhospital_healthy,"[건강미소내과의원]","내과","평일 08시~19시","서울시 노원구"))
+        hospitals_ne.add(Facility_info (R.drawable.img_imhospital_kim,"[김앤박내과의원]","내과","평일 09시~18시","서울시 노원구"))
+        hospitals_ne.add(Facility_info (R.drawable.img_imhospital_micro,"[태능마이크로병원]","내과","평일 09시~18시","서울시 노원구"))
+        hospitals_ne.add(Facility_info (R.drawable.img_imhospital_jaemin,"[제민통합내과정형외과의원]","내과","평일 09시~18시","서울시 노원구"))
+        hospitals_ne.add(Facility_info (R.drawable.img_imhospital_samsung,"[삼성바른내과의원]","내과","평일 08시~18시","서울시 노원구"))
 
-        hospitals_pi.add(Facility_info (R.drawable.h_image2,"[감자피부과]","피부과","평일 09시~20시","인천시 계양구"))
-        hospitals_pi.add(Facility_info (R.drawable.h_image2,"[김성연피부과]","피부과","평일 08시~20시","인천시 계양구"))
-        hospitals_pi.add(Facility_info (R.drawable.h_image2,"[이소아피부과]","피부과","평일 09시~20시","경기도 고양시"))
-        hospitals_pi.add(Facility_info (R.drawable.h_image2,"[안예린피부과]","피부과","평일 10시~20시","서울시 구로구"))
-        hospitals_pi.add(Facility_info (R.drawable.h_image2,"[한유림피부과]","피부과","평일 08시~20시","서울시 노원구"))
-        hospitals_pi.add(Facility_info (R.drawable.h_image2,"[해커톤피부과]","피부과","평일 09시~20시","인천시 계양구"))
+        hospitals_pi.add(Facility_info (R.drawable.img_pshospital_doc,"[닥터쁘띠의원]","피부과","평일 10시~20시","서울시 노원구"))
+        hospitals_pi.add(Facility_info (R.drawable.img_pshospital_clean,"[클린업피부과의원]","피부과","평일 10시~20시","서울시 노원구"))
+        hospitals_pi.add(Facility_info (R.drawable.img_pshospital_tox,"[톡스앤필의원]","피부과","평일 10시~20시","서울시 노원구"))
+        hospitals_pi.add(Facility_info (R.drawable.img_pshostpital_cha,"[차앤박피부과의원]","피부과","평일 10시~20시","서울시 노원구"))
+        hospitals_pi.add(Facility_info (R.drawable.img_shospital_abee,"[아비쥬의원]","피부과","평일 10시~20시","서울시 노원구"))
+        hospitals_pi.add(Facility_info (R.drawable.img_pshospital_oaro,"[오아로피부과의원]","피부과","평일 10시~20시","서울시 노원구"))
 
-        hospitals_ebi.add(Facility_info (R.drawable.h_image3,"[뀨이비인후과]","이비인후과","평일 09시~20시","인천시 계양구"))
-        hospitals_ebi.add(Facility_info (R.drawable.h_image3,"[이비인후과]","이비인후과","평일 08시~20시","인천시 계양구"))
-        hospitals_ebi.add(Facility_info (R.drawable.h_image3,"[가이비인후과]","이비인후과","평일 09시~20시","경기도 고양시"))
-        hospitals_ebi.add(Facility_info (R.drawable.h_image3,"[나이비인후과]","이비인후과","평일 10시~20시","서울시 구로구"))
-        hospitals_ebi.add(Facility_info (R.drawable.h_image3,"[다이비인후과]","이비인후과","평일 08시~20시","서울시 노원구"))
-        hospitals_ebi.add(Facility_info (R.drawable.h_image3,"[라이비인후과]","이비인후과","평일 09시~20시","인천시 계양구"))
+        hospitals_ebi.add(Facility_info (R.drawable.img_enthospital_sky,"[새하늘이비인후과의원]","이비인후과","평일 09시~19시","서울시 노원구"))
+        hospitals_ebi.add(Facility_info (R.drawable.img_enthospital_feel,"[기분조은이비인후과의원]","이비인후과","평일 08시~19시","서울시 노원구"))
+        hospitals_ebi.add(Facility_info (R.drawable.img_enthospital_smart,"[스마트의원]","이비인후과","평일 10시~20시","서울시 노원구"))
+        hospitals_ebi.add(Facility_info (R.drawable.img_enthospital_beandbe,"[비앤비이비인후과의원]","이비인후과","평일 09시~18시","서울시 노원구"))
+        hospitals_ebi.add(Facility_info (R.drawable.img_enthospital_dasom,"[다솜이비인후과의원]","이비인후과","평일 09시~18시","서울시 노원구"))
+        hospitals_ebi.add(Facility_info (R.drawable.img_enthospital_cool,"[시원한이비인후과의원]","이비인후과","평일 09시~18시","서울시 노원구"))
 
-        hospitals_jung.add(Facility_info (R.drawable.h_image4,"[서울정형외과]","정형외과","평일 09시~20시","인천시 계양구"))
-        hospitals_jung.add(Facility_info (R.drawable.h_image4,"[드림정형외과]","정형외과","평일 08시~20시","인천시 계양구"))
-        hospitals_jung.add(Facility_info (R.drawable.h_image4,"[비정형외과]","정형외과","평일 09시~20시","경기도 고양시"))
-        hospitals_jung.add(Facility_info (R.drawable.h_image4,"[반정형외과]","정형외과","평일 10시~20시","서울시 구로구"))
-        hospitals_jung.add(Facility_info (R.drawable.h_image4,"[개정형외과]","정형외과","평일 08시~20시","서울시 노원구"))
+        hospitals_jung.add(Facility_info (R.drawable.img_oshospital_mady,"[노원마디본의원]","정형외과","평일 09시~20시","서울시 노원구"))
+        hospitals_jung.add(Facility_info (R.drawable.img_oshospital_bang,"[방병원]","정형외과","평일 08시~17시","서울시 노원구"))
+        hospitals_jung.add(Facility_info (R.drawable.img_oshospital_strong,"[굳쎈정형외과의원]","정형외과","평일 09시~18시","서울시 노원구"))
+        hospitals_jung.add(Facility_info (R.drawable.img_hospital_sangmo,"[성모오케이정형외과의원]","정형외과","평일 09시~18시","서울시 노원구"))
+        hospitals_jung.add(Facility_info (R.drawable.img_oshospital_nobos,"[서울노보스병원]","정형외과","평일 09시~18시","서울시 노원구"))
 
-        hospitals_chi.add(Facility_info (R.drawable.h_image5,"[서울치과]","치과","평일 09시~20시","인천시 계양구"))
-        hospitals_chi.add(Facility_info (R.drawable.h_image5,"[이상해치과]","치과","평일 08시~20시","인천시 계양구"))
-        hospitals_chi.add(Facility_info (R.drawable.h_image5,"[안아파치과]","치과","평일 09시~20시","경기도 고양시"))
-        hospitals_chi.add(Facility_info (R.drawable.h_image5,"[나몰라치과]","치과","평일 10시~20시","서울시 구로구"))
-        hospitals_chi.add(Facility_info (R.drawable.h_image5,"[같이봐치과]","치과","평일 08시~20시","서울시 노원구"))
     }
 }
 
