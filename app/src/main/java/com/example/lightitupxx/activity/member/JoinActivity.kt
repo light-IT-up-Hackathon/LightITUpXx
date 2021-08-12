@@ -28,8 +28,8 @@ class JoinActivity: AppCompatActivity() {
         btn_join.setOnClickListener {
             if(etv_birth.text.substring(6).equals("4")|| etv_birth.text.substring(6).equals("2")) {
                 var intent = Intent(this, LoginActivity::class.java)
-                intent.putExtra("id", etv_id.text.toString())
-                intent.putExtra("pwd", etv_pwd.text.toString())
+                user.id=etv_id.text.toString()
+                user.pwd=etv_pwd.text.toString()
                 startActivity(intent)
             }else{
                 Toast.makeText(this, "엑스엑스는 \n여성만 가입 가능한 어플입니다.",Toast.LENGTH_SHORT).show()
