@@ -1,4 +1,4 @@
-package com.example.lightitupxx.activity
+package com.example.lightitupxx.activity.member
 
 import android.os.Bundle
 import android.view.View

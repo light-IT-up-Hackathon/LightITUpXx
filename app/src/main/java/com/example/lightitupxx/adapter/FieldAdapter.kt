@@ -12,7 +12,7 @@ import java.util.*
 class FieldAdapter(val locationList : ArrayList<LocationItem>): RecyclerView.Adapter<FieldAdapter.CustomViewHolder>() {
     //뷰홀더가 처음 생성될때
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_main2, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_field, parent, false)
         return CustomViewHolder(view)
     }
 

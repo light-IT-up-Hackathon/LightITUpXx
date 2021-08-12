@@ -6,14 +6,14 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lightitupxx.Hospitals_info
+import com.example.lightitupxx.Facility_info
 import com.example.lightitupxx.R
 import java.util.*
 
-class HospitalAdapter (val hospitalList : ArrayList<Hospitals_info>): RecyclerView.Adapter<HospitalAdapter.CustomViewHolder1>() {
+class HospitalAdapter (val hospitalList : ArrayList<Facility_info>): RecyclerView.Adapter<HospitalAdapter.CustomViewHolder1>() {
     //뷰홀더가 처음 생성될때
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder1 {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_griditem, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_griditem_hospital, parent, false)
         return CustomViewHolder1(view)
     }
     //재활용해주는 곳 및 값을 넣어주는 곳
@@ -27,7 +27,7 @@ class HospitalAdapter (val hospitalList : ArrayList<Hospitals_info>): RecyclerVi
     //뷰홀더 클래스(음료수처럼 잡아주는 홀더)
     //이곳에서 파인드뷰아이디로 리스트 아이템에 있는 뷰들을 참조한다.
     inner class CustomViewHolder1(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        fun bindItems(hospitals: Hospitals_info){
+        fun bindItems(hospitals: Facility_info ){
             val h_Image = itemView.findViewById<ImageView>(R.id.imageView_hospital) //병원 종류
             val h_name = itemView.findViewById<TextView>(R.id.hospital_name)
             val h_field = itemView.findViewById<TextView>(R.id.hospital_field)
