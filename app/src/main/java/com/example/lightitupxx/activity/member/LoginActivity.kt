@@ -9,6 +9,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lightitupxx.R
 import com.example.lightitupxx.activity.HomeActivity
+import com.example.lightitupxx.api.userClass
+
+public var user=userClass("","","")
 
 class LoginActivity: AppCompatActivity() {
 
@@ -31,9 +34,9 @@ class LoginActivity: AppCompatActivity() {
         }
 
         btn_login.setOnClickListener{
-            if (intent.hasExtra("id")) {
-                if (intent.getStringExtra("id").toString().contentEquals(etv_login_id.text)) {
-                    if (intent.getStringExtra("pwd").toString().contentEquals(etv_login_pwd.text)) {
+            if (!user.id.equals("")) {
+                if (user.id.contentEquals(etv_login_id.text)) {
+                    if (user.pwd.contentEquals(etv_login_pwd.text)) {
                         startActivity(Intent(this, HomeActivity::class.java))
                     } else {
                         Toast.makeText(this, "비밀번호가 틀립니다.", Toast.LENGTH_SHORT).show()

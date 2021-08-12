@@ -42,6 +42,7 @@
         <activity android:name=".activity.member.CouponActivity"/>
         <activity android:name=".activity.member.ScrapActivity"/>
         <activity android:name=".activity.member.JoinActivity"/>
+        <activity android:name=".activity.member.LoginActivity"/>
 
         <activity android:name=".activity.category.HomeFacilityListAcitvity" />
         <activity android:name=".activity.detail.PTshopDetailActivity" />
@@ -50,9 +51,8 @@
         <activity android:name=".activity.detail.FragmentMapActivity" />
         <activity android:name=".activity.category.HospitalListActivity" />
         <activity android:name=".activity.detail.HospitalDetailActivity" />
-        <activity android:name=".activity.HomeActivity" />
 
-        <activity android:name=".activity.member.LoginActivity">
+        <activity android:name=".activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
