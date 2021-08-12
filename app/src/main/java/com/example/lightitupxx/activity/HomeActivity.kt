@@ -8,6 +8,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.lightitupxx.R
+import com.example.lightitupxx.activity.category.HomeFacilityListAcitvity
+import com.example.lightitupxx.activity.category.HospitalListActivity
+import com.example.lightitupxx.activity.category.LeisureFacilityListActivity
+import com.example.lightitupxx.activity.member.MypageActivity
 import org.jetbrains.anko.startActivity
 
 
@@ -40,7 +44,6 @@ class HomeActivity: AppCompatActivity() {
         //함수 및 기능 구현
         hospitalLayoutEvent()
         leisureLayoutEvent()
-        publicFacilityLayoutEvent()
         homeLayoutEvent()
         mypageLayoutEvent()
         searchButtonEvent()
@@ -49,28 +52,21 @@ class HomeActivity: AppCompatActivity() {
     //functions--> clickable layout including child
     private fun hospitalLayoutEvent(){
         layoutHospital.setOnClickListener {
-            startActivity<CategoryActivity>()
+            startActivity<HospitalListActivity>()
         }
     }
     private fun leisureLayoutEvent(){
         layoutleisure.setOnClickListener {
             layoutleisure.setOnClickListener {
-                startActivity<CategoryActivity>()
+                startActivity<LeisureFacilityListActivity>()
             }
         }
 
     }
-    private fun publicFacilityLayoutEvent(){
-        layoutpublic.setOnClickListener {
-            layoutpublic.setOnClickListener {
-                startActivity<CategoryActivity>()
-            }
-        }
-    }
     private fun homeLayoutEvent(){
         layoutHome.setOnClickListener {
             layoutHome.setOnClickListener {
-                startActivity<CategoryActivity>()
+                startActivity<HomeFacilityListAcitvity>()
             }
         }
     }

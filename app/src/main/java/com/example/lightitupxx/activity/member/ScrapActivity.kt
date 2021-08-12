@@ -1,4 +1,4 @@
-package com.example.lightitupxx.activity
+package com.example.lightitupxx.activity.member
 
 import android.content.Intent
 import android.net.Uri
