@@ -6,10 +6,8 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lightitupxx.R
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.MapsInitializer
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.*
+import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
@@ -35,10 +33,17 @@ class FragmentMapActivity: AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         Log.d(TAG, "onMapReady: ");
         val sydney = LatLng(-33.852, 151.211)
+
         googleMap.addMarker(
             MarkerOptions()
                 .position(sydney)
                 .title("Marker in Sydney")
         )
+        val cameraPosition = CameraPosition.builder()
+            .target(sydney)
+            .zoom(15.0f)
+            .build()
+
+        googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
     }
 }

@@ -28,6 +28,7 @@ class HomeFacilityListAcitvity : AppCompatActivity() {
     val leisure_jun = ArrayList<Facility_info >()
     val leisure_meme= ArrayList<Facility_info >()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_facility_list_acitvity)
