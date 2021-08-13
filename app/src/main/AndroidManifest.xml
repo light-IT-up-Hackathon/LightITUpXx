@@ -17,6 +17,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".activity.community.MyApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -27,7 +28,9 @@
         <uses-library android:name="com.google.android.maps" />
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false" /> <!-- 이거 등록하기 -->
+            android:required="false" />
+
+        <!-- 이거 등록하기 -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDKZKu_ItkotzeK_4jabxq-RcfK-yn61x0" />
@@ -35,34 +38,43 @@
             android:name="com.google.android.gms.vision"
             android:value="@integer/google_play_services_version" />
 
-        <!--액티비티들-->
-        <activity android:name=".activity.member.MypageVersionActivity"/>
+        <!-- 액티비티들 -->
+        <activity
+            android:name=".activity.community.CommuRegActivity"
+            android:label="@string/title_activity_commu_reg"
+            android:theme="@style/Theme.LightITUpXx.NoActionBar" />
+        <activity
+            android:name=".activity.community.CommuMainActivity"
+            android:label="@string/title_activity_commu_main"
+            android:theme="@style/Theme.LightITUpXx.NoActionBar" />
+        <activity android:name=".activity.community.CommuAddCommentActivity"/>
+        <activity android:name=".activity.community.CommuContentActivity" />
+        <activity android:name=".activity.member.MypageVersionActivity" />
         <activity android:name=".activity.member.MypageReserveActivity" />
         <activity android:name=".activity.member.MypageActivity" />
         <activity android:name=".activity.member.MypageCsActivity" />
-        <activity android:name=".activity.member.CouponActivity"/>
-        <activity android:name=".activity.member.ScrapActivity"/>
-        <activity android:name=".activity.member.JoinActivity"/>
-        <activity android:name=".activity.member.LoginActivity"/>
+        <activity android:name=".activity.member.CouponActivity" />
+        <activity android:name=".activity.member.ScrapActivity" />
+        <activity android:name=".activity.member.JoinActivity" />
+        <activity android:name=".activity.member.LoginActivity" />
         <activity android:name=".activity.category.HomeFacilityListAcitvity" />
         <activity android:name=".activity.detail.PTshopDetailActivity" />
         <activity android:name=".activity.category.LeisureFacilityListActivity" />
-
-        <activity android:name=".activity.MainActivity"
+        <activity
+            android:name=".activity.MainActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activity.detail.FragmentMapActivity"/>
+        <activity android:name=".activity.detail.FragmentMapActivity" />
         <activity android:name=".activity.category.HospitalListActivity" />
         <activity android:name=".activity.detail.HospitalDetailActivity" />
-        <activity android:name=".activity.HomeActivity"/>
-        <activity android:name=".activity.CheckmyinfoActivity"/>
-
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.CheckmyinfoActivity" />
     </application>
 
 </manifest>

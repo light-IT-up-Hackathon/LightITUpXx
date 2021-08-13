@@ -1,6 +1,5 @@
 package com.example.lightitupxx.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -12,7 +11,11 @@ import com.example.lightitupxx.R
 import com.example.lightitupxx.activity.category.HomeFacilityListAcitvity
 import com.example.lightitupxx.activity.category.HospitalListActivity
 import com.example.lightitupxx.activity.category.LeisureFacilityListActivity
+import com.example.lightitupxx.activity.community.CommuMainActivity
 import com.example.lightitupxx.activity.member.MypageActivity
+import io.realm.Realm
+import io.realm.RealmConfiguration
+import io.realm.exceptions.RealmMigrationNeededException
 import org.jetbrains.anko.startActivity
 
 
@@ -20,7 +23,7 @@ class HomeActivity: AppCompatActivity() {
     //변수 미리 선언
     private lateinit var layoutHospital:View
     private lateinit var layoutleisure:View
-    private lateinit var layoutpublic:View
+    private lateinit var layouthelp:View
     private lateinit var layoutHome:View
     private lateinit var layoutMypage:View
     private lateinit var searchBox:EditText
@@ -37,6 +40,7 @@ class HomeActivity: AppCompatActivity() {
         layoutHospital = findViewById<ConstraintLayout>(R.id.layout_Hospital)
         layoutleisure = findViewById<ConstraintLayout>(R.id.layout_Leisure)
         layoutHome = findViewById<ConstraintLayout>(R.id.layout_home)
+        layouthelp=findViewById<ConstraintLayout>(R.id.layout_help)
         layoutMypage=findViewById(R.id.layout_mypage)
         searchBox = findViewById(R.id.searchBox)
         searchButton = findViewById(R.id.search_button)
@@ -45,6 +49,7 @@ class HomeActivity: AppCompatActivity() {
         hospitalLayoutEvent()
         leisureLayoutEvent()
         homeLayoutEvent()
+        helpLayoutEvent()
         mypageLayoutEvent()
         searchButtonEvent()
     }
@@ -59,13 +64,18 @@ class HomeActivity: AppCompatActivity() {
         layoutleisure.setOnClickListener {
                 startActivity<LeisureFacilityListActivity>()
         }
-
     }
     private fun homeLayoutEvent(){
         layoutHome.setOnClickListener {
                 startActivity<HomeFacilityListAcitvity>()
         }
     }
+    private fun helpLayoutEvent(){
+        layouthelp.setOnClickListener {
+            startActivity<CommuMainActivity>()
+        }
+    }
+
     private fun mypageLayoutEvent(){
         layoutMypage.setOnClickListener{
             startActivity<MypageActivity>()
