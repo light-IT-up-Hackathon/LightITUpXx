@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.lightitupxx.R
+import com.example.lightitupxx.activity.CheckmyinfoActivity
 import org.jetbrains.anko.startActivity
 
 class MypageActivity:AppCompatActivity(){
@@ -52,7 +53,7 @@ class MypageActivity:AppCompatActivity(){
     }
     private fun myinfoLayoutEvent(){
         layoutMyinfo.setOnClickListener {
-            (Toast.makeText(this, "myInfo!!", Toast.LENGTH_SHORT)).show()
+            startActivity<CheckmyinfoActivity>()
         }
     }
     private fun reserveLayoutEvent(){
