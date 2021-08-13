@@ -84,6 +84,7 @@ class CommuRegActivity : AppCompatActivity() {
         alert("저장되었습니다."){
             yesButton { finish() }
         }.show()
+        onBackPressed()
     }
 
     private fun updateTodo_commu(id: Long) {
