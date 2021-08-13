@@ -15,7 +15,6 @@ class FieldAdapter(val locationList : ArrayList<LocationItem>): RecyclerView.Ada
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_field, parent, false)
         return CustomViewHolder(view)
     }
-
     //재활용해주는 곳 및 값을 넣어주는 곳
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         holder.bindItems(locationList[position])

@@ -1,13 +1,16 @@
 package com.example.lightitupxx.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lightitupxx.Facility_info
 import com.example.lightitupxx.R
+import com.example.lightitupxx.activity.detail.HospitalDetailActivity
 import java.util.*
 
 class HospitalAdapter (val hospitalList : ArrayList<Facility_info>): RecyclerView.Adapter<HospitalAdapter.CustomViewHolder1>() {
@@ -38,6 +41,7 @@ class HospitalAdapter (val hospitalList : ArrayList<Facility_info>): RecyclerVie
     override fun getItemCount(): Int {
         return hospitalList.size
     }
+
     //뷰홀더 클래스(음료수처럼 잡아주는 홀더)
     //이곳에서 파인드뷰아이디로 리스트 아이템에 있는 뷰들을 참조한다.
     inner class CustomViewHolder1(itemView : View) : RecyclerView.ViewHolder(itemView) {
