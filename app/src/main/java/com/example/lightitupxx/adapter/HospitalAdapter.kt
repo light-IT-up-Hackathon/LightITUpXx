@@ -19,7 +19,21 @@ class HospitalAdapter (val hospitalList : ArrayList<Facility_info>): RecyclerVie
     //재활용해주는 곳 및 값을 넣어주는 곳
     override fun onBindViewHolder(holder: CustomViewHolder1, position: Int) {
         holder.bindItems(hospitalList[position])
+        holder.itemView.setOnClickListener {
+            itemClickListener.onClick(it, position)
+        }
     }
+    // (2) 리스너 인터페이스
+    interface OnItemClickListener {
+        fun onClick(v: View, position: Int)
+    }
+    // (3) 외부에서 클릭 시 이벤트 설정
+    fun setItemClickListener(onItemClickListener: OnItemClickListener) {
+        this.itemClickListener = onItemClickListener
+    }
+    // (4) setItemClickListener로 설정한 함수 실행
+    private lateinit var itemClickListener : OnItemClickListener
+
     //리스트의 갯수를 적어준다
     override fun getItemCount(): Int {
         return hospitalList.size

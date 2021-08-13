@@ -47,6 +47,9 @@ class HomeFacilityListAcitvity : AppCompatActivity() {
         recyclerGridView_home.adapter=facilityAdapter_wal
         recyclerGridView_home.layoutManager= GridLayoutManager(applicationContext,2)
 
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
 
         fieldAdapter.setItemClickListener(object : FieldAdapter.OnItemClickListener {
             override fun onClick(v: View, position: Int) {

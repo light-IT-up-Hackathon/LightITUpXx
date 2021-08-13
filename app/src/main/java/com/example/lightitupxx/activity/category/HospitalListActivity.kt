@@ -8,11 +8,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lightitupxx.Facility_info
 import com.example.lightitupxx.R
+import com.example.lightitupxx.activity.detail.HospitalDetailActivity
+import com.example.lightitupxx.activity.member.ScrapActivity
 import com.example.lightitupxx.adapter.FieldAdapter
 import com.example.lightitupxx.adapter.HospitalAdapter
 import com.example.lightitupxx.api.LocationItem
 import kotlinx.android.synthetic.main.activity_home_facility_list_acitvity.*
 import kotlinx.android.synthetic.main.activity_hospital_list.*
+import org.jetbrains.anko.startActivity
 import java.util.*
 
 class HospitalListActivity : AppCompatActivity() {
@@ -24,6 +27,8 @@ class HospitalListActivity : AppCompatActivity() {
     lateinit var facilityAdapter_ebi : HospitalAdapter
     lateinit var facilityAdapter_jung : HospitalAdapter
     lateinit var facilityAdapter_chi : HospitalAdapter
+    var num : Int = 0
+
     val field = ArrayList<LocationItem>()
     val hospital_san = ArrayList<Facility_info >()
     val hospitals_ne = ArrayList<Facility_info >()
@@ -53,9 +58,10 @@ class HospitalListActivity : AppCompatActivity() {
         recyclerGridView_hospital.adapter=facilityAdapter_san
         recyclerGridView_hospital.layoutManager= GridLayoutManager(applicationContext,2)
 
-//        backButton.setOnClickListener {
-//            onBackPressed()
-//        }
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
+
         fieldAdapter.setItemClickListener(object : FieldAdapter.OnItemClickListener {
             override fun onClick(v: View, position: Int) {
 
@@ -71,9 +77,13 @@ class HospitalListActivity : AppCompatActivity() {
 
         setField(fieldAdapter)
         setHospitalsList()
+
+        facilityAdapter_san.setItemClickListener(object:HospitalAdapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
+
+            }
+        })
     }
-
-
 
     private fun fieldCheck(v: View, position: Int){
         if(field[position].location=="산부인과"){
