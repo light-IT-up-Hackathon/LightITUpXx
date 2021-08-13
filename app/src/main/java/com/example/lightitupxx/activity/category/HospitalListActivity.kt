@@ -66,7 +66,7 @@ class HospitalListActivity : AppCompatActivity() {
             override fun onClick(v: View, position: Int) {
 
                 Toast.makeText(v.context,
-                        field[position].location, Toast.LENGTH_SHORT).show()
+                    field[position].location, Toast.LENGTH_SHORT).show()
 
                 fieldCheck(v, position)
 
@@ -155,4 +155,3 @@ class HospitalListActivity : AppCompatActivity() {
 
     }
 }
-

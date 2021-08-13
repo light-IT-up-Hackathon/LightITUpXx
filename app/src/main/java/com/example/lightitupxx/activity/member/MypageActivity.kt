@@ -7,6 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.lightitupxx.R
 import com.example.lightitupxx.activity.CheckmyinfoActivity
+import com.example.lightitupxx.api.userClass
+import io.realm.Realm
+import io.realm.RealmConfiguration
+import io.realm.exceptions.RealmMigrationNeededException
+import io.realm.kotlin.where
+import kotlinx.android.synthetic.main.activity_mypage.view.*
 import org.jetbrains.anko.startActivity
 
 class MypageActivity:AppCompatActivity(){
@@ -19,6 +25,16 @@ class MypageActivity:AppCompatActivity(){
     lateinit var layoutCoupon: View
     lateinit var layoutVersion:View
     lateinit var layoutCS:View
+
+    //로그인 Realm 인스턴스 얻기
+    val loginRealm = try {
+        val config = RealmConfiguration.Builder()
+            .deleteRealmIfMigrationNeeded()
+            .build()
+        Realm.getInstance(config)
+    } catch (ex: RealmMigrationNeededException) {
+        Realm.getDefaultInstance()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +52,12 @@ class MypageActivity:AppCompatActivity(){
 
         backButton.setOnClickListener {
             onBackPressed()
+        }
+
+        //Realm 데이터베이스 가져오기
+        val user=loginRealm.where<userClass>().findFirst()
+        if (user != null) {
+            layoutName.tv_name.text= user.id
         }
 
         scrapLayoutEvent()
