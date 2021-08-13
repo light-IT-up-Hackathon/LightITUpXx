@@ -60,7 +60,7 @@
         <activity android:name=".activity.detail.FragmentMapActivity"/>
         <activity android:name=".activity.category.HospitalListActivity" />
         <activity android:name=".activity.detail.HospitalDetailActivity" />
-        <activity android:name=".activity.HomeActivity"></activity>
+        <activity android:name=".activity.HomeActivity"/>
         <activity android:name=".activity.CheckmyinfoActivity"/>
 
     </application>

@@ -10,6 +10,7 @@ import com.example.lightitupxx.activity.member.LoginActivity
 
 
 class MainActivity : AppCompatActivity() {
+
     internal var handler = Handler()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
