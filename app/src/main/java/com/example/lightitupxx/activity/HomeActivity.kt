@@ -8,14 +8,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.lightitupxx.R
-import com.example.lightitupxx.activity.category.HomeFacilityListAcitvity
+import com.example.lightitupxx.activity.category.HouseFacilityListAcitvity
 import com.example.lightitupxx.activity.category.HospitalListActivity
 import com.example.lightitupxx.activity.category.LeisureFacilityListActivity
 import com.example.lightitupxx.activity.community.CommuMainActivity
 import com.example.lightitupxx.activity.member.MypageActivity
-import io.realm.Realm
-import io.realm.RealmConfiguration
-import io.realm.exceptions.RealmMigrationNeededException
 import org.jetbrains.anko.startActivity
 
 
@@ -67,7 +64,7 @@ class HomeActivity: AppCompatActivity() {
     }
     private fun homeLayoutEvent(){
         layoutHome.setOnClickListener {
-                startActivity<HomeFacilityListAcitvity>()
+                startActivity<HouseFacilityListAcitvity>()
         }
     }
     private fun helpLayoutEvent(){

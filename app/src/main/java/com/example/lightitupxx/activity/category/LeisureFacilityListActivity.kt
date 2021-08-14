@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lightitupxx.R
-import com.example.lightitupxx.activity.detail.PTshopDetailActivity
+import com.example.lightitupxx.activity.detail.LeisureDetailActivity
 import com.example.lightitupxx.adapter.FieldAdapter
 import com.example.lightitupxx.adapter.LeisureFacilityAdapter
 import com.example.lightitupxx.api.Facility_info
@@ -25,6 +25,7 @@ class LeisureFacilityListActivity : AppCompatActivity(), onItemClicked {
     lateinit var facilityAdapter_tat : LeisureFacilityAdapter
     lateinit var facilityAdapter_health : LeisureFacilityAdapter
     lateinit var facilityAdapter_mass: LeisureFacilityAdapter
+    var field_idx:Int=0
 
     val field = ArrayList<LocationItem>()
     val leisure_wax = ArrayList<Facility_info>()
@@ -58,6 +59,7 @@ class LeisureFacilityListActivity : AppCompatActivity(), onItemClicked {
 
         fieldAdapter.setItemClickListener(object : FieldAdapter.OnItemClickListener {
             override fun onClick(v: View, position: Int) {
+                field_idx=position
 
                 Toast.makeText(v.context,
                     field[position].location, Toast.LENGTH_SHORT).show()
@@ -74,8 +76,18 @@ class LeisureFacilityListActivity : AppCompatActivity(), onItemClicked {
     //여가시설 리스트 아이템 클릭시 실행되는 함
     override fun onGridItemClick(idx: Int) {
         Log.d("key", "gsg")
-        val intentGoToHomeDetail = Intent(this, PTshopDetailActivity::class.java)
-//        intentGoToHomeDetail.putExtra()
+        val intentGoToHomeDetail = Intent(this, LeisureDetailActivity::class.java)
+        if(field_idx==0){
+            intentGoToHomeDetail.putExtra("leisure",leisure_wax[idx])
+        }else if(field_idx==1){
+            intentGoToHomeDetail.putExtra("leisure",leisure_tat[idx])
+        }else if(field_idx==2){
+            intentGoToHomeDetail.putExtra("leisure",leisure_health[idx])
+        }else if(field_idx==3){
+            intentGoToHomeDetail.putExtra("leisure",leisure_mass[idx])
+        }else{
+            Toast.makeText(this,"해당 필드가 존재하지 않습니다.",Toast.LENGTH_SHORT).show()
+        }
         startActivity(intentGoToHomeDetail)
     }
 

@@ -43,7 +43,7 @@ class JoinActivity: AppCompatActivity() {
 
         handler = Handler()
 
-        //회원가입 버튼
+        //회원가입 버튼 --> 주민번호 크기 잘못적으면 에러남
         btn_join.setOnClickListener {
             //여성인지 확인(주민번호 7번째 자리가 2 or 4)
             if (etv_birth.text.substring(6).equals("2") || etv_birth.text.substring(6).equals("4")) {

@@ -83,6 +83,7 @@
                     </LinearLayout>
 
                     <ImageView
+                        android:id="@+id/img_image"
                         android:layout_width="wrap_content"
                         android:layout_height="300dp"
                         android:scaleType="centerCrop"
@@ -100,6 +101,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingTop="20dp"
@@ -108,6 +110,7 @@
                             android:textSize="25dp" />
 
                         <TextView
+                            android:id="@+id/tv_field"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="산부인과"
@@ -115,6 +118,7 @@
                             android:textSize="18dp" />
 
                         <TextView
+                            android:id="@+id/tv_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingTop="40dp"
@@ -123,6 +127,7 @@
                             android:textSize="18dp" />
 
                         <TextView
+                            android:id="@+id/tv_time"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingBottom="20dp"
@@ -152,13 +157,14 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/tv_phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/call"
                         android:gravity="left|center"
+                        android:text=" 02-938-5557"
                         android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:text=" 02-938-5557" />
+                        android:textSize="17dp" />
 
                 </LinearLayout>
 
@@ -177,13 +183,14 @@
                     android:gravity="bottom">
 
                     <TextView
+                        android:id="@+id/tv_ping"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/address1"
-                        android:textSize="17dp"
                         android:gravity="left|center"
+                        android:text="서울 노원구 상계동 727 덕영빌딩 7층"
                         android:textColor="@color/black"
-                        android:text="서울 노원구 상계동 727 덕영빌딩 7층" />
+                        android:textSize="17dp" />
 
                 </LinearLayout>
 
@@ -214,18 +221,12 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_way"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="17dp"
+                            android:text="노원역 5번 출구에서 순복음교회쪽으로 올라오시면 우리은행 건물 7층에 위치하고 있습니다."
                             android:textColor="@color/black"
-                            android:text="노원역 5번 출구에서 순복음교회쪽으로 올라오시면" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="우리은행 건물 7층에 위치하고 있습니다." />
+                            android:textSize="17dp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -245,13 +246,14 @@
                     android:gravity="bottom">
 
                     <TextView
+                        android:id="@+id/tv_option"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/parking"
-                        android:textSize="17dp"
                         android:gravity="left|center"
+                        android:text=" 주차, 예약, 무선 인터넷, 남/녀 화장실 구분"
                         android:textColor="@color/black"
-                        android:text=" 주차, 예약, 무선 인터넷, 남/녀 화장실 구분" />
+                        android:textSize="17dp" />
 
                 </LinearLayout>
 
@@ -282,20 +284,13 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_realtime"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="bottom"
-                            android:textSize="17dp"
+                            android:text="토요일 09:00~12:00 / 일요일 휴무"
                             android:textColor="@color/black"
-                            android:text="토요일 09:00~12:00 / 일요일 휴무" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="bottom"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="평일 09~00~19:00" />
+                            android:textSize="17dp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -327,18 +322,12 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_hashtag"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="17dp"
+                            android:text="#가족분만 #요실금 #부인과성형 #소아과"
                             android:textColor="@color/black"
-                            android:text="#가족분만 #요실금 #부인과성형 #소아과" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="#여의사진료" />
+                            android:textSize="17dp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -370,25 +359,12 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_comment"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="17dp"
+                            android:text="진료과목: 내과, 소아청소년과, 마취통증의학과,"
                             android:textColor="@color/black"
-                            android:text="진료과목: 내과, 소아청소년과, 마취통증의학과," />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="영상의학과, 가정의학과, 유방클리닉, 산후조리원," />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="산모 문화센터 운영" />
+                            android:textSize="17dp" />
 
                     </LinearLayout>
                 </LinearLayout>
