@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lightitupxx.Facility_info
 import com.example.lightitupxx.R
+import com.example.lightitupxx.api.Facility_info
 import java.util.ArrayList
 
 class LeisureFacilityAdapter (val leisureList : ArrayList<Facility_info>):
