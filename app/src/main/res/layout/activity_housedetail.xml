@@ -30,8 +30,8 @@
 
                     <Button
                         android:id="@+id/back_button"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/ic_baseline_arrow_back_ios_24"
@@ -47,7 +47,7 @@
 
 
                         <Button
-                            android:id="@+id/callsaunaBtn"
+                            android:id="@+id/callsharehouseBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="58dp"
                             android:layout_marginLeft="65dp"
@@ -57,23 +57,23 @@
                             android:textColor="@color/black" />
 
                         <Button
-                            android:id="@+id/mapsaunaBtn"
+                            android:id="@+id/mapsharehouseBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="58dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="140dp"
-                            android:layout_toRightOf="@id/callsaunaBtn"
+                            android:layout_toRightOf="@id/callsharehouseBtn"
                             android:background="@drawable/button_background_color"
                             android:text="지도보기"
                             android:textColor="#FFFFFF" />
 
                         <Button
-                            android:id="@+id/scrapsaunaBtn"
+                            android:id="@+id/scrapsharehouseBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="60dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="156dp"
-                            android:layout_toRightOf="@id/mapsaunaBtn"
+                            android:layout_toRightOf="@id/mapsharehouseBtn"
                             android:background="@drawable/button_background"
                             android:drawableTop="@drawable/heart"
                             android:padding="0sp"
@@ -83,10 +83,11 @@
                     </LinearLayout>
 
                     <ImageView
+                        android:id="@+id/img_image"
                         android:layout_width="wrap_content"
                         android:layout_height="300dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/saunadetail" />
+                        android:src="@drawable/sharehousedetail" />
 
                     <LinearLayout
                         android:id="@+id/hospital_name"
@@ -100,33 +101,29 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingTop="20dp"
-                            android:text="[ 청솔여성전용사우나 ]"
+                            android:text="[ 쉐어하우스 하늘 ]"
                             android:textColor="@color/black"
                             android:textSize="25dp" />
 
                         <TextView
+                            android:id="@+id/tv_field"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="목욕탕,사우나"
+                            android:text="쉐어하우스,하숙"
                             android:textColor="#86000000"
                             android:textSize="18dp" />
 
                         <TextView
+                            android:id="@+id/tv_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingTop="40dp"
-                            android:text="서울 노원구 상계로9길 23"
-                            android:textColor="@color/black"
-                            android:textSize="18dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingBottom="20dp"
-                            android:text="매일 00:00 - 24:00"
+                            android:paddingBottom="40dp"
+                            android:text="서울 노원구 석계로15길 25"
                             android:textColor="@color/black"
                             android:textSize="18dp" />
 
@@ -144,27 +141,27 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/callsauna"
-                    android:layout_below="@id/two"
+                    android:id="@+id/callsharehouse"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="bottom">
+                    android:layout_below="@id/two"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/call"
-                        android:textSize="17dp"
                         android:gravity="left|center"
+                        android:text=" 0507-1362-5608"
                         android:textColor="@color/black"
-                        android:text="  02-465-4500" />
+                        android:textSize="17dp" />
 
                 </LinearLayout>
 
-
                 <View
                     android:id="@+id/line1"
-                    android:layout_below="@id/callsauna"
+                    android:layout_below="@id/callsharehouse"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#1E000000"/>
@@ -183,45 +180,113 @@
                         android:textSize="17dp"
                         android:gravity="left|center"
                         android:textColor="@color/black"
-                        android:text="서울 노원구 상계동 397-4" />
+                        android:text="서울 노원구 월계동 926" />
 
                 </LinearLayout>
 
-
                 <View
-                    android:id="@+id/line4"
-                    android:layout_below="@id/parking"
+                    android:id="@+id/line2"
+                    android:layout_below="@id/address"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#1E000000"/>
 
                 <LinearLayout
-                    android:id="@+id/time"
-                    android:layout_below="@id/line1"
+                    android:id="@+id/loaction"
+                    android:layout_below="@id/line2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="bottom">
+                    android:orientation="horizontal">
 
-                    <TextView
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:src="@drawable/location"/>
+
+                    <LinearLayout
+                        android:id="@+id/text_loaction"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/time"
-                        android:textSize="17dp"
-                        android:gravity="left|center"
-                        android:textColor="@color/black"
-                        android:text=" 매일 00:00 - 24:00" />
+                        android:orientation="vertical">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="광운대역(1호선) 2번출구 도보1분," />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="광운대학교 도보7분" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
                 <View
-                    android:id="@+id/line10"
-                    android:layout_below="@id/time"
+                    android:id="@+id/line3"
+                    android:layout_below="@id/loaction"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#1E000000"/>
 
                 <LinearLayout
                     android:id="@+id/cost"
+                    android:layout_below="@id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/cost"/>
+
+                    <LinearLayout
+                        android:id="@+id/text_cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="1인실 A 420,000원" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="2인실 B 350,000원" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="2인실 C 300,000원
+" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line10"
+                    android:layout_below="@id/loaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/parking"
                     android:layout_below="@id/line10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -230,17 +295,24 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/cost"
+                        android:drawableLeft="@drawable/parking"
                         android:textSize="17dp"
                         android:gravity="left|center"
                         android:textColor="@color/black"
-                        android:text="  입욕료 6000원" />
+                        android:text=" 주차, 무선 인터넷" />
 
                 </LinearLayout>
 
                 <View
-                    android:id="@+id/line5"
+                    android:id="@+id/line4"
                     android:layout_below="@id/parking"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <View
+                    android:id="@+id/line5"
+                    android:layout_below="@id/time"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#1E000000"/>
@@ -269,14 +341,14 @@
                             android:layout_height="wrap_content"
                             android:textSize="17dp"
                             android:textColor="@color/black"
-                            android:text="#여성전용 #사우나 #장작불가마 #맛사지" />
+                            android:text="#광운대쉐어하우스 #광운대역쉐어하우스" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="17dp"
                             android:textColor="@color/black"
-                            android:text="#부항" />
+                            android:text="#여성전용쉐어하우스 #인덕대쉐어하우스" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -312,21 +384,22 @@
                             android:layout_height="wrap_content"
                             android:textSize="17dp"
                             android:textColor="@color/black"
-                            android:text="여성전용 사우나로서 이번에 장작불가마를 신설하여" />
+                            android:text="쾌적하고 깨끗한 쉐어하우스, 안전을 최우선으로 생각합니다." />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="17dp"
                             android:textColor="@color/black"
-                            android:text="여성들의 기호에 맞도록 노폐물 배출에 특별히 신경" />
+                            android:text="40평대의 하우스에 각 방마다 개인 발코니가 있고" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="17dp"
                             android:textColor="@color/black"
-                            android:text="을 써 아주 좋은 호감을 얻고 있습니다." />
+                            android:text="정기적으로 청소아주머니가 방문오십니다.
+" />
 
                     </LinearLayout>
                 </LinearLayout>

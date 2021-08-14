@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
 import com.example.lightitupxx.R
-import com.example.lightitupxx.activity.detail.PTshopDetailActivity
+import com.example.lightitupxx.activity.detail.LeisureDetailActivity
 import org.jetbrains.anko.startActivity
 
 class MypageReserveActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class MypageReserveActivity : AppCompatActivity() {
         backButton = findViewById(R.id.img_myPageBack)
 
         goptdetail.setOnClickListener {
-            startActivity<PTshopDetailActivity>()
+            startActivity<LeisureDetailActivity>()
         }
 
         backButton.setOnClickListener {

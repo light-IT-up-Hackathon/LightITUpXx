@@ -1,6 +1,5 @@
 package com.example.lightitupxx.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +14,7 @@ import java.util.ArrayList
 class HomeAdapter (val homeList : ArrayList<Facility_info>, private val onItemClicked: onItemClicked): RecyclerView.Adapter<HomeAdapter.CustomViewHolder1>() {
     //뷰홀더가 처음 생성될때
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder1 {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_griditem_home, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_griditem_house, parent, false)
         return CustomViewHolder1(view)
     }
 

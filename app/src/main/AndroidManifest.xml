@@ -57,8 +57,8 @@
         <activity android:name=".activity.member.ScrapActivity" />
         <activity android:name=".activity.member.JoinActivity" />
         <activity android:name=".activity.member.LoginActivity" />
-        <activity android:name=".activity.category.HomeFacilityListAcitvity" />
-        <activity android:name=".activity.detail.PTshopDetailActivity" />
+        <activity android:name=".activity.category.HouseFacilityListAcitvity" />
+        <activity android:name=".activity.detail.LeisureDetailActivity" />
         <activity android:name=".activity.category.LeisureFacilityListActivity" />
         <activity
             android:name=".activity.MainActivity"
@@ -75,7 +75,7 @@
         <activity android:name=".activity.detail.HospitalDetailActivity" />
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.member.CheckmyinfoActivity" />
-        <activity android:name=".activity.detail.SharehouseDetailActivity"/>
+        <activity android:name=".activity.detail.HouseDetailActivity"/>
     </application>
 
 </manifest>

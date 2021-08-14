@@ -215,7 +215,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:clickable="false"
-            android:text="우야누"
+            android:text="도와도"
             android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
