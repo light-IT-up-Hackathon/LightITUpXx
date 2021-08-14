@@ -74,7 +74,8 @@
         <activity android:name=".activity.category.HospitalListActivity" />
         <activity android:name=".activity.detail.HospitalDetailActivity" />
         <activity android:name=".activity.HomeActivity" />
-        <activity android:name=".activity.CheckmyinfoActivity" />
+        <activity android:name=".activity.member.CheckmyinfoActivity" />
+        <activity android:name=".activity.detail.SharehouseDetailActivity"/>
     </application>
 
 </manifest>

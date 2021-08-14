@@ -1,23 +1,24 @@
 package com.example.lightitupxx.activity.category
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lightitupxx.R
+import com.example.lightitupxx.activity.detail.HospitalDetailActivity
 import com.example.lightitupxx.adapter.FieldAdapter
 import com.example.lightitupxx.adapter.HospitalAdapter
 import com.example.lightitupxx.api.Facility_info
 import com.example.lightitupxx.api.LocationItem
 import com.example.lightitupxx.api.onItemClicked
-import kotlinx.android.synthetic.main.activity_home_facility_list_acitvity.*
 import kotlinx.android.synthetic.main.activity_hospital_list.*
-import org.jetbrains.anko.startActivity
 import java.util.*
 
-class HospitalListActivity : AppCompatActivity() {
+class HospitalListActivity : AppCompatActivity(), onItemClicked {
     lateinit var backButton: View
     lateinit var fieldAdapter: FieldAdapter
     lateinit var facilityAdapter_san: HospitalAdapter
@@ -47,12 +48,12 @@ class HospitalListActivity : AppCompatActivity() {
         //레이아웃 매니저를 이용해 어뎁터의 방향을 결정
         fieldlist_hospital.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        facilityAdapter_san = HospitalAdapter(hospital_san)
-        facilityAdapter_ne = HospitalAdapter(hospitals_ne)
-        facilityAdapter_pi = HospitalAdapter(hospitals_pi)
-        facilityAdapter_ebi = HospitalAdapter(hospitals_ebi)
-        facilityAdapter_jung = HospitalAdapter(hospitals_jung)
-        facilityAdapter_chi = HospitalAdapter(hospitals_chi)
+        facilityAdapter_san = HospitalAdapter(hospital_san, this)
+        facilityAdapter_ne = HospitalAdapter(hospitals_ne, this)
+        facilityAdapter_pi = HospitalAdapter(hospitals_pi, this)
+        facilityAdapter_ebi = HospitalAdapter(hospitals_ebi, this)
+        facilityAdapter_jung = HospitalAdapter(hospitals_jung, this)
+        facilityAdapter_chi = HospitalAdapter(hospitals_chi, this)
 
         recyclerGridView_hospital.adapter=facilityAdapter_san
         recyclerGridView_hospital.layoutManager= GridLayoutManager(applicationContext,2)
@@ -79,6 +80,13 @@ class HospitalListActivity : AppCompatActivity() {
 
     }
 
+    //병원 리스트 아이템 클릭시 실행되는 함수
+    override fun onGridItemClick(idx: Int) {
+        Log.d("key", "gsg")
+        val intentGoToHospitalDetail = Intent(this, HospitalDetailActivity::class.java)
+//        intentGoToHomeDetail.putExtra()
+        startActivity(intentGoToHospitalDetail)
+    }
 
     private fun fieldCheck(v: View, position: Int){
         if(field[position].location=="산부인과"){
@@ -149,6 +157,8 @@ class HospitalListActivity : AppCompatActivity() {
         hospitals_jung.add(Facility_info (R.drawable.img_oshospital_nobos,"[서울노보스병원]","정형외과","평일 09시~18시","서울시 노원구",37.65483586359399, 127.06199025414544))
 
     }
+
+
 
 
 }

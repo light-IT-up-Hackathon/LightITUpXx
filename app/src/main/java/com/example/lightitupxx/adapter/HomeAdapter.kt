@@ -39,7 +39,7 @@ class HomeAdapter (val homeList : ArrayList<Facility_info>, private val onItemCl
         View.OnClickListener {
         init {
             itemView.setOnClickListener{
-                Log.d("key","ket")
+                onItemClicked.onGridItemClick(layoutPosition)
             }
         }
 
@@ -56,11 +56,11 @@ class HomeAdapter (val homeList : ArrayList<Facility_info>, private val onItemCl
             h_time.text = homes.time
             h_location.text = homes.location
 
-
         }
 
         override fun onClick(v: View?) {
             onItemClicked.onGridItemClick(layoutPosition)
         }
+
     }
 }

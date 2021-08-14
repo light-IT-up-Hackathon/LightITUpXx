@@ -1,4 +1,4 @@
-package com.example.lightitupxx.activity
+package com.example.lightitupxx.activity.member
 
 import android.app.AlertDialog
 import android.content.DialogInterface
@@ -10,13 +10,11 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.lightitupxx.R
-import com.example.lightitupxx.activity.member.LoginActivity
 import com.example.lightitupxx.api.userClass
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import io.realm.exceptions.RealmMigrationNeededException
 import io.realm.kotlin.where
-import kotlinx.android.synthetic.main.activity_mypage.view.*
 
 class CheckmyinfoActivity : AppCompatActivity() {
 

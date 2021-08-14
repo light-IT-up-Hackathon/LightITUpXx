@@ -2,11 +2,9 @@ package com.example.lightitupxx.activity.member
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.lightitupxx.R
-import com.example.lightitupxx.activity.CheckmyinfoActivity
 import com.example.lightitupxx.api.userClass
 import io.realm.Realm
 import io.realm.RealmConfiguration

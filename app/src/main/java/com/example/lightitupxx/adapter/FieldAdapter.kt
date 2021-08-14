@@ -26,6 +26,7 @@ class FieldAdapter(val locationList : ArrayList<LocationItem>): RecyclerView.Ada
     interface OnItemClickListener {
         fun onClick(v: View, position: Int)
     }
+
     // (3) 외부에서 클릭 시 이벤트 설정
     fun setItemClickListener(onItemClickListener: OnItemClickListener) {
         this.itemClickListener = onItemClickListener

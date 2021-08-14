@@ -1,21 +1,24 @@
 package com.example.lightitupxx.activity.category
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lightitupxx.R
+import com.example.lightitupxx.activity.detail.PTshopDetailActivity
 import com.example.lightitupxx.adapter.FieldAdapter
 import com.example.lightitupxx.adapter.LeisureFacilityAdapter
 import com.example.lightitupxx.api.Facility_info
 import com.example.lightitupxx.api.LocationItem
-import kotlinx.android.synthetic.main.activity_hospital_list.*
+import com.example.lightitupxx.api.onItemClicked
 import kotlinx.android.synthetic.main.activity_leisure_facility_list.*
 import java.util.ArrayList
 
-class LeisureFacilityListActivity : AppCompatActivity() {
+class LeisureFacilityListActivity : AppCompatActivity(), onItemClicked {
     lateinit var backButton: View
     lateinit var fieldAdapter: FieldAdapter
     lateinit var facilityAdapter_wax: LeisureFacilityAdapter
@@ -41,10 +44,10 @@ class LeisureFacilityListActivity : AppCompatActivity() {
         //레이아웃 매니저를 이용해 어뎁터의 방향을 결정
         fieldlist_leisure.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        facilityAdapter_wax = LeisureFacilityAdapter (leisure_wax)
-        facilityAdapter_tat= LeisureFacilityAdapter (leisure_tat)
-        facilityAdapter_health = LeisureFacilityAdapter (leisure_health)
-        facilityAdapter_mass = LeisureFacilityAdapter (leisure_mass)
+        facilityAdapter_wax = LeisureFacilityAdapter (leisure_wax, this)
+        facilityAdapter_tat= LeisureFacilityAdapter (leisure_tat, this)
+        facilityAdapter_health = LeisureFacilityAdapter (leisure_health, this)
+        facilityAdapter_mass = LeisureFacilityAdapter (leisure_mass, this)
 
         recyclerGridView_leisure.adapter=facilityAdapter_wax
         recyclerGridView_leisure.layoutManager= GridLayoutManager(applicationContext,2)
@@ -66,6 +69,16 @@ class LeisureFacilityListActivity : AppCompatActivity() {
         setLeisureList()
         
     }
+
+
+    //여가시설 리스트 아이템 클릭시 실행되는 함
+    override fun onGridItemClick(idx: Int) {
+        Log.d("key", "gsg")
+        val intentGoToHomeDetail = Intent(this, PTshopDetailActivity::class.java)
+//        intentGoToHomeDetail.putExtra()
+        startActivity(intentGoToHomeDetail)
+    }
+
     private fun fieldCheck(v: View, position: Int){
         if(field[position].location=="왁싱샵"){
             recyclerGridView_leisure.adapter=facilityAdapter_wax
@@ -121,7 +134,6 @@ class LeisureFacilityListActivity : AppCompatActivity() {
         leisure_mass.add(Facility_info(R.drawable.img_leisure_wonly,"[여성전용케어샵]","마사지샵","평일 08시~20시","서울시 노원구", 37.66988146964927, 127.07964698156509))
         leisure_mass.add(Facility_info(R.drawable.img_leisure_sgj,"[SGJ SPA]","마사지샵","평일 09시~20시","서울시 노원구", 37.671275339913386, 127.08306304316511))
     }
-
 
 
 }
