@@ -6,10 +6,10 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.lightitupxx.Facility_info
 import com.example.lightitupxx.R
 import com.example.lightitupxx.adapter.FieldAdapter
 import com.example.lightitupxx.adapter.LeisureFacilityAdapter
+import com.example.lightitupxx.api.Facility_info
 import com.example.lightitupxx.api.LocationItem
 import kotlinx.android.synthetic.main.activity_hospital_list.*
 import kotlinx.android.synthetic.main.activity_leisure_facility_list.*

@@ -6,13 +6,12 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.lightitupxx.Facility_info
 import com.example.lightitupxx.R
-import com.example.lightitupxx.activity.detail.HospitalDetailActivity
-import com.example.lightitupxx.activity.member.ScrapActivity
 import com.example.lightitupxx.adapter.FieldAdapter
 import com.example.lightitupxx.adapter.HospitalAdapter
+import com.example.lightitupxx.api.Facility_info
 import com.example.lightitupxx.api.LocationItem
+import com.example.lightitupxx.api.onItemClicked
 import kotlinx.android.synthetic.main.activity_home_facility_list_acitvity.*
 import kotlinx.android.synthetic.main.activity_hospital_list.*
 import org.jetbrains.anko.startActivity
@@ -30,7 +29,7 @@ class HospitalListActivity : AppCompatActivity() {
     var num : Int = 0
 
     val field = ArrayList<LocationItem>()
-    val hospital_san = ArrayList<Facility_info >()
+    val hospital_san = ArrayList<Facility_info>()
     val hospitals_ne = ArrayList<Facility_info >()
     val hospitals_pi= ArrayList<Facility_info >()
     val hospitals_ebi = ArrayList<Facility_info >()
@@ -78,12 +77,8 @@ class HospitalListActivity : AppCompatActivity() {
         setField(fieldAdapter)
         setHospitalsList()
 
-        facilityAdapter_san.setItemClickListener(object:HospitalAdapter.OnItemClickListener{
-            override fun onClick(v: View, position: Int) {
-
-            }
-        })
     }
+
 
     private fun fieldCheck(v: View, position: Int){
         if(field[position].location=="산부인과"){
@@ -154,4 +149,6 @@ class HospitalListActivity : AppCompatActivity() {
         hospitals_jung.add(Facility_info (R.drawable.img_oshospital_nobos,"[서울노보스병원]","정형외과","평일 09시~18시","서울시 노원구",37.65483586359399, 127.06199025414544))
 
     }
+
+
 }

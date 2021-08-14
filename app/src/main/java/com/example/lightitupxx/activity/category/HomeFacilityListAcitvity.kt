@@ -1,22 +1,24 @@
 package com.example.lightitupxx.activity.category
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.lightitupxx.Facility_info
 import com.example.lightitupxx.R
+import com.example.lightitupxx.activity.detail.SharehouseDetailActivity
 import com.example.lightitupxx.adapter.FieldAdapter
 import com.example.lightitupxx.adapter.HomeAdapter
+import com.example.lightitupxx.api.Facility_info
 import com.example.lightitupxx.api.LocationItem
+import com.example.lightitupxx.api.onItemClicked
 import kotlinx.android.synthetic.main.activity_home_facility_list_acitvity.*
-import kotlinx.android.synthetic.main.activity_hospital_list.*
-import kotlinx.android.synthetic.main.activity_leisure_facility_list.*
 import java.util.ArrayList
 
-class HomeFacilityListAcitvity : AppCompatActivity() {
+class HomeFacilityListAcitvity : AppCompatActivity(), onItemClicked {
     lateinit var backButton: View
     lateinit var fieldAdapter: FieldAdapter
     lateinit var facilityAdapter_wal: HomeAdapter
@@ -24,7 +26,7 @@ class HomeFacilityListAcitvity : AppCompatActivity() {
     lateinit var facilityAdapter_meme : HomeAdapter
 
     val field = ArrayList<LocationItem>()
-    val leisure_wal = ArrayList<Facility_info >()
+    val leisure_wal = ArrayList<Facility_info>()
     val leisure_jun = ArrayList<Facility_info >()
     val leisure_meme= ArrayList<Facility_info >()
 
@@ -40,9 +42,9 @@ class HomeFacilityListAcitvity : AppCompatActivity() {
         //레이아웃 매니저를 이용해 어뎁터의 방향을 결정
         fieldlist_home.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        facilityAdapter_wal = HomeAdapter (leisure_wal)
-        facilityAdapter_jun= HomeAdapter (leisure_jun)
-        facilityAdapter_meme = HomeAdapter (leisure_meme)
+        facilityAdapter_wal = HomeAdapter (leisure_wal, this)
+        facilityAdapter_jun= HomeAdapter (leisure_jun, this)
+        facilityAdapter_meme = HomeAdapter (leisure_meme, this)
 
         recyclerGridView_home.adapter=facilityAdapter_wal
         recyclerGridView_home.layoutManager= GridLayoutManager(applicationContext,2)
@@ -63,6 +65,14 @@ class HomeFacilityListAcitvity : AppCompatActivity() {
         setField(fieldAdapter)
         setHospitalsList()
     }
+
+
+    override fun onGridItemClick(idx: Int) {
+        Log.d("key", "gsg")
+        val intentGoToHomeDetail = Intent(this, SharehouseDetailActivity::class.java)
+        startActivity(intentGoToHomeDetail)
+    }
+
 
     private fun fieldCheck(v: View, position: Int){
         if(field[position].location=="월세"){
@@ -108,4 +118,5 @@ class HomeFacilityListAcitvity : AppCompatActivity() {
         leisure_meme.add(Facility_info (R.drawable.img_home_hansin,"[한신3차]","매매","301동 209호","서울시 노원구", 37.666460017554265, 127.06735947819688))
         leisure_meme.add(Facility_info (R.drawable.img_home_sunglim,"[성림]","매매","901동 506호","서울시 노원구", 37.67321959228559, 127.08066319750056))
     }
+
 }

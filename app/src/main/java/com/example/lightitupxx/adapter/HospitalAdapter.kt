@@ -8,9 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lightitupxx.Facility_info
 import com.example.lightitupxx.R
 import com.example.lightitupxx.activity.detail.HospitalDetailActivity
+import com.example.lightitupxx.api.Facility_info
 import java.util.*
 
 class HospitalAdapter (val hospitalList : ArrayList<Facility_info>): RecyclerView.Adapter<HospitalAdapter.CustomViewHolder1>() {
