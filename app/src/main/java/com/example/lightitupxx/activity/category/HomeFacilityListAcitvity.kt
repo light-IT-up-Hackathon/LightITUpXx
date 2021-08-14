@@ -30,7 +30,6 @@ class HomeFacilityListAcitvity : AppCompatActivity(), onItemClicked {
     val leisure_jun = ArrayList<Facility_info >()
     val leisure_meme= ArrayList<Facility_info >()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_facility_list_acitvity)
@@ -38,7 +37,7 @@ class HomeFacilityListAcitvity : AppCompatActivity(), onItemClicked {
         backButton = findViewById(R.id.img_homePageBack)
         fieldAdapter = FieldAdapter(field)
         fieldlist_home.adapter = fieldAdapter
-        fieldlist_home.setHasFixedSize(true) //어뎁터에 성능을 위한것
+        fieldlist_home.setHasFixedSize(true) //어뎁터에 성능을 위한 것
         //레이아웃 매니저를 이용해 어뎁터의 방향을 결정
         fieldlist_home.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
@@ -55,7 +54,6 @@ class HomeFacilityListAcitvity : AppCompatActivity(), onItemClicked {
 
         fieldAdapter.setItemClickListener(object : FieldAdapter.OnItemClickListener {
             override fun onClick(v: View, position: Int) {
-
                 Toast.makeText(v.context,
                     field[position].location, Toast.LENGTH_SHORT).show()
                 fieldCheck(v, position)
@@ -66,13 +64,13 @@ class HomeFacilityListAcitvity : AppCompatActivity(), onItemClicked {
         setHospitalsList()
     }
 
-
+    //주거시설 리스트 아이템 클릭시 실행되는 함수
     override fun onGridItemClick(idx: Int) {
         Log.d("key", "gsg")
         val intentGoToHomeDetail = Intent(this, SharehouseDetailActivity::class.java)
+//        intentGoToHomeDetail.putExtra()
         startActivity(intentGoToHomeDetail)
     }
-
 
     private fun fieldCheck(v: View, position: Int){
         if(field[position].location=="월세"){
@@ -96,7 +94,6 @@ class HomeFacilityListAcitvity : AppCompatActivity(), onItemClicked {
     }
 
     private fun setHospitalsList(){
-
         leisure_wal.add(Facility_info (R.drawable.img_home_sanggyejugong7,"[상계주공7단지]","월세","701동 1211호","서울시 노원구", 37.65904745825612, 127.0604076840165))
         leisure_wal.add(Facility_info (R.drawable.img_home_sodambill,"[소담빌]","월세","B동 302호","서울시 노원구", 37.6197880321966, 127.07789245517912))
         leisure_wal.add(Facility_info (R.drawable.img_home_chungsole,"[상계청솔아파트]","월세","125동 121호","서울시 노원구", 37.62337044501715, 127.08652253983522))
