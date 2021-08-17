@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lightitupxx.R
 import com.example.lightitupxx.api.Facility_info
+import kotlinx.android.synthetic.main.activity_hospitaldetail.*
 import kotlinx.android.synthetic.main.activity_housedetail.*
 import org.jetbrains.anko.backgroundDrawable
 import org.w3c.dom.Text
@@ -29,6 +30,7 @@ class HouseDetailActivity : AppCompatActivity() {
     lateinit var tv_hashtag: TextView
     lateinit var tv_comment: TextView
     lateinit var btn_map: Button
+    lateinit var imageView: ImageView
     var longtitude by Delegates.notNull<Double>()
     var latitude by Delegates.notNull<Double>()
 
@@ -48,7 +50,8 @@ class HouseDetailActivity : AppCompatActivity() {
         tv_option = findViewById(R.id.tv_option)
         tv_hashtag = findViewById(R.id.tv_hashtag)
         tv_comment = findViewById(R.id.tv_comment)
-        btn_map = findViewById(R.id.mapsharehouseBtn)
+        btn_map = findViewById(R.id.maphouseBtn)
+        imageView=findViewById(R.id.scrapHeart)
 
         if (intent.hasExtra("house")) {
             var house = intent.getParcelableExtra<Facility_info>("house")
@@ -77,15 +80,17 @@ class HouseDetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        scrapsharehouseBtn.setOnClickListener {
+        btn_map.setOnClickListener {
+            var intent = Intent(this, FragmentMapActivity::class.java)
+            intent.putExtra("longtitude", longtitude)
+            intent.putExtra("latitude", latitude)
 
-            btn_map.setOnClickListener {
-                var intent = Intent(this, FragmentMapActivity::class.java)
-                intent.putExtra("longtitude", longtitude)
-                intent.putExtra("latitude", latitude)
+            startActivity(intent)
+        }
 
-                startActivity(intent)
-            }
+
+        scraphouseBtn.setOnClickListener {
+            imageView.setImageResource(R.drawable.img_heart)
         }
     }
 }

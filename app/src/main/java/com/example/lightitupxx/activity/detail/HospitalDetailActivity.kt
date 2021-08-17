@@ -29,6 +29,7 @@ class HospitalDetailActivity : AppCompatActivity() {
     lateinit var tv_hashtag:TextView
     lateinit var tv_comment:TextView
     lateinit var btn_map:Button
+    lateinit var imageView: ImageView
     var longtitude by Delegates.notNull<Double>()
     var latitude by Delegates.notNull<Double>()
 
@@ -49,6 +50,7 @@ class HospitalDetailActivity : AppCompatActivity() {
         tv_hashtag=findViewById(R.id.tv_hashtag)
         tv_comment=findViewById(R.id.tv_comment)
         btn_map=findViewById(R.id.maphospitalBtn)
+        imageView=findViewById(R.id.scrapHeart)
 
         if(intent.hasExtra("hospital")){
             var hospital=intent.getParcelableExtra<Facility_info>("hospital")
@@ -85,6 +87,10 @@ class HospitalDetailActivity : AppCompatActivity() {
             intent.putExtra("latitude", latitude)
 
             startActivity(intent)
+        }
+
+        scraphospitalBtn.setOnClickListener {
+            imageView.setImageResource(R.drawable.img_heart)
         }
     }
 }
