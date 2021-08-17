@@ -1,5 +1,6 @@
 package com.example.lightitupxx.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -83,10 +84,12 @@ class HomeActivity: AppCompatActivity() {
     private fun searchButtonEvent(){
         searchButton.setOnClickListener {
             val searchTerm=searchBox.text.toString()
-            if(searchTerm in placeArray){
-                Toast.makeText(this, ""+searchTerm,Toast.LENGTH_SHORT).show()
+            if(searchTerm.equals("남미현 산부인과")){
+                var search_intent=Intent(this, HospitalListActivity::class.java)
+                search_intent.putExtra("searchTerm", searchTerm)
+                startActivity(search_intent)
             }else{
-                Toast.makeText(this, "검색결과 없음",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "sival 없어", Toast.LENGTH_SHORT).show()
             }
         }
     }

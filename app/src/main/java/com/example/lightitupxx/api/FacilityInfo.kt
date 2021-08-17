@@ -16,6 +16,7 @@ data class Facility_info (
     var phone:String="",    //전화번호
     var ping:String="", //상세 주소
     var way:String="",  //찾아가는 길
+    var cost:String="",
     var option:String="",   //시설 옵션(ex. 주차, 인터넷)
     var hashtag:String="",  //해시 태그
     var comment:String=""   //그 외 업체 공지

@@ -149,6 +149,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/tv_phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/call"
@@ -174,13 +175,14 @@
                     android:gravity="bottom">
 
                     <TextView
+                        android:id="@+id/tv_ping"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/address1"
-                        android:textSize="17dp"
                         android:gravity="left|center"
+                        android:text="서울 노원구 월계동 926"
                         android:textColor="@color/black"
-                        android:text="서울 노원구 월계동 926" />
+                        android:textSize="17dp" />
 
                 </LinearLayout>
 
@@ -211,18 +213,12 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_way"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="17dp"
+                            android:text="광운대역(1호선) 2번출구 도보1분,"
                             android:textColor="@color/black"
-                            android:text="광운대역(1호선) 2번출구 도보1분," />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="광운대학교 도보7분" />
+                            android:textSize="17dp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -254,26 +250,12 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_cost"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="17dp"
+                            android:text="1인실 A 420,000원"
                             android:textColor="@color/black"
-                            android:text="1인실 A 420,000원" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="2인실 B 350,000원" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="2인실 C 300,000원
-" />
+                            android:textSize="17dp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -293,13 +275,14 @@
                     android:gravity="bottom">
 
                     <TextView
+                        android:id="@+id/tv_option"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/parking"
-                        android:textSize="17dp"
                         android:gravity="left|center"
+                        android:text=" 주차, 무선 인터넷"
                         android:textColor="@color/black"
-                        android:text=" 주차, 무선 인터넷" />
+                        android:textSize="17dp" />
 
                 </LinearLayout>
 
@@ -337,18 +320,12 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_hashtag"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="17dp"
+                            android:text="#광운대쉐어하우스 #광운대역쉐어하우스"
                             android:textColor="@color/black"
-                            android:text="#광운대쉐어하우스 #광운대역쉐어하우스" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="#여성전용쉐어하우스 #인덕대쉐어하우스" />
+                            android:textSize="17dp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -380,26 +357,12 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_comment"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="17dp"
+                            android:text="쾌적하고 깨끗한 쉐어하우스, 안전을 최우선으로 생각합니다."
                             android:textColor="@color/black"
-                            android:text="쾌적하고 깨끗한 쉐어하우스, 안전을 최우선으로 생각합니다." />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="40평대의 하우스에 각 방마다 개인 발코니가 있고" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="17dp"
-                            android:textColor="@color/black"
-                            android:text="정기적으로 청소아주머니가 방문오십니다.
-" />
+                            android:textSize="17dp" />
 
                     </LinearLayout>
                 </LinearLayout>
