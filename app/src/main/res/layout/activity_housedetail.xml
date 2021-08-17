@@ -215,7 +215,8 @@
                         <TextView
                             android:id="@+id/tv_way"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="41dp"
+                            android:gravity="left|center"
                             android:text="광운대역(1호선) 2번출구 도보1분,"
                             android:textColor="@color/black"
                             android:textSize="17dp" />
