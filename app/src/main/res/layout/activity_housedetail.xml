@@ -37,50 +37,80 @@
                         android:background="@drawable/ic_baseline_arrow_back_ios_24"
                         tools:ignore="SpeakableTextPresentCheck" />
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/grey"
                         android:layout_width="match_parent"
                         android:layout_height="235dp"
                         android:layout_marginTop="250dp"
-                        android:orientation="horizontal"
-                        android:background="@drawable/background_grey">
+                        android:background="@drawable/background_grey"
+                        android:orientation="horizontal">
 
-
-                        <Button
-                            android:id="@+id/callsharehouseBtn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="58dp"
-                            android:layout_marginLeft="65dp"
-                            android:layout_marginTop="140dp"
+                        <LinearLayout
+                            android:id="@+id/callhouseBtn"
+                            android:layout_width="92dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginBottom="10dp"
                             android:background="@drawable/button_background"
-                            android:text="예약하기"
-                            android:textColor="@color/black" />
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="예약하기"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
 
                         <Button
-                            android:id="@+id/mapsharehouseBtn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="58dp"
+                            android:id="@+id/maphouseBtn"
+                            android:layout_width="92dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="8dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="140dp"
-                            android:layout_toRightOf="@id/callsharehouseBtn"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toRightOf="@id/callhouseBtn"
                             android:background="@drawable/button_background_color"
                             android:text="지도보기"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/callhouseBtn" />
 
-                        <Button
-                            android:id="@+id/scrapsharehouseBtn"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/scraphouseBtn"
+                            android:layout_width="92dp"
                             android:layout_height="60dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="156dp"
-                            android:layout_toRightOf="@id/mapsharehouseBtn"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="60dp"
+                            android:layout_marginBottom="10dp"
                             android:background="@drawable/button_background"
-                            android:drawableTop="@drawable/heart"
-                            android:padding="0sp"
-                            android:text="스크랩"
-                            android:textColor="@color/black" />
+                            android:orientation="vertical"
+                            android:padding="3dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/maphouseBtn">
 
-                    </LinearLayout>
+                            <ImageView
+                                android:id="@+id/scrapHeart"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/img_emptyheart" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="스크랩"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <ImageView
                         android:id="@+id/img_image"

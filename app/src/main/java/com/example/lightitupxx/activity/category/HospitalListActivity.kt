@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lightitupxx.R
 import com.example.lightitupxx.activity.detail.HospitalDetailActivity
 import com.example.lightitupxx.adapter.FieldAdapter
+import com.example.lightitupxx.adapter.HomeAdapter
 import com.example.lightitupxx.activity.HomeActivity
 import com.example.lightitupxx.adapter.HospitalAdapter
 import com.example.lightitupxx.api.Facility_info
@@ -18,16 +19,17 @@ import com.example.lightitupxx.api.LocationItem
 import com.example.lightitupxx.api.onItemClicked
 import kotlinx.android.synthetic.main.activity_hospital_list.*
 import java.util.*
+import com.example.lightitupxx.adapter.HospitalAdapter as HospitalAdapter1
 
 class HospitalListActivity : AppCompatActivity(), onItemClicked {
     lateinit var backButton: View
     lateinit var fieldAdapter: FieldAdapter
-    lateinit var facilityAdapter_san: HospitalAdapter
-    lateinit var facilityAdapter_ne : HospitalAdapter
-    lateinit var facilityAdapter_pi : HospitalAdapter
-    lateinit var facilityAdapter_ebi : HospitalAdapter
-    lateinit var facilityAdapter_jung : HospitalAdapter
-    lateinit var facilityAdapter_chi : HospitalAdapter
+    lateinit var facilityAdapter_san: HospitalAdapter1
+    lateinit var facilityAdapter_ne : HospitalAdapter1
+    lateinit var facilityAdapter_pi : HospitalAdapter1
+    lateinit var facilityAdapter_ebi : HospitalAdapter1
+    lateinit var facilityAdapter_jung : HospitalAdapter1
+    lateinit var facilityAdapter_chi : HospitalAdapter1
     var num : Int = 0
     var field_idx:Int=0
 
@@ -50,12 +52,12 @@ class HospitalListActivity : AppCompatActivity(), onItemClicked {
         //레이아웃 매니저를 이용해 어뎁터의 방향을 결정
         fieldlist_hospital.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        facilityAdapter_san = HospitalAdapter(hospital_san, this)
-        facilityAdapter_ne = HospitalAdapter(hospitals_ne, this)
-        facilityAdapter_pi = HospitalAdapter(hospitals_pi, this)
-        facilityAdapter_ebi = HospitalAdapter(hospitals_ebi, this)
-        facilityAdapter_jung = HospitalAdapter(hospitals_jung, this)
-        facilityAdapter_chi = HospitalAdapter(hospitals_chi, this)
+        facilityAdapter_san = HospitalAdapter1(hospital_san, this)
+        facilityAdapter_ne = HospitalAdapter1(hospitals_ne, this)
+        facilityAdapter_pi = HospitalAdapter1(hospitals_pi, this)
+        facilityAdapter_ebi = HospitalAdapter1(hospitals_ebi, this)
+        facilityAdapter_jung = HospitalAdapter1(hospitals_jung, this)
+        facilityAdapter_chi = HospitalAdapter1(hospitals_chi, this)
 
         recyclerGridView_hospital.adapter=facilityAdapter_san
         recyclerGridView_hospital.layoutManager= GridLayoutManager(applicationContext,2)

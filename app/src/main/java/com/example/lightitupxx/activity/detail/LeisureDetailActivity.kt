@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lightitupxx.R
 import com.example.lightitupxx.api.Facility_info
+import kotlinx.android.synthetic.main.activity_hospitaldetail.*
 import kotlinx.android.synthetic.main.activity_leisuredetail.*
 import kotlin.properties.Delegates
 
@@ -27,6 +28,7 @@ class LeisureDetailActivity : AppCompatActivity() {
     lateinit var tv_hashtag:TextView
     lateinit var tv_comment:TextView
     lateinit var btn_map: Button
+    lateinit var imageView: ImageView
     var longtitude by Delegates.notNull<Double>()
     var latitude by Delegates.notNull<Double>()
 
@@ -46,7 +48,8 @@ class LeisureDetailActivity : AppCompatActivity() {
         tv_option=findViewById(R.id.tv_option)
         tv_hashtag=findViewById(R.id.tv_hashtag)
         tv_comment=findViewById(R.id.tv_comment)
-        btn_map=findViewById(R.id.mapptshopBtn)
+        btn_map=findViewById(R.id.mapleisureBtn)
+        imageView=findViewById(R.id.scrapHeart)
 
         if(intent.hasExtra("leisure")){
             var leisure=intent.getParcelableExtra<Facility_info>("leisure")
@@ -73,7 +76,7 @@ class LeisureDetailActivity : AppCompatActivity() {
 
         callptshop.setOnClickListener {
             var intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel: 02-976-4500")
+            intent.data = Uri.parse("tel: 0507-")
             startActivity(intent)
         }
 
@@ -83,6 +86,11 @@ class LeisureDetailActivity : AppCompatActivity() {
             intent.putExtra("latitude", latitude)
 
             startActivity(intent)
+        }
+
+
+        scrapleisureBtn.setOnClickListener {
+            imageView.setImageResource(R.drawable.img_heart)
         }
     }
 }
