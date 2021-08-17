@@ -3,6 +3,7 @@ package com.example.lightitupxx.activity.detail
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -11,6 +12,7 @@ import com.example.lightitupxx.R
 import com.example.lightitupxx.api.Facility_info
 import kotlinx.android.synthetic.main.activity_housedetail.*
 import org.w3c.dom.Text
+import kotlin.properties.Delegates
 
 class HouseDetailActivity : AppCompatActivity(){
 
@@ -25,6 +27,9 @@ class HouseDetailActivity : AppCompatActivity(){
     lateinit var tv_option:TextView
     lateinit var tv_hashtag:TextView
     lateinit var tv_comment:TextView
+    lateinit var btn_map:Button
+    var longtitude by Delegates.notNull<Double>()
+    var latitude by Delegates.notNull<Double>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +47,7 @@ class HouseDetailActivity : AppCompatActivity(){
         tv_option=findViewById(R.id.tv_option)
         tv_hashtag=findViewById(R.id.tv_hashtag)
         tv_comment=findViewById(R.id.tv_comment)
+        btn_map=findViewById(R.id.mapsharehouseBtn)
 
         if(intent.hasExtra("house")){
             var house=intent.getParcelableExtra<Facility_info>("house")
@@ -57,6 +63,9 @@ class HouseDetailActivity : AppCompatActivity(){
             tv_option.text=house?.option
             tv_hashtag.text=house?.hashtag
             tv_comment.text=house?.comment
+
+            longtitude= house?.longtitude!!
+            latitude = house?.latitude!!
         }else{
             Toast.makeText(this,"존재하지 않는 내용입니다.", Toast.LENGTH_SHORT).show()
         }
@@ -64,6 +73,14 @@ class HouseDetailActivity : AppCompatActivity(){
         callsharehouse.setOnClickListener {
             var intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel: 0507-1362-5608")
+            startActivity(intent)
+        }
+
+        btn_map.setOnClickListener {
+            var intent = Intent(this, FragmentMapActivity::class.java)
+            intent.putExtra("longtitude", longtitude)
+            intent.putExtra("latitude", latitude)
+
             startActivity(intent)
         }
     }

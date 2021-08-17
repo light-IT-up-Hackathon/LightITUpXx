@@ -18,7 +18,7 @@ class MypageReserveActivity : AppCompatActivity() {
         setContentView(R.layout.activity_myreserve)
 
         goptdetail = findViewById(R.id.godetail)
-        backButton = findViewById(R.id.img_myPageBack)
+        backButton = findViewById(R.id.img_helpBack)
 
         goptdetail.setOnClickListener {
             startActivity<LeisureDetailActivity>()

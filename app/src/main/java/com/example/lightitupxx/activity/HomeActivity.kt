@@ -21,7 +21,7 @@ class HomeActivity: AppCompatActivity() {
     //변수 미리 선언
     private lateinit var layoutHospital:View
     private lateinit var layoutleisure:View
-    private lateinit var layouthelp:View
+    private var layouthelp:View? = null
     private lateinit var layoutHome:View
     private lateinit var layoutMypage:View
     private lateinit var searchBox:EditText
@@ -69,7 +69,7 @@ class HomeActivity: AppCompatActivity() {
         }
     }
     private fun helpLayoutEvent(){
-        layouthelp.setOnClickListener {
+        layouthelp?.setOnClickListener {
             startActivity<CommuMainActivity>()
         }
     }
