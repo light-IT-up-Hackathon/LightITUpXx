@@ -105,7 +105,9 @@ class HouseFacilityListAcitvity : AppCompatActivity(), onItemClicked {
     }
 
     private fun setHospitalsList(){
-        house_wal.add(Facility_info (R.drawable.img_home_sanggyejugong7,"[상계주공7단지]","월세","701동 1211호","서울시 노원구", 37.65904745825612, 127.0604076840165))
+        house_wal.add(Facility_info (R.drawable.img_home_sanggyejugong7,"[상계주공7단지]","월세","701동 1211호","서울시 노원구", 37.65904745825612, 127.0604076840165,
+        "","서울 노원구 동일로 1456","노원역9번 출구에서347m","매매가60,000 ~ 120,000 만원\n 전세가20,000 ~ 49,000 만원","기본 옵션 없음",
+        "#노원구 쉐어하우스\n#여성전용 쉐어하우스","쾌적하고 깔끔한 구성의 집입니다. 서울여대 학생들이 많이 거주하며, 주변 치안도 좋습니다."))
         house_wal.add(Facility_info (R.drawable.img_home_sodambill,"[소담빌]","월세","B동 302호","서울시 노원구", 37.6197880321966, 127.07789245517912))
         house_wal.add(Facility_info (R.drawable.img_home_chungsole,"[상계청솔아파트]","월세","125동 121호","서울시 노원구", 37.62337044501715, 127.08652253983522))
         house_wal.add(Facility_info (R.drawable.img_home_daeho,"[대호]","월세","805동 709호","서울시 노원구", 37.65998124324081, 127.07330162634443))
