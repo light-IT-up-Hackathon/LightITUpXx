@@ -1,6 +1,8 @@
 package com.example.lightitupxx.activity.community
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.ListView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -11,11 +13,13 @@ import io.realm.RealmConfiguration
 import io.realm.Sort
 import io.realm.exceptions.RealmMigrationNeededException
 import io.realm.kotlin.where
+import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
 
 class CommuMainActivity : AppCompatActivity() {
 
     lateinit var listView_commu: ListView
+    lateinit var back_button: View
 
     val realm = try {
         //Realm 인스턴스 얻기
@@ -31,11 +35,15 @@ class CommuMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_commu_main)
-
+        back_button = findViewById(R.id.img_helpBack)
         listView_commu=findViewById(R.id.listView_commu)
 
         findViewById<FloatingActionButton>(R.id.fab_comu).setOnClickListener { view ->
             startActivity<CommuRegActivity>()
+        }
+
+        back_button.setOnClickListener {
+            onBackPressed()
         }
 
         //데이터베이스 불러오기

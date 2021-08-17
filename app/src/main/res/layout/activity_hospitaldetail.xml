@@ -13,12 +13,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#3EA6A6A6"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/one"
                 android:backgroundTint="#3EA6A6A6"
                 android:orientation="vertical">
 
@@ -37,50 +37,73 @@
                         android:background="@drawable/ic_baseline_arrow_back_ios_24"
                         tools:ignore="SpeakableTextPresentCheck" />
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/grey"
                         android:layout_width="match_parent"
                         android:layout_height="235dp"
                         android:layout_marginTop="250dp"
-                        android:orientation="horizontal"
-                        android:background="@drawable/background_grey">
+                        android:background="@drawable/background_grey"
+                        android:orientation="horizontal">
 
-
-                        <Button
+                        <LinearLayout
                             android:id="@+id/callhospitalBtn"
-                            android:layout_width="wrap_content"
+                            android:layout_width="92dp"
                             android:layout_height="58dp"
-                            android:layout_marginLeft="65dp"
-                            android:layout_marginTop="140dp"
+                            android:layout_marginStart="60dp"
                             android:background="@drawable/button_background"
-                            android:text="예약하기"
-                            android:textColor="@color/black" />
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="예약하기"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
 
                         <Button
                             android:id="@+id/maphospitalBtn"
-                            android:layout_width="wrap_content"
+                            android:layout_width="92dp"
                             android:layout_height="58dp"
+                            android:layout_marginStart="8dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="140dp"
                             android:layout_toRightOf="@id/callhospitalBtn"
                             android:background="@drawable/button_background_color"
                             android:text="지도보기"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/callhospitalBtn" />
 
-                        <Button
-                            android:id="@+id/scraphospitalBtn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="60dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="156dp"
-                            android:layout_toRightOf="@id/maphospitalBtn"
+                        <LinearLayout
+                            android:layout_width="92dp"
+                            android:layout_height="58dp"
+                            android:layout_marginStart="8dp"
                             android:background="@drawable/button_background"
-                            android:drawableTop="@drawable/heart"
-                            android:padding="0sp"
-                            android:text="스크랩"
-                            android:textColor="@color/black" />
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/maphospitalBtn">
 
-                    </LinearLayout>
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/img_emptyHeart" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="스크랩"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <ImageView
                         android:id="@+id/img_image"
@@ -141,11 +164,11 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:id="@+id/two"
                 android:layout_below="@+id/one"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -170,16 +193,16 @@
 
                 <View
                     android:id="@+id/line1"
-                    android:layout_below="@id/callhospital"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#1E000000"/>
+                    android:layout_below="@id/callhospital"
+                    android:background="#1E000000" />
 
                 <LinearLayout
                     android:id="@+id/address"
-                    android:layout_below="@id/line1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/line1"
                     android:gravity="bottom">
 
                     <TextView
@@ -196,23 +219,23 @@
 
                 <View
                     android:id="@+id/line2"
-                    android:layout_below="@id/address"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#1E000000"/>
+                    android:layout_below="@id/address"
+                    android:background="#1E000000" />
 
                 <LinearLayout
                     android:id="@+id/loaction"
-                    android:layout_below="@id/line2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/line2"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:src="@drawable/location"/>
+                        android:src="@drawable/location" />
 
                     <LinearLayout
                         android:id="@+id/text_loaction"
@@ -233,16 +256,16 @@
 
                 <View
                     android:id="@+id/line3"
-                    android:layout_below="@id/loaction"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#1E000000"/>
+                    android:layout_below="@id/loaction"
+                    android:background="#1E000000" />
 
                 <LinearLayout
                     android:id="@+id/parking"
-                    android:layout_below="@id/line3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/line3"
                     android:gravity="bottom">
 
                     <TextView
@@ -259,16 +282,16 @@
 
                 <View
                     android:id="@+id/line4"
-                    android:layout_below="@id/parking"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#1E000000"/>
+                    android:layout_below="@id/parking"
+                    android:background="#1E000000" />
 
                 <LinearLayout
                     android:id="@+id/time"
-                    android:layout_below="@id/line4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/line4"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -297,23 +320,23 @@
 
                 <View
                     android:id="@+id/line5"
-                    android:layout_below="@id/time"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#1E000000"/>
+                    android:layout_below="@id/time"
+                    android:background="#1E000000" />
 
                 <LinearLayout
                     android:id="@+id/tag"
-                    android:layout_below="@id/line5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/line5"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left|center"
-                        android:src="@drawable/tag1"/>
+                        android:src="@drawable/tag1" />
 
                     <LinearLayout
                         android:id="@+id/test_tag"
@@ -334,23 +357,23 @@
 
                 <View
                     android:id="@+id/line6"
-                    android:layout_below="@id/tag"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#1E000000"/>
+                    android:layout_below="@id/tag"
+                    android:background="#1E000000" />
 
                 <LinearLayout
                     android:id="@+id/treatment"
-                    android:layout_below="@id/line6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/line6"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left|center"
-                        android:src="@drawable/treatment"/>
+                        android:src="@drawable/treatment" />
 
                     <LinearLayout
                         android:id="@+id/text_treatment"

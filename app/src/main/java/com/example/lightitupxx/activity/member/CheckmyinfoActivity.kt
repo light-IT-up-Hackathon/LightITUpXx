@@ -37,7 +37,7 @@ class CheckmyinfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_checkmyinfo)
 
-        backButton = findViewById(R.id.img_myPageBack)
+        backButton = findViewById(R.id.img_helpBack)
         name=findViewById(R.id.name)
         withdrawal=findViewById<ConstraintLayout>(R.id.checkmyinfo_Withdrawal)
 

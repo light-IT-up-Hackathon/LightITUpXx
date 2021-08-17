@@ -46,7 +46,7 @@
             tools:ignore="UnknownIdInLayout" />
 
         <ImageView
-            android:id="@+id/img_myPageBack"
+            android:id="@+id/img_helpBack"
             android:layout_width="52dp"
             android:layout_height="55dp"
             android:layout_marginStart="4dp"
