@@ -10,13 +10,21 @@ import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import kotlin.properties.Delegates
 
 
 class FragmentMapActivity: AppCompatActivity(), OnMapReadyCallback {
+    var longtitude by Delegates.notNull<Double>()
+    var latitude by Delegates.notNull<Double>()
     lateinit var backButton:View
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_map)
+
+        if(intent.hasExtra("longtitude")){
+            longtitude = intent.getDoubleExtra("longtitude", 0.00)
+            latitude = intent.getDoubleExtra("latitude", 0.00)
+        }
 
         backButton = findViewById(R.id.img_mapBack)
 //        backButton.setOnClickListener {
@@ -32,16 +40,15 @@ class FragmentMapActivity: AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         Log.d(TAG, "onMapReady: ");
-        val sydney = LatLng(-33.852, 151.211)
+        val LATLNG = LatLng(latitude, longtitude)
 
         googleMap.addMarker(
             MarkerOptions()
-                .position(sydney)
-                .title("Marker in Sydney")
+                .position(LATLNG)
         )
         val cameraPosition = CameraPosition.builder()
-            .target(sydney)
-            .zoom(15.0f)
+            .target(LATLNG)
+            .zoom(18.0f)
             .build()
 
         googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))

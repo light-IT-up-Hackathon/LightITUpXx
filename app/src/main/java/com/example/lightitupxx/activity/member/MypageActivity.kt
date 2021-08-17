@@ -46,7 +46,7 @@ class MypageActivity:AppCompatActivity(){
         layoutCS=findViewById<ConstraintLayout>(R.id.layout_cs)
         layoutVersion=findViewById<ConstraintLayout>(R.id.layout_version)
 
-        backButton = findViewById(R.id.img_myPageBack)
+        backButton = findViewById(R.id.img_helpBack)
 
         backButton.setOnClickListener {
             onBackPressed()
