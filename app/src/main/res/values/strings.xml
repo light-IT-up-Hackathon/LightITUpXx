@@ -10,4 +10,6 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_commu_reg">CommuRegActivity</string>
+    <string name="dojoin"><u>회원가입</u>하기</string>
+    <string name="join_onlywomen">※ 해당 어플은 <u>여성</u>회원만 가입 가능합니다.</string>
 </resources>
