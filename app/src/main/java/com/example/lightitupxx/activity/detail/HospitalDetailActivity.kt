@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.lightitupxx.R
 import com.example.lightitupxx.api.Facility_info
 import kotlinx.android.synthetic.main.activity_hospitaldetail.*
-import org.w3c.dom.Text
 import kotlin.properties.Delegates
 
 class HospitalDetailActivity : AppCompatActivity() {
@@ -67,7 +66,6 @@ class HospitalDetailActivity : AppCompatActivity() {
             tv_option.text=hospital?.option
             tv_hashtag.text=hospital?.hashtag
             tv_comment.text=hospital?.comment
-
             longtitude= hospital?.longtitude!!
             latitude = hospital?.latitude!!
 
@@ -75,7 +73,7 @@ class HospitalDetailActivity : AppCompatActivity() {
             Toast.makeText(this,"존재하지 않는 내용입니다.", Toast.LENGTH_SHORT).show()
         }
 
-        callhospital.setOnClickListener {
+        tv_phone.setOnClickListener {
             var intent = Intent(Intent.ACTION_DIAL)
             intent.data= Uri.parse("tel: 02-938-5557")
             startActivity(intent)
