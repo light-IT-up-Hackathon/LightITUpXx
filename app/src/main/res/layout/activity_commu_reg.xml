@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="42dp"
             android:layout_marginBottom="8dp"
+            android:fontFamily="@font/font_youspotlight"
             android:text="여성을 위한, 여성에 의한 모든 공간"
             android:textColor="@color/white"
             android:textSize="15sp"
@@ -44,6 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/font_youspotlight"
             android:text="우야누"
             android:textColor="@color/white"
             android:textSize="30sp"
@@ -83,9 +85,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
+            android:fontFamily="@font/font_youspotlight"
+            android:gravity="center_vertical"
             android:text="제목"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -95,6 +98,7 @@
             android:layout_width="315dp"
             android:layout_height="match_parent"
             android:background="@null"
+            android:fontFamily="@font/font_youspotlight"
             android:hint="제목 입력" />
 
     </LinearLayout>
@@ -115,11 +119,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:textColor="@color/black"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
+            android:fontFamily="@font/font_youspotlight"
+            android:gravity="center_vertical"
             android:text="이름"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -127,6 +132,7 @@
             android:layout_width="315dp"
             android:layout_height="match_parent"
             android:background="@null"
+            android:fontFamily="@font/font_youspotlight"
             android:hint="이름 입력" />
 
     </LinearLayout>
@@ -147,10 +153,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="@color/black"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
+            android:fontFamily="@font/font_youspotlight"
             android:text="내용"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -158,6 +165,7 @@
             android:layout_width="315dp"
             android:layout_height="match_parent"
             android:background="@null"
+            android:fontFamily="@font/font_youspotlight"
             android:hint="내용 입력                                  "
             android:inputType="textMultiLine"
             android:lines="8" />

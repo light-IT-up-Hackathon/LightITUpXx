@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="42dp"
             android:layout_marginBottom="8dp"
+            android:fontFamily="@font/font_youspotlight"
             android:text="여성을 위한, 여성에 의한 모든 공간"
             android:textColor="@color/white"
             android:textSize="15sp"
@@ -41,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/font_youspotlight"
             android:text="내 정보 확인하기"
             android:textColor="@color/white"
             android:textSize="25sp"
@@ -91,6 +93,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_checkmyinfo_name"
                 android:ems="10"
+                android:fontFamily="@font/font_youspotlight"
                 android:inputType="textPersonName"
                 android:text=" 김성연"
                 android:textSize="20dp" />
@@ -100,6 +103,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="40dp"
+                android:fontFamily="@font/font_youspotlight"
                 android:text="변경"
                 android:textSize="18dp" />
 
@@ -125,6 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
+                android:fontFamily="@font/font_youspotlight"
                 android:text="   아이디 "
                 android:textColor="@color/black"
                 android:textSize="18sp" />
@@ -146,6 +151,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_checkmyinfo_name"
                 android:ems="10"
+                android:fontFamily="@font/font_youspotlight"
                 android:inputType="textPersonName"
                 android:text=" liz09045@naver.com"
                 android:textSize="20dp" />
@@ -166,6 +172,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
+                android:fontFamily="@font/font_youspotlight"
                 android:text="비밀번호"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
@@ -187,6 +194,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_checkmyinfo_name"
                 android:ems="10"
+                android:fontFamily="@font/font_youspotlight"
                 android:inputType="textPersonName"
                 android:text=" 010-6539-2122"
                 android:textSize="20dp" />
@@ -206,6 +214,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
+                android:fontFamily="@font/font_youspotlight"
                 android:text="생년월일"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
@@ -228,6 +237,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_checkmyinfo_name"
                 android:ems="10"
+                android:fontFamily="@font/font_youspotlight"
                 android:inputType="textPersonName"
                 android:text=" 2000.09.04"
                 android:textSize="20dp" />
@@ -254,6 +264,7 @@
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
+                android:fontFamily="@font/font_youspotlight"
                 android:text="회원탈퇴"
                 android:textColor="@color/black"
                 android:textSize="20dp" />

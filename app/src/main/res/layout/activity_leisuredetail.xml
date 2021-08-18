@@ -59,6 +59,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_youspotlight"
                                 android:text="예약하기"
                                 android:textColor="@color/black" />
                         </LinearLayout>
@@ -69,11 +70,10 @@
                             android:layout_width="92dp"
                             android:layout_height="60dp"
                             android:layout_marginStart="8dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="140dp"
                             android:layout_marginBottom="10dp"
                             android:layout_toRightOf="@id/callleisureBtn"
                             android:background="@drawable/button_background_color"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="지도보기"
                             android:textColor="#FFFFFF"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -104,6 +104,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:fontFamily="@font/font_youspotlight"
                                 android:text="스크랩"
                                 android:textColor="@color/black" />
 
@@ -134,6 +135,7 @@
                             android:id="@+id/tv_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:paddingTop="20dp"
                             android:text="[ 커브스 공릉과기대클럽 ]"
                             android:textColor="@color/black"
@@ -143,6 +145,7 @@
                             android:id="@+id/tv_field"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="헬스장"
                             android:textColor="#86000000"
                             android:textSize="18dp" />
@@ -151,6 +154,7 @@
                             android:id="@+id/tv_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:paddingTop="40dp"
                             android:text="서울 노원구 동일로191가길 65 동일주택"
                             android:textColor="@color/black"
@@ -160,6 +164,7 @@
                             android:id="@+id/tv_time"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:paddingBottom="20dp"
                             android:text="평일 09:30~21:00"
                             android:textColor="@color/black"
@@ -191,6 +196,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/call"
+                        android:fontFamily="@font/font_youspotlight"
                         android:gravity="left|center"
                         android:text="02-976-4500"
                         android:textColor="@color/black"
@@ -217,6 +223,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/address1"
+                        android:fontFamily="@font/font_youspotlight"
                         android:gravity="left|center"
                         android:text="서울 노원구 공릉동 312-9 동일주택"
                         android:textColor="@color/black"
@@ -253,6 +260,7 @@
                             android:id="@+id/tv_option"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="주차, 예약, 무선 인터넷, 남/녀 화장실 구분, "
                             android:textColor="@color/black"
                             android:textSize="17dp" />
@@ -291,6 +299,7 @@
                             android:id="@+id/tv_realtime"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:gravity="bottom"
                             android:text="평일 09:30~21:00"
                             android:textColor="@color/black"
@@ -329,6 +338,7 @@
                             android:id="@+id/tv_hashtag"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="#여성전용_헬스클럽 #순환운동 #휘트니스"
                             android:textColor="@color/black"
                             android:textSize="17dp" />
@@ -366,6 +376,7 @@
                             android:id="@+id/tv_comment"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="여성만을 위한 30분 순환운동! 커브스!"
                             android:textColor="@color/black"
                             android:textSize="17dp" />
