@@ -42,7 +42,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="235dp"
                         android:layout_marginTop="250dp"
-                        android:background="@drawable/background_grey"
+                        android:background="@color/appBackgroundColor"
                         android:orientation="horizontal">
 
                         <LinearLayout
@@ -59,6 +59,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/font_youspotlight"
                                 android:text="예약하기"
                                 android:textColor="@color/black" />
                         </LinearLayout>
@@ -69,11 +70,10 @@
                             android:layout_width="92dp"
                             android:layout_height="60dp"
                             android:layout_marginStart="8dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="140dp"
                             android:layout_marginBottom="10dp"
                             android:layout_toRightOf="@id/callhospitalBtn"
                             android:background="@drawable/button_background_color"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="지도보기"
                             android:textColor="#FFFFFF"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -104,6 +104,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:fontFamily="@font/font_youspotlight"
                                 android:text="스크랩"
                                 android:textColor="@color/black" />
 
@@ -134,6 +135,7 @@
                             android:id="@+id/tv_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:paddingTop="20dp"
                             android:text="[ 남미현산부인과의원 ]"
                             android:textColor="@color/black"
@@ -143,6 +145,7 @@
                             android:id="@+id/tv_field"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="산부인과"
                             android:textColor="#86000000"
                             android:textSize="18dp" />
@@ -151,6 +154,7 @@
                             android:id="@+id/tv_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:paddingTop="40dp"
                             android:text="서울 노원구 노해로 482"
                             android:textColor="@color/black"
@@ -160,6 +164,7 @@
                             android:id="@+id/tv_time"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:paddingBottom="20dp"
                             android:text="평일 09:00~19:00"
                             android:textColor="@color/black"
@@ -191,6 +196,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/call"
+                        android:fontFamily="@font/font_youspotlight"
                         android:gravity="left|center"
                         android:text=" 02-938-5557"
                         android:textColor="@color/black"
@@ -217,6 +223,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/address1"
+                        android:fontFamily="@font/font_youspotlight"
                         android:gravity="left|center"
                         android:text="서울 노원구 상계동 727 덕영빌딩 7층"
                         android:textColor="@color/black"
@@ -254,6 +261,7 @@
                             android:id="@+id/tv_way"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="노원역 5번 출구에서 순복음교회쪽으로 올라오시면 우리은행 건물 7층에 위치하고 있습니다."
                             android:textColor="@color/black"
                             android:textSize="17dp" />
@@ -280,6 +288,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/parking"
+                        android:fontFamily="@font/font_youspotlight"
                         android:gravity="left|center"
                         android:text=" 주차, 예약, 무선 인터넷, 남/녀 화장실 구분"
                         android:textColor="@color/black"
@@ -318,6 +327,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="bottom"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="토요일 09:00~12:00 / 일요일 휴무"
                             android:textColor="@color/black"
                             android:textSize="17dp" />
@@ -355,6 +365,7 @@
                             android:id="@+id/tv_hashtag"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="#가족분만 #요실금 #부인과성형 #소아과"
                             android:textColor="@color/black"
                             android:textSize="17dp" />
@@ -392,6 +403,7 @@
                             android:id="@+id/tv_comment"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_youspotlight"
                             android:text="진료과목: 내과, 소아청소년과, 마취통증의학과,"
                             android:textColor="@color/black"
                             android:textSize="17dp" />

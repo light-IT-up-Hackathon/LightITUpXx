@@ -22,6 +22,7 @@
         android:paddingBottom="5dp"
         android:textColor="@color/black"
         tools:ignore="MissingConstraints"
-        android:text="산부인과"/>
+        android:text="산부인과"
+        android:fontFamily="@font/font_youspotlight"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

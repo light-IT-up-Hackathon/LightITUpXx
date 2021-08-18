@@ -43,13 +43,11 @@ class HospitalAdapter (val hospitalList : ArrayList<Facility_info>, private val 
         fun bindItems(hospitals: Facility_info ){
             val h_Image = itemView.findViewById<ImageView>(R.id.imageView_hospital) //병원 종류
             val h_name = itemView.findViewById<TextView>(R.id.hospital_name)
-            val h_field = itemView.findViewById<TextView>(R.id.hospital_field)
             val h_time = itemView.findViewById<TextView>(R.id.hospital_time)
             val h_location = itemView.findViewById<TextView>(R.id.hospital_location)
 
             h_Image.setImageResource(hospitals.image)
             h_name.text = hospitals.name
-            h_field.text = hospitals.field
             h_time.text = hospitals.time
             h_location.text = hospitals.location
         }
