@@ -39,14 +39,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/font_youspotlight"
         android:text="아이디"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+        app:layout_constraintTop_toBottomOf="@+id/rg2" />
 
     <TextView
         android:id="@+id/textView4"
@@ -82,7 +82,7 @@
         android:id="@+id/etv_join_id"
         android:layout_width="180dp"
         android:layout_height="37dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="60dp"
         android:background="@drawable/rectangle"
         android:ems="10"
@@ -93,7 +93,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton2"
+        app:layout_constraintTop_toBottomOf="@+id/rg2"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
@@ -162,27 +162,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_join" />
 
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/font_youspotlight"
-
-        android:text="사업자"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <RadioButton
-        android:id="@+id/radioButton2"
+    <RadioGroup
+        android:id="@+id/rg2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="136dp"
-        android:fontFamily="@font/font_youspotlight"
-        android:text="개인"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.039">
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:fontFamily="@font/font_youspotlight"
+            android:paddingStart="20dp"
+            android:text="사업자"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="136dp"
+            android:fontFamily="@font/font_youspotlight"
+            android:paddingStart="20dp"
+            android:text="개인"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

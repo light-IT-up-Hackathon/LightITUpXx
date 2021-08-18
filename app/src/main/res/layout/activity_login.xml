@@ -47,9 +47,9 @@
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/rg1"
         app:layout_constraintEnd_toStartOf="@+id/etv_login_id"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
@@ -103,6 +103,7 @@
         android:id="@+id/etv_login_id"
         android:layout_width="180dp"
         android:layout_height="37dp"
+        android:paddingLeft="10dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="85dp"
         android:background="@drawable/rectangle"
@@ -110,7 +111,7 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton4"
+        app:layout_constraintTop_toBottomOf="@+id/rg1"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <EditText
@@ -119,6 +120,7 @@
         android:layout_height="37dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="85dp"
+        android:paddingLeft="10dp"
         android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textPersonName"
@@ -144,24 +146,39 @@
         app:layout_constraintTop_toBottomOf="@+id/etv_login_pwd"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <RadioButton
-        android:id="@+id/radioButton3"
+    <RadioGroup
+        android:id="@+id/rg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="16dp"
-        android:text="사업자"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <RadioButton
-        android:id="@+id/radioButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="136dp"
-        android:text="개인"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.039">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:fontFamily="@font/font_youspotlight"
+            android:paddingStart="20dp"
+            android:text="사업자"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="136dp"
+            android:fontFamily="@font/font_youspotlight"
+            android:paddingStart="20dp"
+            android:text="개인"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
