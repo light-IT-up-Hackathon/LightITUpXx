@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/font_youspotlight"
             android:text="[이소아집]"
@@ -41,28 +41,13 @@
             app:layout_constraintTop_toBottomOf="@id/imageView_home" />
 
         <TextView
-            android:id="@+id/home_field"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="32dp"
-            android:text="매매"
-            android:fontFamily="@font/font_youspotlight"
-            android:textColor="#a9a9a9"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.01"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_name" />
-
-        <TextView
             android:id="@+id/home_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
+            android:fontFamily="@font/font_youspotlight"
             android:text="평일 09~20시"
             android:fontFamily="@font/font_youspotlight"
             android:textColor="@color/black"
@@ -70,15 +55,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.021"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_field" />
+            app:layout_constraintTop_toBottomOf="@+id/home_name" />
 
         <TextView
             android:id="@+id/home_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
+            android:fontFamily="@font/font_youspotlight"
             android:text="인천시 계양구"
             android:fontFamily="@font/font_youspotlight"
             android:textColor="@color/black"

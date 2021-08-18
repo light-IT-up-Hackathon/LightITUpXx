@@ -39,13 +39,11 @@ class LeisureFacilityAdapter (val leisureList : ArrayList<Facility_info>, privat
         fun bindItems(leisures:Facility_info ){
             val l_Image = itemView.findViewById<ImageView>(R.id.imageView_leisure)
             val l_name = itemView.findViewById<TextView>(R.id.leisure_name)
-            val l_field = itemView.findViewById<TextView>(R.id.leisure_field)
             val l_time = itemView.findViewById<TextView>(R.id.leisure_time)
             val l_location = itemView.findViewById<TextView>(R.id.leisure_location)
 
             l_Image.setImageResource(leisures.image)
             l_name.text = leisures.name
-            l_field.text = leisures.field
             l_time.text = leisures.time
             l_location.text = leisures.location
         }

@@ -66,25 +66,20 @@
             app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/linear_main3"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fieldlist_leisure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:background="@color/white"
+        android:fontFamily="@font/font_youspotlight"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/top_bar">
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"
+        tools:listitem="@layout/list_item_field"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/fieldlist_leisure"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:fontFamily="@font/font_youspotlight"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/list_item_field">
-        </androidx.recyclerview.widget.RecyclerView>
-
-    </LinearLayout>
 
     <ScrollView
         android:background="@color/categoryBackgroundColor"

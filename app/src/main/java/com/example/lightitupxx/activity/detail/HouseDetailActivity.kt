@@ -39,7 +39,6 @@ class HouseDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_housedetail)
 
         tv_name = findViewById(R.id.tv_name)
-        tv_field = findViewById(R.id.tv_field)
         tv_location = findViewById(R.id.tv_location)
         img_image = findViewById(R.id.img_image)
 
@@ -56,7 +55,6 @@ class HouseDetailActivity : AppCompatActivity() {
         if (intent.hasExtra("house")) {
             var house = intent.getParcelableExtra<Facility_info>("house")
             tv_name.text = house?.name
-            tv_field.text = house?.field
             tv_location.text = house?.location
             img_image.setImageResource(house!!.image)
 
@@ -79,7 +77,6 @@ class HouseDetailActivity : AppCompatActivity() {
             intent.data = Uri.parse("tel: 0507-1362-5608")
             startActivity(intent)
         }
-
         btn_map.setOnClickListener {
             var intent = Intent(this, FragmentMapActivity::class.java)
             intent.putExtra("longtitude", longtitude)
@@ -87,8 +84,6 @@ class HouseDetailActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
-
-
         scraphouseBtn.setOnClickListener {
             imageView.setImageResource(R.drawable.img_heart)
         }

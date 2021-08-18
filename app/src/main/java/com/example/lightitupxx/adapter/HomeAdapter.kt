@@ -45,13 +45,11 @@ class HomeAdapter (val homeList : ArrayList<Facility_info>, private val onItemCl
         fun bindItems(homes: Facility_info) {
             val h_Image = itemView.findViewById<ImageView>(R.id.imageView_home)
             val h_name = itemView.findViewById<TextView>(R.id.home_name)
-            val h_field = itemView.findViewById<TextView>(R.id.home_field)
             val h_time = itemView.findViewById<TextView>(R.id.home_time)
             val h_location = itemView.findViewById<TextView>(R.id.home_location)
 
             h_Image.setImageResource(homes.image)
             h_name.text = homes.name
-            h_field.text = homes.field
             h_time.text = homes.time
             h_location.text = homes.location
 

@@ -8,7 +8,7 @@ import kotlinx.android.parcel.Parcelize
 data class Facility_info (
     val image : Int,    //이미지
     val name : String,  //시설 이름
-    val field : String, //시설 종류
+    val field : String, //종류
     val time : String,  //운영 시간
     val location :String,   //위치
     val latitude:Double?,   //위도

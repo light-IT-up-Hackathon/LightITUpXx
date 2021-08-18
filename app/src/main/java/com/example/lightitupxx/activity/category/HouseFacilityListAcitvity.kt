@@ -62,7 +62,6 @@ class HouseFacilityListAcitvity : AppCompatActivity(), onItemClicked {
                 fieldCheck(v, position)
             }
         })
-
         setField(fieldAdapter)
         setHospitalsList()
     }
