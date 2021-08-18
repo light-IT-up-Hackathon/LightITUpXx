@@ -67,9 +67,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:background="@drawable/bottom_stroke"
-        android:padding="5dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top_bar">
 
         <TextView
@@ -77,25 +79,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/font_youspotlight"
             android:text="비회원"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.476" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="17dp"
             android:fontFamily="@font/font_youspotlight"
             android:text="님, 엑스엑스 회원"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_name"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,7 +104,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="32dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_user" />
@@ -119,6 +119,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rectangle"
+        android:elevation="10dp"
         android:padding="5dp"
         android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
@@ -135,27 +136,25 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/font_youspotlight"
-            android:gravity="center_horizontal"
-            android:text="MY\n스크랩"
+            android:text="MY 스크랩"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="53dp"
-            android:layout_height="47dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_scrap"
-            app:srcCompat="@drawable/scrap_icon"
-            app:tint="@color/mainColor" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_mypage_thumbs_up" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -167,6 +166,7 @@
         android:layout_marginEnd="30dp"
         android:background="@drawable/rectangle"
         android:padding="5dp"
+        android:elevation="10dp"
         android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
@@ -182,26 +182,25 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/font_youspotlight"
-            android:gravity="center_horizontal"
-            android:text="내 정보\n확인하기"
+            android:text="내 정보"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="53dp"
-            android:layout_height="47dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_myinfo"
-            app:srcCompat="@drawable/info_icon" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_mypage_document" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
