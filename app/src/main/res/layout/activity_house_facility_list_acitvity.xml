@@ -21,6 +21,7 @@
             android:id="@+id/appendix"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/font_youspotlight"
             android:text="내 주변 여성 주거 시설을 찾아보세요!"
             android:textColor="@color/white"
             android:textSize="15sp"
@@ -35,6 +36,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="140dp"
             android:text="주거시설"
+            android:fontFamily="@font/font_youspotlight"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -74,22 +76,15 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/fieldlist_home"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:orientation="horizontal"
+            android:fontFamily="@font/font_youspotlight"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/list_item_field">
         </androidx.recyclerview.widget.RecyclerView>
 
-        <ImageButton
-            android:id="@+id/button_fieldlist_home"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
     </LinearLayout>
 
     <ScrollView
@@ -106,6 +101,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerGridView_home"
             android:layout_width="match_parent"
+            android:fontFamily="@font/font_youspotlight"
             android:layout_height="wrap_content" />
     </ScrollView>
 
