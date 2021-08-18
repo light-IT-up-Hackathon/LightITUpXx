@@ -11,7 +11,7 @@
         android:layout_width="107dp"
         android:layout_height="174dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -39,7 +39,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/font_youspotlight"
         android:text="아이디"
@@ -47,12 +48,14 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/etv_login_id"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/font_youspotlight"
@@ -61,6 +64,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/etv_login_pwd"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etv_login_id" />
 
     <TextView
@@ -97,23 +101,23 @@
 
     <EditText
         android:id="@+id/etv_login_id"
-        android:layout_width="210dp"
+        android:layout_width="180dp"
         android:layout_height="37dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="85dp"
         android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
 
     <EditText
         android:id="@+id/etv_login_pwd"
-        android:layout_width="210dp"
+        android:layout_width="180dp"
         android:layout_height="37dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="85dp"
         android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textPersonName"
@@ -123,7 +127,7 @@
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="211dp"
+        android:layout_width="270dp"
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
@@ -136,5 +140,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etv_login_pwd" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="16dp"
+        android:text="사업자"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="136dp"
+        android:text="개인"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
