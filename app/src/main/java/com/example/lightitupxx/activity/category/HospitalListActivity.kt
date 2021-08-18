@@ -55,7 +55,6 @@ class HospitalListActivity : AppCompatActivity(), onItemClicked {
         facilityAdapter_san = HospitalAdapter1(hospital_san, this)
         facilityAdapter_ne = HospitalAdapter1(hospitals_ne, this)
         facilityAdapter_pi = HospitalAdapter1(hospitals_pi, this)
-        facilityAdapter_ebi = HospitalAdapter1(hospitals_ebi, this)
         facilityAdapter_jung = HospitalAdapter1(hospitals_jung, this)
         facilityAdapter_chi = HospitalAdapter1(hospitals_chi, this)
 
@@ -93,9 +92,7 @@ class HospitalListActivity : AppCompatActivity(), onItemClicked {
             intentGoToHospitalDetail.putExtra("hospital",hospitals_ne[idx])
         }else if(field_idx==2){
             intentGoToHospitalDetail.putExtra("hospital",hospitals_pi[idx])
-        }else if(field_idx==3){
-            intentGoToHospitalDetail.putExtra("hospital",hospitals_ebi[idx])
-        }else if(field_idx==4){
+        } else if(field_idx==4){
             intentGoToHospitalDetail.putExtra("hospital",hospitals_jung[idx])
         }else{
             Toast.makeText(this,"해당 필드가 존재하지 않습니다.",Toast.LENGTH_SHORT).show()
@@ -117,10 +114,6 @@ class HospitalListActivity : AppCompatActivity(), onItemClicked {
             recyclerGridView_hospital.adapter=facilityAdapter_pi
             recyclerGridView_hospital.layoutManager= GridLayoutManager(applicationContext,2)
         }
-        else if(field[position].location=="이비인후과"){
-            recyclerGridView_hospital.adapter=facilityAdapter_ebi
-            recyclerGridView_hospital.layoutManager= GridLayoutManager(applicationContext,2)
-        }
         else if(field[position].location=="정형외과"){
             recyclerGridView_hospital.adapter=facilityAdapter_jung
             recyclerGridView_hospital.layoutManager= GridLayoutManager(applicationContext,2)
@@ -132,9 +125,7 @@ class HospitalListActivity : AppCompatActivity(), onItemClicked {
         field.add(LocationItem("산부인과"))
         field.add(LocationItem("내과"))
         field.add(LocationItem("피부과"))
-        field.add(LocationItem("이비인후과"))
         field.add(LocationItem("정형외과"))
-
     }
 
     private fun setHospitalsList(){
@@ -308,7 +299,7 @@ class HospitalListActivity : AppCompatActivity(), onItemClicked {
 
 
 
-        //이비인후과
+        /*이비인후과
         hospitals_ebi.add(Facility_info (R.drawable.img_enthospital_sky,"[새하늘이비인후과의원]","이비인후과","평일 09시~19시","서울시 노원구",37.67022440046417, 127.05725361587751,
         "02-951-9518","서울 노원구 동일로 1548 세일빌딩 3층","7호선 마들역 1번 출구로 나와 의정부 방면 5m 거리에 위치해 있습니다.","","",
         "새하늘이비인후과에서는 두 분의 전문의 선생님으로부터 최신의 장비를 이용하여, 코콜이, 비염, 축농증 등의 수술과, 후두내시경, 소아 이비인후과 클리닉, 이명, 난청 클리닉 및 보청기 제작 등 다양한 의료혜택을 누릴 수 있습니다."))
@@ -337,6 +328,8 @@ class HospitalListActivity : AppCompatActivity(), onItemClicked {
                 "#중이염",
         "시원한 이비인후과는 대학병원에서 얻은 풍부한 진료와 치료경험을 바탕으로 환자분들께서 편안하고 빠르게 진료와 수술을 받으실 수 있도록 최선의 노력을 다하고 있습니다. "))
 
+
+         */
 
 
         //정형외과
