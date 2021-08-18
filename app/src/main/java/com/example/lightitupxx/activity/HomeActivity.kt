@@ -25,7 +25,7 @@ class HomeActivity: AppCompatActivity() {
     private lateinit var layoutHome:View
     private lateinit var layoutMypage:View
     private lateinit var searchBox:EditText
-    private lateinit var searchButton: Button
+    private lateinit var searchButton: View
 
     //더미데이터
     val placeArray: Array<String> = arrayOf("이소아병원", "한유림병원", "안예린병원", "김성연병원")
