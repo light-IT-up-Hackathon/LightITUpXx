@@ -23,14 +23,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="160dp"
+            android:fontFamily="@font/font_youspotlight"
             android:paddingTop="10dp"
             android:text="MY 스크랩"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
 
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/logo"
             app:layout_constraintTop_toBottomOf="@+id/appendix" />
 
@@ -93,6 +94,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_youspotlight"
                     android:text="[ 남미현산부인과의원 ]"
                     android:textColor="@color/black"
                     android:textSize="15dp" />
@@ -100,6 +102,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_youspotlight"
                     android:text="산부인과"
                     android:textColor="#86000000"
                     android:textSize="13dp" />
@@ -107,6 +110,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_youspotlight"
                     android:text="평일 09:00~19:00"
                     android:textColor="@color/black"
                     android:textSize="15dp" />
@@ -114,6 +118,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_youspotlight"
                     android:text="서울 노원구"
                     android:textColor="@color/black"
                     android:textSize="15dp" />
