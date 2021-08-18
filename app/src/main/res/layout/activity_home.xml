@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/appBackgroundColor">
+    android:background="#F8F7F7">
 
     <!--Top bar-->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,6 +21,7 @@
             android:id="@+id/appendix"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/font_youspotlight"
             android:text="여성을 위한, 여성에 의한 모든 공간"
             android:textColor="@color/white"
             android:textSize="15sp"
@@ -34,6 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="131dp"
+            android:fontFamily="@font/font_youspotlight"
             android:text="엑스엑스"
             android:textColor="@color/white"
             android:textSize="30sp"
@@ -71,12 +73,13 @@
         >
 
         <EditText
-            android:layout_gravity="center_vertical"
             android:id="@+id/searchBox"
             android:layout_width="325dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:backgroundTint="@color/seachLayoutColor"
-            android:hint="검색어를 입력하세요."
+            android:fontFamily="@font/font_youspotlight"
+            android:hint="어떤 편의시설을 찾고 계신가요?"
             android:padding="8dp"
             android:textSize="16sp" />
 
@@ -89,33 +92,21 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:text="어떤 편의시설을 찾고 계신가요?"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchLayout" />
-
     <!--hospital-->
 
     <!--Leisure-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_Hospital"
-        android:layout_width="143dp"
-        android:layout_height="163dp"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rectangle"
-        android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
 
         app:layout_constraintBottom_toTopOf="@+id/layout_mypage"
         app:layout_constraintEnd_toStartOf="@+id/layout_home"
@@ -127,6 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:clickable="false"
+            android:fontFamily="@font/font_youspotlight"
             android:text="병원"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -156,17 +148,17 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_Leisure"
-        android:layout_width="143dp"
-        android:layout_height="163dp"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/rectangle"
-        app:layout_constraintEnd_toEndOf="@+id/layout_Hospital"
-        app:layout_constraintStart_toStartOf="parent"
-        android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="@+id/layout_Hospital"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchLayout">
 
         <TextView
             android:id="@+id/tv_leisure"
@@ -174,6 +166,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:clickable="false"
+            android:fontFamily="@font/font_youspotlight"
             android:text="여가시설"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -197,17 +190,17 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_help"
-        android:layout_width="143dp"
-        android:layout_height="163dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="52dp"
         android:background="@drawable/rectangle"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/layout_home"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
+        app:layout_constraintTop_toBottomOf="@+id/searchLayout">
 
         <TextView
             android:id="@+id/tv_help"
@@ -215,6 +208,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:clickable="false"
+            android:fontFamily="@font/font_youspotlight"
             android:text="도와도"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -240,14 +234,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_home"
-        android:layout_width="143dp"
-        android:layout_height="163dp"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rectangle"
-        android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
         app:layout_constraintBottom_toTopOf="@+id/layout_mypage"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -257,6 +251,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:clickable="false"
+            android:fontFamily="@font/font_youspotlight"
             android:text="주거시설"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -302,6 +297,7 @@
             android:layout_marginEnd="71dp"
             android:layout_marginBottom="8dp"
             android:clickable="false"
+            android:fontFamily="@font/font_youspotlight"
             android:text="마이페이지 및 설정"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
