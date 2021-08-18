@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lightitupxx.R
 import com.example.lightitupxx.api.Facility_info
-import kotlinx.android.synthetic.main.activity_hospitaldetail.*
 import kotlinx.android.synthetic.main.activity_leisuredetail.*
 import kotlin.properties.Delegates
 
@@ -74,7 +73,7 @@ class LeisureDetailActivity : AppCompatActivity() {
             Toast.makeText(this,"존재하지 않는 내용입니다.", Toast.LENGTH_SHORT).show()
         }
 
-        callptshop.setOnClickListener {
+        tv_phone.setOnClickListener {
             var intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel: 0507-")
             startActivity(intent)

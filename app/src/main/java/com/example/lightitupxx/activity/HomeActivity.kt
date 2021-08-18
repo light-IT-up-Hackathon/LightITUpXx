@@ -19,10 +19,10 @@ import org.jetbrains.anko.startActivity
 
 class HomeActivity: AppCompatActivity() {
     //변수 미리 선언
-    private lateinit var layoutHospital:View
-    private lateinit var layoutleisure:View
+    private var layoutHospital:View? = null
+    private var layoutleisure:View? = null
     private var layouthelp:View? = null
-    private lateinit var layoutHome:View
+    private var layoutHome:View? = null
     private lateinit var layoutMypage:View
     private lateinit var searchBox:EditText
     private lateinit var searchButton: View
@@ -54,18 +54,18 @@ class HomeActivity: AppCompatActivity() {
 
     //functions--> clickable layout including child
     private fun hospitalLayoutEvent(){
-        layoutHospital.setOnClickListener {
+        layoutHospital?.setOnClickListener {
             startActivity<HospitalListActivity>()
         }
     }
     private fun leisureLayoutEvent(){
-        layoutleisure.setOnClickListener {
-                startActivity<LeisureFacilityListActivity>()
+        layoutleisure?.setOnClickListener {
+            startActivity<LeisureFacilityListActivity>()
         }
     }
     private fun homeLayoutEvent(){
-        layoutHome.setOnClickListener {
-                startActivity<HouseFacilityListAcitvity>()
+        layoutHome?.setOnClickListener {
+            startActivity<HouseFacilityListAcitvity>()
         }
     }
     private fun helpLayoutEvent(){

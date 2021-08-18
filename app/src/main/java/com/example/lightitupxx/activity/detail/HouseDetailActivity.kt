@@ -10,10 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lightitupxx.R
 import com.example.lightitupxx.api.Facility_info
-import kotlinx.android.synthetic.main.activity_hospitaldetail.*
 import kotlinx.android.synthetic.main.activity_housedetail.*
-import org.jetbrains.anko.backgroundDrawable
-import org.w3c.dom.Text
 import kotlin.properties.Delegates
 
 class HouseDetailActivity : AppCompatActivity() {
@@ -72,7 +69,7 @@ class HouseDetailActivity : AppCompatActivity() {
             Toast.makeText(this, "존재하지 않는 내용입니다.", Toast.LENGTH_SHORT).show()
         }
 
-        callsharehouse.setOnClickListener {
+        tv_phone.setOnClickListener {
             var intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel: 0507-1362-5608")
             startActivity(intent)
