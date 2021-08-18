@@ -75,6 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="비회원"
+            android:layout_marginLeft="5dp"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -96,14 +97,13 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="60dp"
-            android:layout_height="58dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginStart="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/person_icon"
-            app:tint="@color/black" />
+            app:srcCompat="@drawable/icon_user" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
