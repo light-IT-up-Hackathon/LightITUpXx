@@ -147,7 +147,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/layout_Hospital"
             app:layout_constraintTop_toBottomOf="@+id/tv_hospital"
-            app:srcCompat="@drawable/hospital_logo" />
+            app:srcCompat="@drawable/homeicon_hospital" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--public facilities-->
@@ -192,7 +192,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_leisure"
-            app:srcCompat="@drawable/leisure_logo" />
+            app:srcCompat="@drawable/homeicon_exercise" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -221,6 +221,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_help"
+            android:layout_width="82dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="31dp"
+            android:clickable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_help"
+            app:srcCompat="@drawable/homeicon_help" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -262,7 +275,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_house"
-            app:srcCompat="@drawable/house_logo" />
+            app:srcCompat="@drawable/homeicon_house" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -309,7 +322,7 @@
             app:layout_constraintEnd_toStartOf="@+id/tv_mypage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/person_icon" />
+            app:srcCompat="@drawable/icon_user" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
