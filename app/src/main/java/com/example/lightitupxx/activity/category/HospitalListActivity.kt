@@ -18,6 +18,7 @@ import com.example.lightitupxx.api.Facility_info
 import com.example.lightitupxx.api.LocationItem
 import com.example.lightitupxx.api.onItemClicked
 import kotlinx.android.synthetic.main.activity_hospital_list.*
+import kotlinx.android.synthetic.main.list_griditem_hospital.*
 import java.util.*
 import com.example.lightitupxx.adapter.HospitalAdapter as HospitalAdapter1
 
@@ -78,6 +79,14 @@ class HospitalListActivity : AppCompatActivity(), onItemClicked {
 
         setField(fieldAdapter)
         setHospitalsList()
+
+        var hospital=intent.getParcelableExtra<Facility_info>("hospital")
+        imageView_hospital?.setImageResource(hospital!!.image)
+        hospital_name?.text=hospital?.name
+        hospital_time?.text=hospital?.time
+        hospital_location?.text=hospital?.location
+        hospital_san.add(Facility_info (R.drawable.san_hospital,"[플로체여성의원]","산부인과","평일 09시~17시","서울시 노원구",37.66523650214988, 127.05805302716998,
+            "02-932-0700","서울 노원구 동일로 1530","","","주차, 예약, 무선 인터넷, 남/녀 화장실 구분"))
 
     }
 
