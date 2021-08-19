@@ -79,6 +79,7 @@
                         android:layout_marginBottom="18dp"
                         android:background="@drawable/button_background"
                         android:orientation="vertical"
+                        android:gravity="center"
                         android:padding="4dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +130,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/font_youspotlight"
                         android:text="[ 남미현산부인과의원 ]"
-                        android:textColor="@color/black"
+                        android:textColor="#AB000000"
                         android:textSize="24sp" />
 
                     <TextView
