@@ -9,7 +9,7 @@ data class Facility_info (
     val image : Int,    //이미지
     val name : String,  //시설 이름
     val field : String, //종류
-    val time : String,  //운영 시간
+    val time : String = "평일 09시~20시",  //운영 시간
     val location :String = "서울시 노원구 은행사거리 국민은행 건물",   //위치
     val latitude:Double?,   //위도
     val longtitude:Double?, //경도
