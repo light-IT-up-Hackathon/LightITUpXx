@@ -16,5 +16,8 @@ class ScrapActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scrap)
 
+        img_helpBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 }
