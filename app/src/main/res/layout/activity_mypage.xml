@@ -298,6 +298,14 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <View
+        app:layout_constraintBottom_toTopOf="@+id/layout_cs"
+        android:id="@+id/line20"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40000000"
+        android:elevation="3dp" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_cs"
         android:layout_width="match_parent"
@@ -380,5 +388,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@+id/layout_version"
+        android:id="@+id/line21"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40000000"
+        android:elevation="3dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

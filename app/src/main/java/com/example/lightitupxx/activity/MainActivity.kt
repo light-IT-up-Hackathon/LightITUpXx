@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         handler.postDelayed({
-            val intent = Intent(this, HomeActivity::class.java)  //회원가입함수 구현 후 회원가입 엑티비티로 변경이 필요 --> 로그인 창으로 이동
+            val intent = Intent(this, LoginActivity::class.java)  //회원가입함수 구현 후 회원가입 엑티비티로 변경이 필요 --> 로그인 창으로 이동
             startActivity(intent)
             finish() }, 2000)
 
