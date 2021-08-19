@@ -26,7 +26,6 @@ class LeisureDetailActivity : AppCompatActivity() {
     lateinit var tv_option:TextView
     lateinit var tv_hashtag:TextView
     lateinit var tv_comment:TextView
-    lateinit var btn_map: Button
     lateinit var imageView: ImageView
     var longtitude by Delegates.notNull<Double>()
     var latitude by Delegates.notNull<Double>()
@@ -47,7 +46,6 @@ class LeisureDetailActivity : AppCompatActivity() {
         tv_option=findViewById(R.id.tv_option)
         tv_hashtag=findViewById(R.id.tv_hashtag)
         tv_comment=findViewById(R.id.tv_comment)
-        btn_map=findViewById(R.id.mapleisureBtn)
         imageView=findViewById(R.id.scrapHeart)
 
         if(intent.hasExtra("leisure")){
@@ -79,7 +77,7 @@ class LeisureDetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btn_map.setOnClickListener {
+        mapleisureBtn.setOnClickListener {
             var intent = Intent(this, FragmentMapActivity::class.java)
             intent.putExtra("longtitude", longtitude)
             intent.putExtra("latitude", latitude)

@@ -34,7 +34,7 @@
                     android:background="@color/category">
 
                     <LinearLayout
-                        android:id="@+id/btn_reserve_hospital"
+                        android:id="@+id/btn_call_hospital"
                         android:layout_width="92dp"
                         android:elevation="6dp"
                         android:layout_height="60dp"
@@ -42,48 +42,36 @@
                         android:layout_marginBottom="18dp"
                         android:background="@drawable/button_background"
                         android:gravity="center"
+                        android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
-
+                        <ImageView
+                            android:id="@+id/callimg"
+                            android:layout_width="80dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_baseline_call_24" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/font_youspotlight"
-                            android:text="예약하기"
+                            android:text="전화"
                             android:textColor="#AB000000" />
                     </LinearLayout>
 
 
-                    <Button
-                        android:id="@+id/maphospitalBtn"
-                        android:layout_width="92dp"
-                        android:layout_height="60dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginBottom="18dp"
-                        android:layout_toRightOf="@id/btn_reserve_hospital"
-                        android:elevation="6dp"
-                        android:background="@drawable/button_background_color"
-                        android:fontFamily="@font/font_youspotlight"
-                        android:text="지도보기"
-                        android:textColor="#FFFFFF"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/btn_reserve_hospital" />
-
                     <LinearLayout
                         android:id="@+id/scraphospitalBtn"
                         android:layout_width="92dp"
-                        android:layout_height="60dp"
+                        android:layout_height="61dp"
+                        android:layout_marginBottom="17dp"
                         android:layout_marginStart="8dp"
-                        android:layout_marginEnd="60dp"
-                        android:elevation="6dp"
-                        android:layout_marginBottom="18dp"
                         android:background="@drawable/button_background"
-                        android:orientation="vertical"
+                        android:elevation="6dp"
                         android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="4dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/maphospitalBtn">
+                        app:layout_constraintLeft_toRightOf="@+id/btn_call_hospital">
 
                         <ImageView
                             android:id="@+id/scrapHeart"
@@ -101,7 +89,29 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/maphospitalBtn"
+                        android:layout_width="92dp"
+                        android:layout_height="61dp"
+                        android:layout_marginBottom="17dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/scraphospitalBtn">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/font_youspotlight"
+                            android:text="지도보기"
+                            android:textColor="#AB000000" />
+
+                    </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <ImageView
