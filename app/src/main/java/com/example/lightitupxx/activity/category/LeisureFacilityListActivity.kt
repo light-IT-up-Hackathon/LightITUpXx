@@ -33,7 +33,6 @@ class LeisureFacilityListActivity : AppCompatActivity(), onItemClicked {
     val leisure_health = ArrayList<Facility_info>()
     val leisure_mass = ArrayList<Facility_info>()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leisure_facility_list)
