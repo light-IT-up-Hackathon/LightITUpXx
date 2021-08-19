@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.lightitupxx">
     <!-- 필요한 권한 생성 -->
     <permission
@@ -10,7 +11,7 @@
     <uses-permission android:name="READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
@@ -23,6 +24,7 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LightITUpXx">
+
         <!-- 라이브러리 사용 설정 -->
         <uses-library android:name="com.google.android.maps" />
         <uses-library
@@ -73,6 +75,7 @@
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.member.CheckmyinfoActivity" />
         <activity android:name=".activity.detail.HouseDetailActivity" />
+        <activity android:name=".activity.detail.SaleLeisureActivity"/>
     </application>
 
 </manifest>

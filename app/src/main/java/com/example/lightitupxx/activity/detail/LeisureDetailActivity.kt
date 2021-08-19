@@ -71,6 +71,11 @@ class LeisureDetailActivity : AppCompatActivity() {
             Toast.makeText(this,"존재하지 않는 내용입니다.", Toast.LENGTH_SHORT).show()
         }
 
+        btn_sale_leisure.setOnClickListener {
+            var intent = Intent(this, SaleLeisureActivity::class.java)
+            startActivity(intent)
+        }
+
         tv_phone.setOnClickListener {
             var intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel: 0507-")
