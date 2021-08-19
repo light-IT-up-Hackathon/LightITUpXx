@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_leisuredetail.*
 import kotlin.properties.Delegates
 
 class LeisureDetailActivity : AppCompatActivity() {
-
+    lateinit var imageView: ImageView
     lateinit var tv_name: TextView
     lateinit var tv_field: TextView
     lateinit var tv_location: TextView
@@ -26,10 +26,11 @@ class LeisureDetailActivity : AppCompatActivity() {
     lateinit var tv_option:TextView
     lateinit var tv_hashtag:TextView
     lateinit var tv_comment:TextView
-    lateinit var imageView: ImageView
+
     var longtitude by Delegates.notNull<Double>()
     var latitude by Delegates.notNull<Double>()
 
+    lateinit var leisure:Facility_info
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +50,7 @@ class LeisureDetailActivity : AppCompatActivity() {
         imageView=findViewById(R.id.scrapHeart)
 
         if(intent.hasExtra("leisure")){
-            var leisure=intent.getParcelableExtra<Facility_info>("leisure")
+            leisure= intent.getParcelableExtra<Facility_info>("leisure")!!
             tv_name.text=leisure?.name
             tv_field.text=leisure?.field
             tv_location.text=leisure?.location
@@ -73,6 +74,7 @@ class LeisureDetailActivity : AppCompatActivity() {
 
         btn_sale_leisure.setOnClickListener {
             var intent = Intent(this, SaleLeisureActivity::class.java)
+            intent.putExtra("leisure", leisure)
             startActivity(intent)
         }
 
