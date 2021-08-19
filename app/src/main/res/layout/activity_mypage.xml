@@ -204,17 +204,18 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_reserve"
+        android:id="@+id/layout_coupon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
+        android:background="@drawable/bottom_stroke"
         app:layout_constraintTop_toBottomOf="@+id/layout_scrap">
 
         <TextView
-            android:id="@+id/tv_notice"
+            android:id="@+id/tv_cs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -222,7 +223,7 @@
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/font_youspotlight"
             android:gravity="center_horizontal"
-            android:text="MY 예약"
+            android:text="MY 쿠폰함"
             android:textColor="#AB000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -243,14 +244,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_coupon"
+        android:id="@+id/layout_reserve"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_stroke"
         android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@+id/layout_reserve"
+        app:layout_constraintTop_toBottomOf="@+id/layout_coupon"
         tools:layout_editor_absoluteX="16dp">
 
         <ImageView
@@ -266,14 +267,14 @@
             app:srcCompat="@drawable/arrow_icon" />
 
         <TextView
-            android:id="@+id/tv_cs"
+            android:id="@+id/tv_notice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/font_youspotlight"
-            android:text="MY 쿠폰함"
+            android:text="개인정보 처리방침"
             android:textColor="#AB000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -290,7 +291,7 @@
         android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@+id/layout_coupon">
+        app:layout_constraintTop_toBottomOf="@+id/layout_reserve">
 
         <ImageView
             android:id="@+id/imageView7"
