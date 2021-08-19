@@ -46,6 +46,7 @@
         android:fontFamily="@font/font_youspotlight"
         android:gravity="center_vertical"
         android:text="  익명"
+        android:textColor="#AB000000"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
