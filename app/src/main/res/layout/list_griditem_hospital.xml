@@ -33,7 +33,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/font_youspotlight"
         android:text="[이소아의원]"
-        android:textColor="@color/black"
+        android:textColor="#AB000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
