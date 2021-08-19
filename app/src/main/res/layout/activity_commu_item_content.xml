@@ -14,7 +14,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/font_youspotlight"
         android:gravity="center_vertical"
-        android:padding="15dp"
+        android:padding="10dp"
         android:text="좋은 정보 감사합니다."
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
