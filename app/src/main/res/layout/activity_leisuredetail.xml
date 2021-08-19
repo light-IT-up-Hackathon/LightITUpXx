@@ -78,6 +78,7 @@
                         android:background="@drawable/button_background"
                         android:orientation="vertical"
                         android:padding="4dp"
+                        android:gravity="center"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/mapleisureBtn">
@@ -124,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/font_youspotlight"
                         android:text="[ 커브스 공릉과기대클럽 ]"
-                        android:textColor="@color/black"
+                        android:textColor="#AB000000"
                         android:textSize="24sp" />
 
                     <TextView
