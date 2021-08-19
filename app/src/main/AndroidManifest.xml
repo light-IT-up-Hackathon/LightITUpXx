@@ -56,10 +56,7 @@
         <activity android:name=".activity.member.JoinActivity" />
         <activity
             android:name=".activity.member.LoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <activity android:name=".activity.category.HouseFacilityListAcitvity" />
         <activity android:name=".activity.detail.LeisureDetailActivity" />
@@ -68,6 +65,10 @@
             android:name=".activity.MainActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".activity.detail.FragmentMapActivity" />
         <activity android:name=".activity.category.HospitalListActivity" />

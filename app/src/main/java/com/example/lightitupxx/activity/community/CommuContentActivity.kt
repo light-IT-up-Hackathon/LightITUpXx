@@ -2,6 +2,7 @@ package com.example.lightitupxx.activity.community
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
@@ -20,6 +21,7 @@ class CommuContentActivity : AppCompatActivity() {
     lateinit var button_content_commu: Button
     lateinit var commentListView: ListView
     lateinit var nameContentTextView: TextView
+    lateinit var back_button: View
 
     val realm1 = try {
         //Realm 인스턴스 얻기
@@ -41,6 +43,7 @@ class CommuContentActivity : AppCompatActivity() {
         button_content_commu=findViewById(R.id.button_content_commu)
         commentListView=findViewById(R.id.commentListView)
         nameContentTextView=findViewById(R.id.nameContentTextView)
+        back_button = findViewById(R.id.img_helpBack)
 
         //댓글 추가 버튼 클릭 리스너
         button_content_commu.setOnClickListener {
@@ -49,6 +52,10 @@ class CommuContentActivity : AppCompatActivity() {
 
         val realmResult = realm1.where<Commu_commentDB>().findAll().sort("id", Sort.ASCENDING)
 
+
+        back_button.setOnClickListener {
+            onBackPressed()
+        }
 
         //위의 데이터베이스로 adapter 생성
         val adapter= CommentListAdapter(realmResult)

@@ -277,6 +277,34 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/checkmyinfo_Withdrawal1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkmyinfo_Withdrawal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/font_youspotlight"
+                android:text="종료하기"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+
+            <Button
+                android:id="@+id/Withdrawal1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+        </LinearLayout>
+
         <View
             android:id="@+id/line3"
             android:layout_width="match_parent"

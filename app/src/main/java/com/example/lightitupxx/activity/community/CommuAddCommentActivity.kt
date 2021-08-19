@@ -2,6 +2,7 @@ package com.example.lightitupxx.activity.community
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import com.example.lightitupxx.R
@@ -19,6 +20,7 @@ class CommuAddCommentActivity : AppCompatActivity() {
     lateinit var add_editText: EditText
     lateinit var button: Button
     lateinit var button2: Button
+    lateinit var back_button: View
 
     val realm1 = try {//Realm 인스턴스 얻기
         //오류에 대비하여 예외처리
@@ -40,6 +42,11 @@ class CommuAddCommentActivity : AppCompatActivity() {
         add_editText=findViewById(R.id.add_editText)
         button=findViewById(R.id.button)
         button2=findViewById(R.id.button2)
+        back_button = findViewById(R.id.img_helpBack)
+
+        back_button.setOnClickListener {
+            onBackPressed()
+        }
 
         // 인텐트로 id를 전달해서 데이터 베이스의 삽입/변경/삭제를 분기
         // id=-1 (추가모드)

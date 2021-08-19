@@ -21,6 +21,7 @@ class CheckmyinfoActivity : AppCompatActivity() {
     lateinit var backButton: View
     lateinit var name:TextView
     lateinit var withdrawal:View
+    lateinit var withdrawal1:View
 
     //로그인 Realm 인스턴스 얻기
     val loginRealm = try {
@@ -40,6 +41,7 @@ class CheckmyinfoActivity : AppCompatActivity() {
         backButton = findViewById(R.id.img_helpBack)
         name=findViewById(R.id.name)
         withdrawal=findViewById<ConstraintLayout>(R.id.checkmyinfo_Withdrawal)
+        withdrawal1=findViewById<ConstraintLayout>(R.id.checkmyinfo_Withdrawal1)
 
         //Realm 데이터베이스 가져오기
         handler = Handler()
@@ -82,6 +84,11 @@ class CheckmyinfoActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             onBackPressed()
         }
+
+        withdrawal1.setOnClickListener {  //어플을 종료시킨다.
+            finishAffinity()
+            System.runFinalization()
+            System.exit(0)}
 
     }
 

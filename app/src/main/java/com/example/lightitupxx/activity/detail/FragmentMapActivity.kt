@@ -27,9 +27,9 @@ class FragmentMapActivity: AppCompatActivity(), OnMapReadyCallback {
         }
 
         backButton = findViewById(R.id.img_mapBack)
-//        backButton.setOnClickListener {
-//            onBackPressed()
-//        }
+        backButton.setOnClickListener {
+            onBackPressed()
+       }
 
         //지도 프래그먼트 설정
         // Get the SupportMapFragment and request notification when the map is ready to be used.

@@ -1,6 +1,7 @@
 package com.example.lightitupxx.activity.community
 
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -21,6 +22,7 @@ class CommuRegActivity : AppCompatActivity() {
     lateinit var edtName_commu : EditText
     lateinit var edtContent_commu : EditText
     lateinit var doneFab_commu : FloatingActionButton
+    lateinit var back_button: View
 
     val realm = try {
         //Realm 인스턴스 얻기
@@ -41,6 +43,11 @@ class CommuRegActivity : AppCompatActivity() {
         edtName_commu = findViewById(R.id.edtName_commu)
         edtContent_commu = findViewById(R.id.edtContent_commu)
         doneFab_commu = findViewById(R.id.doneFab_commu)
+        back_button = findViewById(R.id.img_helpBack)
+
+        back_button.setOnClickListener {
+            onBackPressed()
+        }
 
         // 인텐트로 id를 전달해서 데이터 베이스의 삽입/변경/삭제를 분기
         // id=-1 (추가모드)
