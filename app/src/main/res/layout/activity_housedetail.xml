@@ -140,16 +140,8 @@
                         android:fontFamily="@font/font_youspotlight"
                         android:text="[ 커브스 공릉과기대클럽 ]"
                         android:textColor="#AB000000"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/tv_field"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/font_youspotlight"
-                        android:text="헬스"
-                        android:paddingBottom="16dp"
-                        android:textSize="16sp" />
+                        android:textSize="24sp"
+                        android:layout_marginBottom="15dp"/>
 
                     <TextView
                         android:id="@+id/tv_location"

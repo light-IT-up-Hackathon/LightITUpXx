@@ -58,7 +58,6 @@ class SaleLeisureActivity : AppCompatActivity(){
         img_saleBack.setOnClickListener {
             onBackPressed()
         }
-
     }
 
     private fun generateQRCode(text: String): Bitmap {
