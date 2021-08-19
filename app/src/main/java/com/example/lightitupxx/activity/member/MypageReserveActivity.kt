@@ -10,19 +10,13 @@ import org.jetbrains.anko.startActivity
 
 class MypageReserveActivity : AppCompatActivity() {
 
-    lateinit var goptdetail : ImageButton
     lateinit var backButton: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_myreserve)
 
-        goptdetail = findViewById(R.id.godetail)
         backButton = findViewById(R.id.img_helpBack)
-
-        goptdetail.setOnClickListener {
-            startActivity<LeisureDetailActivity>()
-        }
 
         backButton.setOnClickListener {
             onBackPressed()
