@@ -112,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/font_youspotlight"
                     android:text="평일 09:00~19:00"
-                    android:textColor="@color/black"
+                    android:textColor="#AB000000"
                     android:textSize="15dp" />
 
                 <TextView
@@ -120,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/font_youspotlight"
                     android:text="서울 노원구"
-                    android:textColor="@color/black"
+                    android:textColor="#AB000000"
                     android:textSize="15dp" />
 
             </LinearLayout>
