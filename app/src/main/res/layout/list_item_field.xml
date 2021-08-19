@@ -20,7 +20,7 @@
         android:paddingStart="4dp"
         android:paddingTop="4dp"
         android:paddingBottom="5dp"
-        android:textColor="@color/black"
+        android:textColor="#AB000000"
         tools:ignore="MissingConstraints"
         android:text="산부인과"
         android:fontFamily="@font/font_youspotlight"/>
