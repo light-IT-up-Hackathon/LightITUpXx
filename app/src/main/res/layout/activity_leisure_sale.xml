@@ -159,6 +159,7 @@
         app:layout_constraintTop_toBottomOf="@+id/qr_space_layout"
         android:padding="10dp">
         <ImageView
+            android:id="@+id/img_pin"
             android:layout_width="40dp"
             android:layout_height="90dp"
             android:src="@drawable/ic_baseline_push_pin_24"
@@ -169,8 +170,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/font_youspotlight"
-            android:text="고객님! \n 본 쿠폰은 주식ㅎ"
-
+            android:text="고객님! \n 본 쿠폰은\n [주식회사 입벌려 핑들어 간다]에서\n직접 지급하는 쿠폰입니다.
+            \n업주/업장에 부담이 되지 않습니다;)"
+            app:layout_constraintLeft_toRightOf="@+id/img_pin"
+            android:layout_marginLeft="8dp"
+            android:textSize="24sp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
