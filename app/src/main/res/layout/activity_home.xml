@@ -68,24 +68,19 @@
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_vertical"
         app:layout_constraintTop_toBottomOf="@+id/top_bar">
 
-        <EditText
+        <TextView
             android:id="@+id/searchBox"
-            android:layout_width="325dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:backgroundTint="@color/seachLayoutColor"
             android:fontFamily="@font/font_youspotlight"
-            android:hint="어떤 편의시설을 찾고 계신가요?"
+            android:text="             어떤 편의시설을 찾고 계신가요?"
             android:padding="8dp"
+            android:textColor="#AB000000"
             android:textSize="16sp" />
-
-        <ImageView
-            android:id="@+id/search_button"
-            android:layout_width="44dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/search_icon" />
 
     </LinearLayout>
 
